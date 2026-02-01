@@ -223,23 +223,43 @@ body {
     }
 }
 
-.about {
+.about-section {
+    padding: 60px 20px;
+    background: #f8fbff;
     text-align: center;
-    padding: 60px 30px;
-    background: #fff;
 }
 
-.about h2 {
-    margin-bottom: 10px;
-    color: #1e4fa3;
-}
-
-.about p {
-    max-width: 700px;
+.about-container {
+    max-width: 800px;
     margin: auto;
-    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    color: #1d3e8a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-section p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.brochure-btn {
+    background: #28a745;
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 6px;
     font-size: 16px;
-    line-height: 1.6;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.brochure-btn:hover {
+    background: #218838;
 }
 
 
@@ -308,6 +328,7 @@ footer {
     .hero-content { padding: 20px; }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
