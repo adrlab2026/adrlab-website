@@ -286,11 +286,12 @@ footer {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center top;
-        padding-bottom: 40px;
+        padding-bottom: 80px;
     }
     .hero-content { padding: 20px;margin-top: -170px;  }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
