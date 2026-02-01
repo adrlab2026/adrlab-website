@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -275,4 +279,5 @@ footer {
     .hero-content { padding: 20px; }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
