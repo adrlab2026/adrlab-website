@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e4fa3;
+}
+
+.logo span {
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;           /* BOLDER */
+    letter-spacing: 0.3px;      /* CLEAN + MODERN */
+    transition: 0.3s ease;      /* SMOOTH HOVER EFFECT */
+}
+
+.nav-links a:hover {
+    color: #1e4fa3;             /* Slight blue highlight on hover */
+    transform: translateY(-2px);
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.primary {
+    background: #28a745;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+    cursor: pointer;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+/* HERO */
+.hero {
+    background: url("images/hero.png") center top/cover no-repeat;
+    min-height: 420px;
+    background-position: center -120px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.hero-content {
+    background: transparent;
+    padding: 30px;
+    color: #fff;
+    max-width: 520px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+/* SERVICE ICON IMAGES */
+.service-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    gap: 25px;
+    padding: 60px 30px;
+    background: #ffffff;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1;
+    background: #f8fbff;
+    padding: 35px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #1e4fa3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    padding: 70px 30px;
+    text-align: center;
+    background: #f5f7fb; /* light blue tone */
+}
+
+.how-it-works h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #1c2e4a;
+}
+
+/* ICONS */
+.how-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+/* STEP CARDS */
+.steps {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.step {
+    flex: 1;
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step h4 {
+    color: #1e4fa3;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.step p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .steps {
+        flex-direction: column;
+    }
+}
+
+
+/* CTA */
+.cta {
+    background: #1e4fa3;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .services, .steps {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links a {
+        margin: 15px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    .hero-content { padding: 20px; }
+    .service-card, .step { margin-bottom: 20px; }
+}
+
