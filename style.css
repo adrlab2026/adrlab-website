@@ -12,18 +12,24 @@ html {
 body {
     background: #f5f7fa;
     color: #333;
+    padding-top: 80px;
 }
 
 /* NAVBAR */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    position: relative;
 }
+
 
 .logo {
     font-size: 22px;
@@ -279,5 +285,6 @@ footer {
     .hero-content { padding: 20px; }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
