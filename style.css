@@ -283,32 +283,13 @@ footer {
 @media (max-width: 480px) {
     h1 { font-size: 22px; }
     .hero {
-        min-height: 260px !important;   /* reduce hero height */
-        padding: 10px 15px;             /* reduce padding */
-        background-size: cover;
-        background-position: center top;
-        overflow: hidden;               /* prevents any extra space */
-    }
-
-    .hero-content {
-        padding: 10px 12px;
-        margin: 0;
-        transform: translateY(-25px);   /* moves hero text UP */
-    }
-
-    .hero-content h1 {
-        font-size: 20px;                /* better mobile size */
-        line-height: 1.2;
-        margin-bottom: 6px;
-    }
-
-    .hero-content p {
-        margin-bottom: 10px;
-        font-size: 13px;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .hero-content { padding: 20px;margin-top: -170px;  }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
