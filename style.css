@@ -283,14 +283,15 @@ footer {
 @media (max-width: 480px) {
     h1 { font-size: 22px; }
     .hero {
+        min-width: 450px !important;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center top;
-        padding-bottom: 80px;
     }
     .hero-content { padding: 20px;margin-top: -170px;  }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
