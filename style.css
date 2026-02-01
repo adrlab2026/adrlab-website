@@ -288,8 +288,13 @@ footer {
         background-position: center top;
     }
     .hero-content { padding: 20px;margin-top: -170px;  }
+    .services {
+        margin-top: 0 !important;
+        padding-top: 30px;   /* adjust as needed */
+    }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
