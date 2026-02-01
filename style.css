@@ -288,9 +288,10 @@ footer {
         background-repeat: no-repeat;
         background-position: center top;
     }
-    .hero-content { padding: 20px;margin-top: -170px;  }
+    .hero-content { padding: 20px; }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
