@@ -282,9 +282,10 @@ footer {
 
 @media (max-width: 480px) {
     h1 { font-size: 22px; }
-    .hero-content { padding: 20px; }
+    .hero-content { padding: 20px;margin-top: -20px;  }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
