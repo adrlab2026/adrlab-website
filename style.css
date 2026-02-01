@@ -285,11 +285,13 @@ footer {
     .hero {
         background-size: contain;
         background-repeat: no-repeat;
-        min-height: 400px;
+        background-position: center top;
+        outline: 1px solid red;
     }
     .hero-content { padding: 20px;margin-top: -170px;  }
     .service-card, .step { margin-bottom: 20px; }
 }
+
 
 
 
