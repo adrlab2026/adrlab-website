@@ -30,6 +30,8 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -51,7 +53,7 @@
 </header>
 
 <section id="hero" class="hero">
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-up">
         <h1>Academic Projects<br>& Research Support</h1>
         <p>Guiding your final-year projects and research papers with expertise and integrity.</p>
         <a href="https://wa.me/918603942612" class="btn primary">Talk to Our Team</a>
@@ -60,7 +62,7 @@
 
 <!-- SERVICES SECTION -->
 <section id="services" class="services">
-    <div class="service-card">
+    <div class="service-card" data-aos="zoom-in">
         <img src="images/icon-final.png" loading="lazy" class="service-icon" alt="Final Year Projects">
         <h3>Final Year Projects</h3>
         <p>Assisting with practical and innovative project work for UG & PG students.</p>
@@ -82,7 +84,7 @@
 <section id="how-it-works" class="how-it-works">
     <h2>How It Works</h2>
 
-    <div class="steps">
+    <div class="steps" data-aos="fade-up">
 
         <div class="step">
             <img src="images/hiw-1.png" loading="lazy" class="how-icon" alt="Discuss Requirements">
@@ -111,7 +113,7 @@
     </div>
 </section>
 
-<section id="contact" class="cta">
+<section id="contact" class="cta" data-aos="zoom-in">
     <h2>Ready to get started?</h2>
     <p>We're here to help you succeed in your academic journey.</p>
     <a href="https://wa.me/918603942612" class="btn whatsapp">WhatsApp Us</a>
@@ -138,7 +140,18 @@
 }
 </script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800, /* animation speed */
+        offset: 120,   /* when animation triggers */
+        easing: "ease-in-out",
+        once: true     /* animates only once */
+    });
+</script>
+
 
 </body>
 </html>
+
 
