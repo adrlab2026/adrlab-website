@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adrlab.netlify.app/sitemap.xml
+Sitemap: https://adresearchlab.com/sitemap.xml

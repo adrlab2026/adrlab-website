@@ -95,185 +95,56 @@ body {
     background: #25d366;
 }
 
-/* HERO */
-.hero {
-    background: url("images/hero.png") center top/cover no-repeat;
-    min-height: 420px;
-    background-position: center -120px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-
-.hero-content {
-    background: transparent;
-    padding: 30px;
-    color: #fff;
-    max-width: 520px;
-}
-
-.hero h1 {
-    font-size: 34px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    margin-bottom: 20px;
-}
-/* SERVICE ICON IMAGES */
-.service-icon {
-    width: 65px;
-    height: 65px;
-    margin-bottom: 15px;
-    user-select: none;
-}
-
-/* SERVICES */
-.services {
+/* SECTION */
+.ideas-section {
     display: flex;
     gap: 25px;
     padding: 60px 30px;
     background: #ffffff;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.service-card {
-    flex: 1;
+/* CARD STYLE */
+.idea-card {
+    width: 260px;
     background: #f8fbff;
-    padding: 35px 25px;
-    border-radius: 10px;
+    padding: 30px 20px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🔥 Improved Hover Effects */
-.service-card:hover {
+/* HOVER EFFECT */
+.idea-card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.15);
     background: #ffffff;
 }
 
-/* Headings */
-.service-card h3 {
-    margin-bottom: 12px;
+/* ICON */
+.idea-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.idea-card h3 {
+    margin-bottom: 10px;
     color: #1e4fa3;
     font-size: 18px;
     font-weight: bold;
 }
 
-/* Paragraph */
-.service-card p {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.5;
+.idea-card p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.4;
 }
-
-.service-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-/* HOW IT WORKS SECTION */
-.how-it-works {
-    padding: 70px 30px;
-    text-align: center;
-    background: #f5f7fb; /* light blue tone */
-}
-
-.how-it-works h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: #1c2e4a;
-}
-
-/* ICONS */
-.how-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-    user-select: none;
-}
-
-/* STEP CARDS */
-.steps {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-}
-
-.step {
-    flex: 1;
-    background: #ffffff;
-    padding: 35px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
-}
-
-.step:hover {
-    transform: translateY(-5px);
-}
-
-.step h4 {
-    color: #1e4fa3;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.step p {
-    color: #555;
-    font-size: 15px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .steps {
-        flex-direction: column;
-    }
-}
-
-.about-section {
-    padding: 60px 20px;
-    background: #f8fbff;
-    text-align: center;
-}
-
-.about-container {
-    max-width: 800px;
-    margin: auto;
-}
-
-.about-section h2 {
-    font-size: 30px;
-    color: #1d3e8a;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.about-section p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #333;
-    margin-bottom: 25px;
-}
-
-.brochure-btn {
-    background: #28a745;
-    color: #fff !important;
-    padding: 10px 22px;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: 0.3s ease;
-    display: inline-block;
-}
-
-.brochure-btn:hover {
-    background: #218838;
-}
-
 
 
 /* CTA */
