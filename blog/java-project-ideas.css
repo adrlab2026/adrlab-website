@@ -1,0 +1,88 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    background: #f7faff;
+    color: #1a1a1a;
+}
+
+/* Header Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #002f6c, #0059b3);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-banner h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #003c8f;
+}
+
+.project-desc {
+    margin-top: 8px;
+    line-height: 1.6;
+    padding-left: 5px;
+}
+
+.features-title {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #003c8f;
+    padding-left: 20px;
+}
+
+.features-list {
+    margin-top: 5px;
+    padding-left: 50px;
+    line-height: 1.6;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: #003c8f;
+    padding: 12px 22px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background: #002855;
+}
