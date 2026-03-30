@@ -3,47 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQs — ADR Scholar by ADR Lab</title>
-  <meta name="description" content="Frequently asked questions about ADR Scholar — pricing, features, AI content, plagiarism, and more." />
-  
-    <link rel="stylesheet" href="shared.css" />
+  <title>FAQs — ADR Lab | Frequently Asked Questions</title>
+  <meta name="description" content="Frequently asked questions about ADR Lab services — final year projects, research paper support, career services, pricing, and more." />
+  <link rel="canonical" href="https://adresearchlab.com/faq.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="shared.css" />
   <style>
-    .faq-section { margin-bottom: 40px; }
-    .faq-section-title {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.08em; color: #1e4fa3;
-      background: #e8f0fd; padding: 6px 14px;
-      border-radius: 20px; display: inline-block; margin-bottom: 20px;
+    .faq-section { background:var(--white); padding:72px 24px 90px; }
+    .faq-inner { max-width:780px; margin:0 auto; }
+
+    .faq-group { margin-bottom:48px; }
+    .faq-group-title {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+      color:var(--blue); background:var(--blue-light); padding:6px 16px;
+      border-radius:20px; margin-bottom:20px;
     }
+
     details {
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      overflow: hidden;
+      border:1.5px solid var(--gray-200); border-radius:var(--radius);
+      margin-bottom:10px; overflow:hidden; transition:var(--transition);
     }
+    details[open] { border-color:var(--blue); box-shadow:0 0 0 3px rgba(30,79,163,0.07); }
+
     summary {
-      padding: 16px 20px;
-      font-weight: 600;
-      font-size: 15px;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: white;
+      padding:18px 22px; font-family:'DM Sans',sans-serif; font-weight:600;
+      font-size:15px; color:var(--navy); cursor:pointer;
+      list-style:none; display:flex; justify-content:space-between;
+      align-items:center; gap:16px; background:var(--white);
+      transition:var(--transition);
     }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; font-size: 20px; color: #1e4fa3; font-weight: 400; }
-    details[open] summary::after { content: "−"; }
-    details[open] summary { background: #e8f0fd; color: #1e4fa3; }
-    .faq-answer { padding: 16px 20px; background: #fafafa; border-top: 1px solid #e0e0e0; }
-    .faq-answer p { margin-bottom: 10px; font-size: 15px; }
-    .faq-answer p:last-child { margin-bottom: 0; }
-    .faq-answer ul { margin: 8px 0 10px 20px; }
-    .faq-answer li { font-size: 15px; margin-bottom: 6px; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after {
+      content:'+'; font-size:22px; color:var(--blue);
+      font-weight:300; flex-shrink:0; line-height:1; transition:var(--transition);
+    }
+    details[open] summary::after { content:'−'; }
+    details[open] summary { background:var(--blue-light); color:var(--blue); }
+
+    .faq-answer { padding:18px 22px 20px; background:var(--cream); border-top:1px solid var(--gray-200); }
+    .faq-answer p { margin-bottom:10px; font-size:15px; color:var(--gray-600); line-height:1.75; }
+    .faq-answer p:last-child { margin-bottom:0; }
+    .faq-answer ul, .faq-answer ol { margin:10px 0 12px 20px; }
+    .faq-answer li { font-size:15px; color:var(--gray-600); margin-bottom:6px; }
+    .faq-answer strong { color:var(--navy); }
+    .faq-answer a { color:var(--blue); font-weight:500; }
+
+    .faq-still-here {
+      background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+      border-radius:var(--radius-lg); padding:36px 32px;
+      text-align:center; margin-top:52px;
+    }
+    .faq-still-here h3 { font-family:'DM Serif Display',serif; font-size:1.3rem; color:#fff; margin-bottom:10px; }
+    .faq-still-here p { color:rgba(255,255,255,0.65); margin-bottom:22px; }
   </style>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "logo": "https://adresearchlab.com/images/favicon.png",
+  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
+  "telephone": "+91-9430696596",
+  "email": "adrlab2026@gmail.com",
+  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
+  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
+}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "FAQs", "item": "https://adresearchlab.com/faq.html"}]}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is ADR Lab?","acceptedAnswer":{"@type":"Answer","text":"ADR Lab is an academic support company providing final year project development, research paper guidance, and career services for engineering students worldwide since 2024."}},
+    {"@type":"Question","name":"Who can use ADR Lab services?","acceptedAnswer":{"@type":"Answer","text":"B.Tech, M.Tech, BCA, MCA, and Research Scholars can use ADR Lab services for final year projects, research papers, resume writing, LinkedIn optimization, and mock interviews."}},
+    {"@type":"Question","name":"What domains do you support for final year projects?","acceptedAnswer":{"@type":"Answer","text":"ADR Lab supports AI/ML, Deep Learning, Java Spring Boot, Blockchain, Cybersecurity, Full Stack, Data Science, and Java+AI/ML hybrid projects."}},
+    {"@type":"Question","name":"How long does project development take?","acceptedAnswer":{"@type":"Answer","text":"Simple Java projects take 5-7 days, medium complexity AI/ML projects 10-15 days, and complex Blockchain or federated learning projects 15-25 days."}},
+    {"@type":"Question","name":"How much do your services cost?","acceptedAnswer":{"@type":"Answer","text":"Simple Java projects start from ₹2,000, AI/ML projects from ₹3,500, and full-stack hybrid projects from ₹5,000. Career services are priced separately. Contact us for an exact quote."}},
+    {"@type":"Question","name":"Is my project information kept confidential?","acceptedAnswer":{"@type":"Answer","text":"Yes, ADR Lab treats all client information with complete confidentiality. We never share project details or deliverables with any third party or other students."}},
+    {"@type":"Question","name":"What is your refund policy?","acceptedAnswer":{"@type":"Answer","text":"Refunds are available if work has not started (within 24 hours of payment) or if there is a verified technical failure on our side. Once work begins, refunds are not issued."}},
+    {"@type":"Question","name":"Do you serve students outside India?","acceptedAnswer":{"@type":"Answer","text":"Yes, ADR Lab serves students worldwide via WhatsApp, email, and video calls. We have served students from India, UAE, Malaysia, the UK and other countries."}}
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -52,201 +105,238 @@
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
   <nav class="nav-links">
-    <a href="/">Home</a>
-    <a href="/#services">Services</a>
-    <a href="/about.html">About</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/faq.html">FAQs</a>
-    <a href="/contact.html">Contact</a>
-    <a href="https://scholar.adresearchlab.com" class="btn-whatsapp">ADR Scholar &rarr;</a>
+    <a href="index.html">Home</a><a href="project-ideas.html">Projects</a><a href="career-services.html">Career</a>
+    <a href="about.html">About</a><a href="blog.html">Blog</a>
+    <a href="faq.html" class="active">FAQs</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/919430696596" class="btn-wa">&#128172; WhatsApp</a>
   </nav>
 </header>
 
 <div class="page-hero">
   <div class="container">
+    <div class="badge">Common Questions</div>
     <h1>Frequently Asked Questions</h1>
-    <p>Everything you need to know about ADR Scholar and ADR Lab.</p>
+    <p>Everything you need to know about ADR Lab's project, research, and career services.</p>
   </div>
 </div>
 
-<div class="content">
-  <div class="container">
+<section class="faq-section">
+  <div class="faq-inner">
 
     <!-- General -->
-    <div class="faq-section">
-      <div class="faq-section-title">General</div>
+    <div class="faq-group">
+      <div class="faq-group-title">🏠 General</div>
 
       <details>
-        <summary>What is ADR Scholar?</summary>
+        <summary>What is ADR Lab?</summary>
         <div class="faq-answer">
-          <p>ADR Scholar is an AI-powered academic tool designed for BTech and MTech engineering students worldwide. It helps you generate final year project ideas, create SRS documents, project synopsis, full project reports, and IEEE/Springer/APA research papers — all in minutes.</p>
-          <p>It is a product by ADR Lab, an academic technology company building tools for students, institutions, and companies.</p>
+          <p>ADR Lab is an academic project and research support company founded in 2024. We help engineering students — B.Tech, M.Tech, BCA, MCA, and Research Scholars — complete their final year projects, research papers, and career documentation.</p>
+          <p>We provide end-to-end services: from project idea selection and full development to research paper writing, resume creation, LinkedIn optimisation, and mock interview coaching.</p>
         </div>
       </details>
 
       <details>
-        <summary>Who is ADR Scholar for?</summary>
+        <summary>Who can use ADR Lab's services?</summary>
         <div class="faq-answer">
-          <p>ADR Scholar is designed primarily for:</p>
+          <p>Our services are designed for:</p>
           <ul>
-            <li>BTech students in their 5th-8th semester working on final year projects</li>
-            <li>MTech students writing research papers or thesis documents</li>
-            <li>Engineering students who need academic documentation support</li>
+            <li>UG students (B.Tech, BCA, B.Sc) working on final year projects</li>
+            <li>PG students (M.Tech, MCA, M.Sc) needing research or project guidance</li>
+            <li>Research scholars requiring paper writing and journal submission support</li>
+            <li>Professionals seeking resume, LinkedIn, or interview preparation help</li>
           </ul>
-          <p>While we are built with Indian engineering students in mind, ADR Scholar is available worldwide and works for any student needing academic project support.</p>
+          <p>We serve students and professionals across India and worldwide.</p>
         </div>
       </details>
 
       <details>
-        <summary>Is ADR Scholar free to use?</summary>
+        <summary>What domains do you support for final year projects?</summary>
         <div class="faq-answer">
-          <p>Yes — ADR Scholar has a free plan that gives you access to core features with monthly limits:</p>
+          <p>We currently support projects across the following domains:</p>
           <ul>
-            <li>3 project idea generations per month</li>
-            <li>1 blank template download per month (SRS or Synopsis only)</li>
-            <li>2 research tool uses per month (Abstract, Literature Review, Research Gap)</li>
+            <li><strong>AI / ML &amp; Deep Learning</strong> — TensorFlow, PyTorch, Scikit-learn, OpenCV</li>
+            <li><strong>Java / Spring Boot</strong> — REST APIs, Hibernate, Microservices</li>
+            <li><strong>Blockchain</strong> — Smart contracts, Solidity, DApps</li>
+            <li><strong>Cybersecurity</strong> — Ethical hacking, IDS, network security</li>
+            <li><strong>Full Stack</strong> — React, Node.js, Django, Flask</li>
+            <li><strong>Data Science</strong> — Data analysis, visualisation, prediction models</li>
+            <li><strong>Java + AI/ML Hybrid</strong> — Spring Boot + Python ML microservices</li>
           </ul>
-          <p>For unlimited access, AI-filled templates, full research paper generation, and all Pro features, upgrade to ADR Scholar Pro for Rs.599/month or Rs.1,499/semester.</p>
         </div>
       </details>
 
+      <details>
+        <summary>Are you available for students outside India?</summary>
+        <div class="faq-answer">
+          <p>Yes. ADR Lab serves students worldwide. We have supported students from India, the UAE, Malaysia, the UK, and other countries. Our communication is entirely online via WhatsApp, email, and video calls, so location is never a barrier.</p>
+        </div>
+      </details>
     </div>
 
-    <!-- Pricing -->
-    <div class="faq-section">
-      <div class="faq-section-title">Pricing & Payments</div>
+    <!-- Projects -->
+    <div class="faq-group">
+      <div class="faq-group-title">💻 Final Year Projects</div>
 
       <details>
-        <summary>What does Pro plan include?</summary>
+        <summary>What does "complete project development" include?</summary>
         <div class="faq-answer">
+          <p>Our complete project development package typically includes:</p>
           <ul>
-            <li>200 project idea generations per month (with full details — roadmap, database schema, career relevance)</li>
-            <li>Unlimited blank templates — SRS, Synopsis, Project Report, IEEE Paper</li>
-            <li>AI-filled templates — Claude writes 60-80 page project reports automatically</li>
-            <li>Full Research Paper Assistant — Abstract, Literature Review, Research Gap, Methodology, Results, Full Paper generation</li>
-            <li>All 3 formats — IEEE, Springer, APA</li>
-            <li>Priority support</li>
+            <li>Project topic selection and abstract</li>
+            <li>Full source code (frontend + backend + ML model if applicable)</li>
+            <li>Database design and setup</li>
+            <li>Project documentation — SRS, synopsis, and project report</li>
+            <li>Deployment support (if required)</li>
+            <li>Viva/presentation preparation guidance</li>
+            <li>Post-delivery support for 2 weeks</li>
           </ul>
         </div>
       </details>
 
       <details>
-        <summary>What payment methods are accepted?</summary>
+        <summary>How long does project development take?</summary>
         <div class="faq-answer">
-          <p>We accept all major payment methods via Razorpay:</p>
+          <p>Timelines depend on the project complexity:</p>
           <ul>
-            <li>UPI (PhonePe, Google Pay, Paytm, BHIM)</li>
-            <li>Debit and credit cards (Visa, Mastercard, RuPay)</li>
-            <li>Net banking (all major Indian banks)</li>
-            <li>Digital wallets</li>
+            <li><strong>Simple projects</strong> (basic CRUD, Java Spring Boot) — 5–7 days</li>
+            <li><strong>Medium projects</strong> (Full stack, ML model) — 10–15 days</li>
+            <li><strong>Complex projects</strong> (Blockchain, federated learning, advanced AI) — 15–25 days</li>
           </ul>
-          <p>For international students, card payments in your local currency are supported via Razorpay's international payment gateway.</p>
+          <p>We always confirm the timeline before starting. If you have an urgent deadline, mention it upfront — we do our best to accommodate.</p>
         </div>
       </details>
 
       <details>
-        <summary>Can I get a refund?</summary>
+        <summary>Will my project be unique / not submitted before?</summary>
         <div class="faq-answer">
-          <p>Yes. We offer a 7-day refund policy for Pro subscriptions. If you are not satisfied within the first 7 days of subscribing, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a5853565653545d7a5b5e485f495f5b485952565b5814595557">[email&#160;protected]</a> and we will process a full refund — no questions asked.</p>
-          <p>Please refer to our full <a href="/refund">Refund Policy</a> for complete details.</p>
+          <p>Yes. Every project is built fresh based on your specific requirements and base paper. We do not resell the same project to multiple students. Your implementation, dataset, and codebase are unique to your submission.</p>
         </div>
       </details>
 
       <details>
-        <summary>Is there a student discount?</summary>
+        <summary>Do you provide the base paper / research paper for the project?</summary>
         <div class="faq-answer">
-          <p>Our pricing is already intentionally designed to be student-friendly at Rs.599/month — significantly cheaper than any comparable international tool. The semester plan at Rs.1,499 for 6 months brings the effective cost to just Rs.250/month, which is our recommended plan for final year students.</p>
-          <p>We do not currently offer additional discounts beyond the semester plan, but we run promotional offers periodically on our LinkedIn and Instagram pages.</p>
+          <p>We can help you find a suitable IEEE or Springer base paper for your project domain. Alternatively, if your college requires a specific paper, you can share it with us and we will implement the system described in it.</p>
         </div>
       </details>
-
     </div>
 
-    <!-- AI Content -->
-    <div class="faq-section">
-      <div class="faq-section-title">AI Content & Academic Integrity</div>
+    <!-- Research -->
+    <div class="faq-group">
+      <div class="faq-group-title">🔬 Research Paper Guidance</div>
 
       <details>
-        <summary>Will my college detect that the content is AI-generated?</summary>
+        <summary>What research paper services do you offer?</summary>
         <div class="faq-answer">
-          <p>ADR Scholar generates content as a starting draft — similar to how a tutor or guide would give you notes or a framework to work from. We strongly recommend that every student:</p>
           <ul>
-            <li>Review all AI-generated content carefully</li>
-            <li>Add their own analysis, actual results, and screenshots</li>
-            <li>Rewrite sections in their own voice</li>
-            <li>Add their specific data, graphs, and experimental findings</li>
+            <li>Full research paper writing (IEEE, Springer, APA format)</li>
+            <li>Abstract and literature review writing</li>
+            <li>Paper editing, proofreading, and formatting</li>
+            <li>Plagiarism reduction and paraphrasing</li>
+            <li>Journal and conference identification and submission guidance</li>
+            <li>Methodology and results section writing</li>
           </ul>
-          <p>The AI gives you the structure and academic language — you provide the actual project content, results, and personal insights. Used this way, the output is genuinely your work supported by AI tools, similar to using Grammarly or Google Scholar.</p>
         </div>
       </details>
 
       <details>
-        <summary>Is using AI tools for academic work ethical?</summary>
+        <summary>Can you guarantee journal acceptance?</summary>
         <div class="faq-answer">
-          <p>This is an evolving area in academia. Most institutions globally are developing policies that permit AI as a writing aid while requiring students to produce original analysis and results. ADR Scholar is designed as a writing assistance tool — not a plagiarism tool.</p>
-          <p>We always recommend students to check their institution's specific policy on AI-assisted writing before submitting AI-aided work.</p>
+          <p>No ethical service can guarantee journal acceptance, as it depends on peer review which is entirely outside our control. What we can guarantee is a professionally written, formatted, and proofread paper that meets the technical and structural requirements of your target journal or conference.</p>
         </div>
       </details>
-
-      <details>
-        <summary>Does ADR Lab store or use my documents to train AI?</summary>
-        <div class="faq-answer">
-          <p>No. We do not use any content you generate or upload to train AI models. Your project ideas, templates, and research papers belong to you. We only store the minimum metadata required to deliver the service (usage counts, account details). Please refer to our <a href="/privacy">Privacy Policy</a> for full details.</p>
-        </div>
-      </details>
-
     </div>
 
-    <!-- Technical -->
-    <div class="faq-section">
-      <div class="faq-section-title">Technical</div>
+    <!-- Career Services -->
+    <div class="faq-group">
+      <div class="faq-group-title">💼 Career Services</div>
 
       <details>
-        <summary>What file formats does ADR Scholar support?</summary>
+        <summary>What is included in the resume service?</summary>
         <div class="faq-answer">
+          <p>Our resume service includes:</p>
           <ul>
-            <li><strong>Templates</strong> — Downloaded as Microsoft Word (.docx) files, compatible with MS Word, Google Docs, LibreOffice</li>
-            <li><strong>Research Paper Assistant</strong> — Generated content displayed on screen with copy and .docx download option</li>
+            <li>Complete rewrite in ATS-friendly format</li>
+            <li>Role-specific keyword optimisation</li>
+            <li>Clean, professional design (Word + PDF delivered)</li>
+            <li>Unlimited revisions until you are satisfied</li>
+            <li>Delivery within 24–48 hours</li>
           </ul>
         </div>
       </details>
 
       <details>
-        <summary>Why is generation taking longer than usual?</summary>
+        <summary>How does LinkedIn optimization work?</summary>
         <div class="faq-answer">
-          <p>ADR Scholar uses Claude AI for content generation. Generation times vary by feature:</p>
-          <ul>
-            <li>Project ideas — 10-20 seconds</li>
-            <li>Single research sections (Abstract, Methodology etc.) — 10-20 seconds</li>
-            <li>AI-filled templates (SRS, Synopsis) — 30-60 seconds</li>
-            <li>Full project report (6 chapters) — 60-120 seconds</li>
-            <li>Full research paper — 75-90 seconds</li>
-          </ul>
-          <p>A progress bar shows you exactly which section is being written. If generation fails, please try again — occasional API timeouts can occur during peak usage.</p>
+          <p>You share your current LinkedIn profile URL and target job role. We then rewrite your headline, about section, experience descriptions, and skills section with keywords that increase your search ranking for recruiters. We also advise on profile photo, banner, and featured section strategy.</p>
         </div>
       </details>
 
       <details>
-        <summary>I am getting a 500 error. What should I do?</summary>
+        <summary>How is the mock interview conducted?</summary>
         <div class="faq-answer">
-          <p>Please try the following steps:</p>
-          <ul>
-            <li>Refresh the page and try again</li>
-            <li>Log out and log back in</li>
-            <li>Check your internet connection</li>
-            <li>Wait 2-3 minutes and try again (occasional API rate limiting)</li>
-          </ul>
-          <p>If the error persists, email us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d3e383d3d223f390d2c293f283e282c3f2e25212c2f632e2220">[email&#160;protected]</a> with a screenshot and we will resolve it within 12 hours.</p>
+          <p>Mock interviews are conducted via Google Meet or Zoom. A domain expert conducts a 45–60 minute session simulating a real HR + technical interview. After the session, you receive a written feedback report covering your strengths, areas to improve, and suggested answers for questions you struggled with.</p>
         </div>
       </details>
-
     </div>
 
-    <div class="info-box">
-      <p>Still have questions? Email us at <a href="/cdn-cgi/l/email-protection#ee868b828281ae8f8a9c8b9d8b8f9c8d86828f8cc08d8183"><span class="__cf_email__" data-cfemail="48202d24242708292c3a2d3b2d293a2b2024292a662b2725">[email&#160;protected]</span></a> — we respond within 24 hours.</p>
+    <!-- Pricing & Process -->
+    <div class="faq-group">
+      <div class="faq-group-title">💰 Pricing &amp; Process</div>
+
+      <details>
+        <summary>How much do your services cost?</summary>
+        <div class="faq-answer">
+          <p>Pricing depends on the service type and complexity. We intentionally keep prices student-friendly. To get an exact quote for your specific requirement, reach out via WhatsApp or use the booking form on our homepage — we respond with a proposal within 24 hours.</p>
+          <p>As a general guide: simple Java projects start from ₹2,000, AI/ML projects from ₹3,500, and full-stack hybrid projects from ₹5,000. Research papers and career services are priced separately.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is the payment process?</summary>
+        <div class="faq-answer">
+          <p>We typically work on a <strong>50% advance, 50% on delivery</strong> model. Payment can be made via UPI, bank transfer, or any digital payment method. We share a payment confirmation before starting work.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is my project information kept confidential?</summary>
+        <div class="faq-answer">
+          <p>Absolutely. We treat every project with complete confidentiality. Your project details, source code, research content, and personal information are never shared with any third party. We do not resell or reuse your work in any form.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What if I'm not satisfied with the delivered work?</summary>
+        <div class="faq-answer">
+          <p>We offer revision support as part of every delivery. If the work does not meet the agreed requirements, we will revise it until it does. We ask that feedback be specific and based on the original requirements shared at the time of booking. Our goal is for every student to be genuinely satisfied with their project.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="faq-still-here">
+      <h3>Still Have a Question?</h3>
+      <p>Reach out directly — we respond within a few hours on most days.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/919430696596" class="btn btn-gold">&#128172; WhatsApp Us</a>
+        <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Send an Email</a>
+      </div>
     </div>
 
   </div>
-</div>
+</section>
 
-<foo
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-brand">ADR <span>Lab</span></div>
+  <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+  <div class="footer-grid">
+    <div class="footer-col"><p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students worldwide since 2024.</p><p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:12px;">📞 +91 94306 96596</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><a href="project-ideas.html">Final Year Projects</a><a href="career-services.html">Career Services</a><a href="index.html#booking">Book a Project</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="about.html">About ADR Lab</a><a href="blog.html">Blog</a><a href="faq.html">FAQs</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><div class="footer-col-title">Legal</div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="refund.html">Refund Policy</a></div>
+  </div>
+  <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+</div></footer>
+</body>
+</html>

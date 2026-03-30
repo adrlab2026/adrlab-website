@@ -3,161 +3,438 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Career Services – ADR Lab</title>
-
-<!-- Google tag (gtag.js) -->
+<title>Career Services – ADR Lab | Resume, LinkedIn, Interview Prep</title>
+<meta name="description" content="ADR Lab career services: ATS resume writing, LinkedIn optimization, Naukri profile, interview answer engineering, and mock interviews for students and professionals.">
+<link rel="canonical" href="https://adresearchlab.com/career-services.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="shared.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Career Services","provider":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"}}</script>
+<style>
+  .services-wrap {
+    background: var(--white);
+    padding: 64px 24px 80px;
+  }
+  .career-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto 64px;
+  }
+  .career-card {
+    background: var(--cream);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 36px 24px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .career-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--gold));
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .career-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    background: var(--white);
+    border-color: transparent;
+  }
+  .career-card:hover::before { opacity: 1; }
+  .career-icon {
+    width: 64px; height: 64px;
+    object-fit: contain;
+    margin-bottom: 18px;
+  }
+  .career-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .career-card p {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0 0 18px;
+    flex-grow: 1;
+  }
+  .career-features {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .career-feature {
+    font-size: 12px;
+    color: var(--gray-600);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .career-feature::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .career-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: var(--transition);
+    margin-top: auto;
+  }
+  .career-card:hover .career-cta { background: var(--blue); color: #fff; }
 
-  gtag('config', 'G-F274FYF2KE');
-</script>
+  /* Why Choose Section */
+  .why-section {
+    background: var(--navy);
+    padding: 72px 24px;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .why-text .section-title { color: #fff; }
+  .why-text .section-subtitle { color: rgba(255,255,255,0.6); }
+  .why-points { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .why-point {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+  }
+  .why-icon { font-size: 20px; flex-shrink: 0; }
+  .why-point h4 { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+  .why-point p { font-size: 13px; color: rgba(255,255,255,0.5); margin: 0; }
+  .why-visual {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+  }
+  .why-visual h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .process-step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+  .process-step:last-child { margin-bottom: 0; }
+  .ps-num {
+    width: 28px; height: 28px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .ps-text h4 { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+  .ps-text p { font-size: 12px; color: rgba(255,255,255,0.5); margin: 0; }
 
-<script type="application/ld+json">
+  @media (max-width: 900px) {
+    .career-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 540px) {
+    .career-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "logo": "https://adresearchlab.com/images/favicon.png",
+  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
+  "telephone": "+91-9430696596",
+  "email": "adrlab2026@gmail.com",
+  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
+  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
+}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Career Services", "item": "https://adresearchlab.com/career-services.html"}]}
+  </script>
+
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "provider": {
-    "@type": "Organization",
-    "name": "ADR Lab",
-    "url": "https://adresearchlab.com"
-  },
-  
-  "serviceType": "Academic & Career Services",
-  
+  "name": "Career Services — ADR Lab",
+  "url": "https://adresearchlab.com/career-services.html",
+  "provider": {"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "ADR Lab Services",
-    
+    "name": "ADR Lab Career Services",
     "itemListElement": [
-      
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Final Year Projects",
-          "description": "Java, AI/ML, Blockchain, Cybersecurity final year project support.",
-          "url": "https://adresearchlab.com/#services"
-        }
-      },
-      
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Research Paper Guidance",
-          "description": "Paper writing, editing, formatting, and journal submission support.",
-          "url": "https://adresearchlab.com/#services"
-        }
-      },
-      
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Resume Services",
-          "description": "ATS-optimized resumes for students and professionals.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      },
-
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "LinkedIn Optimization",
-          "description": "Profile rewriting and optimization to increase recruiter visibility.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      },
-
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Interview Answer Engineering",
-          "description": "Custom-prepared answers for HR and technical interview questions.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      },
-
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mock Interview",
-          "description": "1:1 mock interview sessions with personalized feedback.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      }
-
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Resume Writing","description":"ATS-optimised, professionally designed resumes for students and professionals."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"LinkedIn Optimization","description":"Complete LinkedIn profile rewrite to increase recruiter visibility."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Naukri Profile Optimization","description":"Boost Naukri profile ranking and improve job call rates."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interview Answer Engineering","description":"Custom STAR-method answers for HR and technical interview questions."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mock Interview","description":"Live 1:1 mock interview sessions with detailed feedback report."}}
     ]
   }
 }
-</script>
-
-<link rel="stylesheet" href="career-services.css">
+  </script>
 </head>
-
 <body>
 
-
 <header class="navbar">
-    <div class="logo">ADR <span>Lab</span></div>
-
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
-    <nav class="nav-links">
-        <a href="https://wa.me/919430696596" class="btn whatsapp">WhatsApp Us</a>
-    </nav>
-
+  <div class="logo">ADR <span>Lab</span></div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="project-ideas.html">Projects</a>
+    <a href="career-services.html" class="active">Career</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/919430696596" class="btn-wa">&#128172; WhatsApp</a>
+  </nav>
 </header>
 
-<section class="career-section">
+<div class="page-hero">
+  <div class="container">
+    <div class="badge">Career Acceleration</div>
+    <h1>Career Services</h1>
+    <p>From ATS-friendly resumes to mock interviews — we prepare you to land the job you deserve.</p>
+  </div>
+</div>
 
-    <a href="#" class="career-card">
-        <img src="images/icon-resume.png" class="career-icon" alt="Resume Services">
-        <h3>Resume Services</h3>
-        <p>ATS-friendly resume creation and redesign for students and professionals.</p>
+<div class="services-wrap">
+  <div class="career-grid">
+
+    <div class="career-card">
+      <img src="images/icon-resume.png" class="career-icon" alt="Resume Services">
+      <h3>Resume Services</h3>
+      <p>ATS-optimised, professionally designed resumes that get noticed by recruiters and hiring systems.</p>
+      <div class="career-features">
+        <div class="career-feature">ATS keyword optimisation</div>
+        <div class="career-feature">Clean, modern formatting</div>
+        <div class="career-feature">Role-specific tailoring</div>
+        <div class="career-feature">Unlimited revisions</div>
+      </div>
+      <a href="https://wa.me/919430696596?text=I+need+resume+services+from+ADR+Lab" class="career-cta">Get Started &rarr;</a>
+    </div>
+
+    <div class="career-card">
+      <img src="images/icon-linkedin.png" class="career-icon" alt="LinkedIn Optimization">
+      <h3>LinkedIn Optimization</h3>
+      <p>Rewrite and optimise your LinkedIn profile to rank higher and attract recruiters worldwide.</p>
+      <div class="career-features">
+        <div class="career-feature">Headline &amp; summary rewrite</div>
+        <div class="career-feature">Skills &amp; endorsements strategy</div>
+        <div class="career-feature">Profile SEO optimisation</div>
+        <div class="career-feature">Connection strategy tips</div>
+      </div>
+      <a href="https://wa.me/919430696596?text=I+need+LinkedIn+optimization+from+ADR+Lab" class="career-cta">Get Started &rarr;</a>
+    </div>
+
+    <div class="career-card">
+      <img src="images/icon-naukri.png" class="career-icon" alt="Naukri Profile Optimization">
+      <h3>Naukri Optimization</h3>
+      <p>Boost your Naukri profile ranking so recruiters find you — not the other way around.</p>
+      <div class="career-features">
+        <div class="career-feature">Profile score maximisation</div>
+        <div class="career-feature">Keyword-rich description</div>
+        <div class="career-feature">Skill tag optimisation</div>
+        <div class="career-feature">Job alert configuration</div>
+      </div>
+      <a href="https://wa.me/919430696596?text=I+need+Naukri+optimization+from+ADR+Lab" class="career-cta">Get Started &rarr;</a>
+    </div>
+
+    <div class="career-card">
+      <img src="images/icon-interview.png" class="career-icon" alt="Interview Answer Engineering">
+      <h3>Interview Answer Engineering</h3>
+      <p>Custom-crafted answers to HR and technical questions — tailored to your role and experience.</p>
+      <div class="career-features">
+        <div class="career-feature">STAR-method structured answers</div>
+        <div class="career-feature">HR + technical coverage</div>
+        <div class="career-feature">Role-specific preparation</div>
+        <div class="career-feature">Weakness/strength framing</div>
+      </div>
+      <a href="https://wa.me/919430696596?text=I+need+interview+answer+engineering+from+ADR+Lab" class="career-cta">Get Started &rarr;</a>
+    </div>
+
+    <div class="career-card">
+      <img src="images/icon-mock.png" class="career-icon" alt="Mock Interview">
+      <h3>Mock Interview</h3>
+      <p>Live 1:1 mock interview sessions with personalised feedback to build confidence and sharpen answers.</p>
+      <div class="career-features">
+        <div class="career-feature">Live video session</div>
+        <div class="career-feature">Domain-expert interviewer</div>
+        <div class="career-feature">Detailed feedback report</div>
+        <div class="career-feature">Follow-up Q&amp;A included</div>
+      </div>
+      <a href="https://wa.me/919430696596?text=I+need+a+mock+interview+session+from+ADR+Lab" class="career-cta">Book Session &rarr;</a>
+    </div>
+
+    <a href="index.html#booking" class="career-card" style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-color:transparent;justify-content:center;">
+      <div style="font-size:48px;margin-bottom:18px;">🚀</div>
+      <h3 style="color:#fff;">Full Career Package</h3>
+      <p style="color:rgba(255,255,255,0.6);">Get all services bundled — resume, LinkedIn, Naukri, interview prep and mock session at the best value.</p>
+      <span style="display:inline-block;background:rgba(201,168,76,0.2);color:var(--gold);border:1px solid rgba(201,168,76,0.3);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:20px;">Contact for Pricing</span>
     </a>
 
-    <a href="#" class="career-card">
-        <img src="images/icon-linkedin.png" class="career-icon" alt="LinkedIn Optimization">
-        <h3>LinkedIn Optimization</h3>
-        <p>Enhance your LinkedIn profile for maximum visibility and recruiter reach.</p>
-    </a>
+  </div>
+</div>
 
-    <a href="#" class="career-card">
-        <img src="images/icon-naukri.png" class="career-icon" alt="Naukri Optimization">
-        <h3>Naukri Profile Optimization</h3>
-        <p>Boost your Naukri profile ranking and improve job call rates.</p>
-    </a>
-
-    <a href="#" class="career-card">
-        <img src="images/icon-interview.png" class="career-icon" alt="Interview Answer Engineering">
-        <h3>Interview Answer Engineering</h3>
-        <p>Get customized answers for HR + Technical interviews.</p>
-    </a>
-
-    <a href="#" class="career-card">
-        <img src="images/icon-mock.png" class="career-icon" alt="Mock Interview">
-        <h3>Mock Interview</h3>
-        <p>1:1 mock interview practice sessions with feedback.</p>
-    </a>
-
+<!-- WHY ADR LAB -->
+<section class="why-section">
+  <div class="why-grid">
+    <div class="why-text">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Career Support That Actually Works</h2>
+      <p class="section-subtitle">We don't use generic templates. Every deliverable is crafted specifically for you.</p>
+      <div class="why-points">
+        <div class="why-point">
+          <div class="why-icon">✍️</div>
+          <div>
+            <h4>Human-Crafted, Not Template-Generated</h4>
+            <p>Every resume and answer is written by our experts, not auto-filled by software.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-icon">⚡</div>
+          <div>
+            <h4>Fast Turnaround</h4>
+            <p>Most deliverables are ready within 24–48 hours of sharing your details.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-icon">🎯</div>
+          <div>
+            <h4>Domain-Specific Expertise</h4>
+            <p>Tech, engineering, finance, and management — we know what each industry wants.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <h3>How It Works</h3>
+      <div class="process-step">
+        <div class="ps-num">1</div>
+        <div class="ps-text">
+          <h4>Share Your Details</h4>
+          <p>Send us your current resume, target role, and any job description you have in mind.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">2</div>
+        <div class="ps-text">
+          <h4>We Craft It</h4>
+          <p>Our expert team rewrites your profile, resume, or interview answers to match the role.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">3</div>
+        <div class="ps-text">
+          <h4>Review &amp; Revise</h4>
+          <p>You review the draft. We refine until you're completely satisfied.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num">4</div>
+        <div class="ps-text">
+          <h4>You Apply with Confidence</h4>
+          <p>Submit your polished application and prepare to hear back.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="cta" data-aos="zoom-in">
-    <h2>Ready to get started?</h2>
-    <p>We're here to help you succeed in your academic journey.</p>
-    <a href="https://wa.me/919430696596" class="btn whatsapp">WhatsApp Us</a>
+<section class="cta-section">
+  <h2>Ready to Accelerate Your Career?</h2>
+  <p>Let's build the profile that gets you hired.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://wa.me/919430696596?text=Hi+I+need+career+services+from+ADR+Lab" class="btn btn-gold">&#128172; Chat on WhatsApp</a>
+    <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Send an Enquiry</a>
+  </div>
 </section>
 
-<footer>
-    <p>© 2026 ADR Lab. All rights reserved.</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">ADR <span>Lab</span></div>
+    <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students with professional project and research support since 2024.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:12px;">📞 +91 94306 96596</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="project-ideas.html">Final Year Projects</a>
+        <a href="career-services.html">Resume Services</a>
+        <a href="career-services.html">LinkedIn Optimization</a>
+        <a href="career-services.html">Mock Interviews</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="about.html">About ADR Lab</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund.html">Refund Policy</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+  </div>
 </footer>
 
 </body>

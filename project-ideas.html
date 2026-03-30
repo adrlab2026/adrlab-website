@@ -3,161 +3,298 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Ideas – ADR Lab</title>
-
-<!-- Google tag (gtag.js) -->
+<title>Project Ideas – ADR Lab | Final Year Project Topics</title>
+<meta name="description" content="Explore curated final year project ideas in AI/ML, Java, Blockchain, Cybersecurity, and more — backed by ADR Lab's expert development support.">
+<link rel="canonical" href="https://adresearchlab.com/project-ideas.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="shared.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+<style>
+  .ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  .idea-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 36px 24px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .idea-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--gold));
+    transform: scaleX(0);
+    transition: var(--transition);
+  }
+  .idea-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+  .idea-card:hover::after { transform: scaleX(1); }
+  .idea-icon {
+    width: 72px; height: 72px;
+    object-fit: contain;
+    margin-bottom: 18px;
+  }
+  .idea-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .idea-card p {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0 0 16px;
+    flex-grow: 1;
+  }
+  .idea-tag {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .idea-tag.gold { background: var(--gold-light); color: #8a6b00; }
+  .idea-arrow {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--blue);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: var(--transition);
+  }
+  .idea-card:hover .idea-arrow { opacity: 1; transform: translateY(0); }
 
-  gtag('config', 'G-F274FYF2KE');
-</script>
+  .ideas-intro {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .intro-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: -32px;
+  }
+  .intro-stat {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .intro-stat .num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+  }
+  .intro-stat .lbl {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+  }
 
+  @media (max-width: 800px) {
+    .ideas-grid { grid-template-columns: 1fr 1fr; }
+    .intro-wrap { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 500px) {
+    .ideas-grid { grid-template-columns: 1fr; }
+  }
+</style>
 
-<script type="application/ld+json">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "provider": {
-    "@type": "Organization",
-    "name": "ADR Lab",
-    "url": "https://adresearchlab.com"
-  },
-  
-  "serviceType": "Academic & Career Services",
-  
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "ADR Lab Services",
-    
-    "itemListElement": [
-      
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Final Year Projects",
-          "description": "Java, AI/ML, Blockchain, Cybersecurity final year project support.",
-          "url": "https://adresearchlab.com/#services"
-        }
-      },
-      
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Research Paper Guidance",
-          "description": "Paper writing, editing, formatting, and journal submission support.",
-          "url": "https://adresearchlab.com/#services"
-        }
-      },
-      
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Resume Services",
-          "description": "ATS-optimized resumes for students and professionals.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      },
-
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "LinkedIn Optimization",
-          "description": "Profile rewriting and optimization to increase recruiter visibility.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      },
-
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Interview Answer Engineering",
-          "description": "Custom-prepared answers for HR and technical interview questions.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      },
-
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mock Interview",
-          "description": "1:1 mock interview sessions with personalized feedback.",
-          "url": "https://adresearchlab.com/career-services.html"
-        }
-      }
-
-    ]
-  }
+  "@type": "Organization",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "logo": "https://adresearchlab.com/images/favicon.png",
+  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
+  "telephone": "+91-9430696596",
+  "email": "adrlab2026@gmail.com",
+  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
+  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
 }
-</script>
+  </script>
 
-<link rel="stylesheet" href="project-ideas.css">
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Project Ideas", "item": "https://adresearchlab.com/project-ideas.html"}]}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Final Year Project Support","description":"ADR Lab provides complete final year project development in AI/ML, Java, Blockchain, Cybersecurity and hybrid domains for B.Tech and M.Tech students.","url":"https://adresearchlab.com/project-ideas.html","provider":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"}}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Final Year Project Ideas — ADR Lab","url":"https://adresearchlab.com/project-ideas.html","description":"Curated final year project ideas in AI/ML, Java, Blockchain, Cybersecurity and hybrid domains — with complete development support by ADR Lab."}
+  </script>
 </head>
-
 <body>
 
 <header class="navbar">
-    <div class="logo">ADR <span>Lab</span></div>
-
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
-    <nav class="nav-links">
-        <a href="https://wa.me/919430696596" class="btn whatsapp">WhatsApp Us</a>
-    </nav>
-
+  <div class="logo">ADR <span>Lab</span></div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="project-ideas.html" class="active">Projects</a>
+    <a href="career-services.html">Career</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/919430696596" class="btn-wa">&#128172; WhatsApp</a>
+  </nav>
 </header>
 
-<section class="ideas-section">
+<div class="page-hero">
+  <div class="container">
+    <div class="badge">500+ Projects Delivered</div>
+    <h1>Final Year Project Ideas</h1>
+    <p>Browse curated, industry-ready project topics across the most in-demand technical domains — fully supported by ADR Lab's development team.</p>
+  </div>
+</div>
 
-    <a href="blog/aiml-project-ideas.html" class="idea-card">
-        <img src="images/icon-aiml.png" class="idea-icon" alt="AI/ML Projects">
-        <h3>AI/ML Project Ideas</h3>
-        <p>Machine learning & AI project ideas.</p>
-    </a>
+<div class="ideas-intro">
+  <div class="intro-wrap">
+    <div class="intro-stat">
+      <div class="num">5</div>
+      <div class="lbl">Domains Covered</div>
+    </div>
+    <div class="intro-stat">
+      <div class="num">100+</div>
+      <div class="lbl">Project Topics</div>
+    </div>
+    <div class="intro-stat">
+      <div class="num">24h</div>
+      <div class="lbl">Proposal Turnaround</div>
+    </div>
+  </div>
+</div>
 
-    <a href="blog/java-project-ideas.html" class="idea-card">
-        <img src="images/icon-java.png" class="idea-icon" alt="Java Projects">
-        <h3>Java Project Ideas</h3>
-        <p>Java-based final year project ideas.</p>
-    </a>
+<div class="ideas-grid">
 
-    <a href="blog/cyber-project-ideas.html" class="idea-card">
-        <img src="images/icon-cyber.png" class="idea-icon" alt="Cybersecurity Projects">
-        <h3>Cybersecurity Project Ideas</h3>
-        <p>Cybersecurity & ethical hacking project ideas.</p>
-    </a>
+  <a href="blog/aiml-project-ideas.html" class="idea-card">
+    <img src="images/icon-aiml.png" class="idea-icon" alt="AI/ML Projects">
+    <h3>AI / ML Project Ideas</h3>
+    <p>Machine learning, deep learning, computer vision and NLP-based projects for B.Tech &amp; M.Tech.</p>
+    <span class="idea-tag">18+ Ideas</span>
+    <div class="idea-arrow">Browse Ideas &rarr;</div>
+  </a>
 
-    <a href="blog/blockchain-project-ideas.html" class="idea-card">
-        <img src="images/icon-blockchain.png" class="idea-icon" alt="Blockchain Projects">
-        <h3>Blockchain Project Ideas</h3>
-        <p>Blockchain and DApp-based ideas.</p>
-    </a>
+  <a href="blog/java-project-ideas.html" class="idea-card">
+    <img src="images/icon-java.png" class="idea-icon" alt="Java Projects">
+    <h3>Java Project Ideas</h3>
+    <p>Spring Boot, Hibernate, REST API-based final year projects with real-world application design.</p>
+    <span class="idea-tag">15+ Ideas</span>
+    <div class="idea-arrow">Browse Ideas &rarr;</div>
+  </a>
 
-    <a href="blog/java-aiml-combined.pdf" class="idea-card">
-        <img src="images/icon-combined.png" class="idea-icon" alt="Java + AI/ML Projects">
-        <h3>Java + AI/ML Combined</h3>
-        <p>Hybrid Java + AI/ML project ideas.</p>
-    </a>
+  <a href="blog/cyber-project-ideas.html" class="idea-card">
+    <img src="images/icon-cyber.png" class="idea-icon" alt="Cybersecurity Projects">
+    <h3>Cybersecurity Projects</h3>
+    <p>Ethical hacking, intrusion detection, network security and encryption-based final year projects.</p>
+    <span class="idea-tag">Trending</span>
+    <div class="idea-arrow">Browse Ideas &rarr;</div>
+  </a>
 
+  <a href="blog/blockchain-project-ideas.html" class="idea-card">
+    <img src="images/icon-blockchain.png" class="idea-icon" alt="Blockchain Projects">
+    <h3>Blockchain Project Ideas</h3>
+    <p>Decentralised apps, smart contracts, DeFi and supply chain blockchain-based project ideas.</p>
+    <span class="idea-tag">15+ Ideas</span>
+    <div class="idea-arrow">Browse Ideas &rarr;</div>
+  </a>
+
+  <a href="blog/java-aiml-combined-project-ideas.html" class="idea-card">
+    <img src="images/icon-combined.png" class="idea-icon" alt="Java + AI/ML Combined">
+    <h3>Java + AI/ML Combined</h3>
+    <p>Hybrid projects that bridge Java backend frameworks with AI/ML prediction modules — ideal for full-stack submissions.</p>
+    <span class="idea-tag gold">New</span>
+    <div class="idea-arrow">Browse Ideas &rarr;</div>
+  </a>
+
+  <a href="index.html#booking" class="idea-card" style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-color:transparent;">
+    <div style="font-size:48px;margin-bottom:16px;">💡</div>
+    <h3 style="color:#fff;">Custom Project Idea?</h3>
+    <p style="color:rgba(255,255,255,0.6);">Have your own concept? Submit your requirements and we'll help you shape and build it.</p>
+    <span class="idea-tag" style="background:rgba(201,168,76,0.2);color:var(--gold);border:1px solid rgba(201,168,76,0.3);">Book Now</span>
+    <div class="idea-arrow" style="color:var(--gold);">Submit Requirements &rarr;</div>
+  </a>
+
+</div>
+
+<section class="cta-section">
+  <h2>Have a Project Topic in Mind?</h2>
+  <p>Submit your requirements and get a tailored proposal within 24 hours.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="index.html#booking" class="btn btn-gold">Book a Project &rarr;</a>
+    <a href="https://wa.me/919430696596" class="btn btn-whatsapp">&#128172; WhatsApp Us</a>
+  </div>
 </section>
 
-<section id="contact" class="cta" data-aos="zoom-in">
-    <h2>Ready to get started?</h2>
-    <p>We're here to help you succeed in your academic journey.</p>
-    <a href="https://wa.me/919430696596" class="btn whatsapp">WhatsApp Us</a>
-</section>
-
-<footer>
-    <p>© 2026 ADR Lab. All rights reserved.</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">ADR <span>Lab</span></div>
+    <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students with professional project and research support since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="project-ideas.html">Final Year Projects</a>
+        <a href="career-services.html">Career Services</a>
+        <a href="index.html#booking">Book a Project</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="about.html">About ADR Lab</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund.html">Refund Policy</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+  </div>
 </footer>
 
 </body>

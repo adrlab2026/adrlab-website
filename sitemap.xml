@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://adresearchlab.com/</loc>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-    <loc>https://adresearchlab.com/#services</loc>
-  </url>
-
-  <url>
-    <loc>https://adresearchlab.com/#how-it-works</loc>
-  </url>
-
-  <url>
-    <loc>https://adresearchlab.com/#contact</loc>
-  </url>
-
+  <url><loc>https://adresearchlab.com/</loc><lastmod>2026-03-30</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://adresearchlab.com/project-ideas.html</loc><lastmod>2026-03-30</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adresearchlab.com/career-services.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adresearchlab.com/about.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adresearchlab.com/blog.html</loc><lastmod>2026-03-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/faq.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://adresearchlab.com/contact.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://adresearchlab.com/privacy.html</loc><lastmod>2026-03-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://adresearchlab.com/terms.html</loc><lastmod>2026-03-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://adresearchlab.com/refund.html</loc><lastmod>2026-03-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://adresearchlab.com/blog/aiml-project-ideas.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adresearchlab.com/blog/java-project-ideas.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adresearchlab.com/blog/blockchain-project-ideas.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/cyber-project-ideas.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/java-aiml-combined-project-ideas.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adresearchlab.com/blog/tech-stack-guide.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/how-to-choose-final-year-project.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/how-to-write-srs-document.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/how-to-write-ieee-research-paper.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/final-year-project-report-format.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/how-to-use-ai-tools-ethically.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adresearchlab.com/blog/present-project-in-job-interview.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

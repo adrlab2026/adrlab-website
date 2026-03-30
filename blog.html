@@ -3,42 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — ADR Lab | Tips for Engineering Students</title>
-  <meta name="description" content="Guides, tips and resources for BTech and MTech students on project documentation, research papers, and final year projects." />
-  
-    <link rel="stylesheet" href="shared.css" />
+  <title>Blog — ADR Lab | Tips &amp; Guides for Engineering Students</title>
+  <meta name="description" content="Guides, tips, and project ideas for BTech and MTech students — from ADR Lab. Learn about final year projects, research papers, and career preparation." />
+  <link rel="canonical" href="https://adresearchlab.com/blog.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="shared.css" />
   <style>
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin: 32px 0; }
+    .blog-section { background:var(--white); padding:72px 24px 90px; }
+    .blog-inner { max-width:1000px; margin:0 auto; }
+
+    .coming-banner {
+      background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+      border-radius:var(--radius-lg); padding:36px 32px;
+      display:flex; align-items:center; gap:24px;
+      margin-bottom:56px; flex-wrap:wrap;
+    }
+    .coming-banner-icon { font-size:48px; flex-shrink:0; }
+    .coming-banner h2 { font-family:'DM Serif Display',serif; font-size:1.4rem; color:#fff; margin-bottom:8px; }
+    .coming-banner p { font-size:14px; color:rgba(255,255,255,0.65); margin:0; }
+    .coming-banner .social-pill { display:inline-flex; align-items:center; gap:8px; background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.3); color:var(--gold); font-size:12px; font-weight:600; padding:5px 14px; border-radius:20px; margin-top:12px; text-decoration:none; transition:var(--transition); }
+    .coming-banner .social-pill:hover { background:rgba(201,168,76,0.25); color:var(--gold); }
+
+    .blog-category-title {
+      font-family:'DM Serif Display',serif; font-size:1.2rem;
+      color:var(--navy); margin:0 0 24px; padding-bottom:12px;
+      border-bottom:2px solid var(--gray-200); display:flex;
+      align-items:center; gap:10px;
+    }
+
+    /* Live blog posts (project idea pages) */
+    .live-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:60px; }
     .blog-card {
-      border: 1px solid #e0e0e0; border-radius: 12px;
-      overflow: hidden; transition: box-shadow 0.2s;
+      background:var(--cream); border:1px solid var(--gray-200);
+      border-radius:var(--radius-lg); overflow:hidden;
+      text-decoration:none; color:inherit; display:flex;
+      flex-direction:column; transition:var(--transition);
     }
-    .blog-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
-    .blog-card-img {
-      height: 160px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 48px;
+    .blog-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent; }
+    .blog-card-thumb {
+      height:130px; display:flex; align-items:center; justify-content:center;
+      font-size:52px; flex-shrink:0;
     }
-    .blog-card-body { padding: 20px; }
-    .blog-tag {
-      font-size: 11px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.06em; color: #1e4fa3;
-      background: #e8f0fd; padding: 3px 10px;
-      border-radius: 20px; display: inline-block; margin-bottom: 10px;
+    .blog-card-body { padding:20px 20px 22px; flex:1; display:flex; flex-direction:column; }
+    .blog-tag { display:inline-block; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:3px 10px; border-radius:20px; margin-bottom:10px; }
+    .tag-ai { background:#f0fdf4; color:#166534; }
+    .tag-java { background:#fff7ed; color:#9a3412; }
+    .tag-cyber { background:#fdf4ff; color:#7e22ce; }
+    .tag-blockchain { background:#eff6ff; color:#1e40af; }
+    .tag-hybrid { background:var(--gold-light); color:#7a5c00; }
+    .tag-guide { background:var(--blue-light); color:var(--blue); }
+    .blog-card-body h3 { font-family:'DM Serif Display',serif; font-size:1rem; color:var(--navy); line-height:1.35; margin-bottom:8px; }
+    .blog-card-body p { font-size:13px; color:var(--gray-600); line-height:1.6; flex:1; margin-bottom:14px; }
+    .blog-read { font-size:13px; font-weight:600; color:var(--blue); display:inline-flex; align-items:center; gap:6px; }
+    .blog-card:hover .blog-read { gap:10px; }
+
+    /* Coming soon posts */
+    .soon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .soon-card {
+      background:var(--cream); border:1px dashed var(--gray-200);
+      border-radius:var(--radius-lg); padding:28px 22px;
+      opacity:0.75;
     }
-    .blog-card-body h3 { font-size: 16px; margin-bottom: 8px; line-height: 1.4; }
-    .blog-card-body p  { font-size: 14px; color: #666; margin-bottom: 12px; }
-    .blog-meta { font-size: 12px; color: #999; }
-    .blog-read-link { font-size: 13px; font-weight: 600; color: #1e4fa3; }
-    .coming-soon-banner {
-      background: #e8f0fd; border: 1px solid #1D9E75;
-      border-radius: 12px; padding: 32px; text-align: center; margin-bottom: 32px;
+    .soon-thumb { font-size:36px; margin-bottom:14px; }
+    .soon-card h3 { font-family:'DM Serif Display',serif; font-size:0.95rem; color:var(--navy); margin-bottom:8px; }
+    .soon-card p { font-size:13px; color:var(--gray-600); line-height:1.6; margin:0 0 12px; }
+    .soon-badge { display:inline-block; font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; background:var(--gray-100); color:var(--gray-400); letter-spacing:1px; text-transform:uppercase; }
+
+    @media(max-width:800px){
+      .live-grid, .soon-grid { grid-template-columns:1fr 1fr; }
+      .coming-banner { flex-direction:column; text-align:center; }
     }
-    .coming-soon-banner h2 { color: #1e4fa3; margin: 0 0 8px; }
-    .coming-soon-banner p  { color: #555; margin: 0; }
+    @media(max-width:500px){
+      .live-grid, .soon-grid { grid-template-columns:1fr; }
+    }
   </style>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "logo": "https://adresearchlab.com/images/favicon.png",
+  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
+  "telephone": "+91-9430696596",
+  "email": "adrlab2026@gmail.com",
+  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
+  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
+}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adresearchlab.com/blog.html"}]}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"ADR Lab Blog","url":"https://adresearchlab.com/blog.html","description":"Guides, project ideas, and tips for engineering students on final year projects, research papers, and career preparation.","publisher":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"}}
+  </script>
 </head>
 <body>
 
@@ -47,121 +112,187 @@
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
   <nav class="nav-links">
-    <a href="/">Home</a>
-    <a href="/#services">Services</a>
-    <a href="/about.html">About</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/faq.html">FAQs</a>
-    <a href="/contact.html">Contact</a>
-    <a href="https://scholar.adresearchlab.com" class="btn-whatsapp">ADR Scholar &rarr;</a>
+    <a href="index.html">Home</a><a href="project-ideas.html">Projects</a><a href="career-services.html">Career</a>
+    <a href="about.html">About</a><a href="blog.html" class="active">Blog</a>
+    <a href="faq.html">FAQs</a><a href="contact.html">Contact</a>
+    <a href="https://wa.me/919430696596" class="btn-wa">&#128172; WhatsApp</a>
   </nav>
 </header>
 
 <div class="page-hero">
   <div class="container">
+    <div class="badge">Resources &amp; Guides</div>
     <h1>ADR Lab Blog</h1>
-    <p>Guides, tips and resources to help engineering students finish their projects faster — without stress.</p>
+    <p>Project ideas, guides, and tips to help engineering students build better projects and launch stronger careers.</p>
   </div>
 </div>
 
-<div class="content">
-  <div class="container">
+<section class="blog-section">
+  <div class="blog-inner">
 
-    <div class="coming-soon-banner">
-      <h2>📝 Blog launching soon</h2>
-      <p>We are writing detailed guides for students. Subscribe to our LinkedIn page to get notified when we publish.</p>
+    <div class="coming-banner">
+      <div class="coming-banner-icon">📝</div>
+      <div>
+        <h2>Full Blog Launching Soon</h2>
+        <p>We're writing detailed guides for students on projects, research papers, career prep, and more. Follow us to get notified when we publish.</p>
+        <a href="https://www.linkedin.com/company/adr-lab" target="_blank" rel="noreferrer" class="social-pill">💼 Follow on LinkedIn</a>
+      </div>
     </div>
 
-    <h2>Coming Soon — What We Are Writing</h2>
-    <div class="blog-grid">
+    <!-- Live Project Idea Pages -->
+    <h2 class="blog-category-title">📂 Project Idea Guides <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;background:var(--green);color:#fff;padding:3px 12px;border-radius:20px;">Live</span></h2>
+    <div class="live-grid">
 
-      <div class="blog-card">
-        <div class="blog-card-img" style="background:#E1F5EE;">💡</div>
+      <a href="blog/aiml-project-ideas.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#f0fdf4;">🤖</div>
         <div class="blog-card-body">
-          <span class="blog-tag">Project Ideas</span>
+          <span class="blog-tag tag-ai">AI / ML</span>
+          <h3>AI &amp; ML Final Year Project Ideas</h3>
+          <p>18 industry-ready machine learning, deep learning, and computer vision project ideas for B.Tech &amp; M.Tech.</p>
+          <span class="blog-read">Read 18 Ideas &rarr;</span>
+        </div>
+      </a>
+
+      <a href="blog/java-project-ideas.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#fff7ed;">☕</div>
+        <div class="blog-card-body">
+          <span class="blog-tag tag-java">Java</span>
+          <h3>Java Final Year Project Ideas</h3>
+          <p>15 Spring Boot, Hibernate, and REST API-based final year project ideas for engineering students.</p>
+          <span class="blog-read">Read 15 Ideas &rarr;</span>
+        </div>
+      </a>
+
+      <a href="blog/blockchain-project-ideas.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#eff6ff;">🔗</div>
+        <div class="blog-card-body">
+          <span class="blog-tag tag-blockchain">Blockchain</span>
+          <h3>Blockchain Final Year Project Ideas</h3>
+          <p>DApps, smart contracts, and DeFi-based final year project topics using Solidity and Ethereum.</p>
+          <span class="blog-read">Read Ideas &rarr;</span>
+        </div>
+      </a>
+
+      <a href="blog/cyber-project-ideas.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#fdf4ff;">🛡️</div>
+        <div class="blog-card-body">
+          <span class="blog-tag tag-cyber">Cybersecurity</span>
+          <h3>Cybersecurity Project Ideas</h3>
+          <p>Ethical hacking, intrusion detection, and network security final year project topics.</p>
+          <span class="blog-read">Read Ideas &rarr;</span>
+        </div>
+      </a>
+
+      <a href="blog/java-aiml-combined-project-ideas.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:var(--gold-light);">⚡</div>
+        <div class="blog-card-body">
+          <span class="blog-tag tag-hybrid">Java + AI/ML</span>
+          <h3>Java + AI/ML Hybrid Project Ideas</h3>
+          <p>15 full-stack hybrid projects combining Spring Boot backend with Python ML microservices.</p>
+          <span class="blog-read">Read 15 Ideas &rarr;</span>
+        </div>
+      </a>
+
+      <a href="blog/tech-stack-guide.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:var(--blue-light);">📚</div>
+        <div class="blog-card-body">
+          <span class="blog-tag tag-guide">Guide</span>
+          <h3>Tech Stack Selection Guide for Final Year Projects</h3>
+          <p>How to choose the right tech stack for your domain, college requirements, and career goals.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Student Guides — All Live -->
+    <h2 class="blog-category-title">✍️ Student Guides <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;background:var(--green);color:#fff;padding:3px 12px;border-radius:20px;">Live</span></h2>
+    <div class="live-grid">
+
+      <a href="blog/how-to-choose-final-year-project.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#f0fdf4;">💡</div>
+        <div class="blog-card-body">
+          <span class="blog-tag tag-guide">Project Ideas</span>
           <h3>How to Choose the Right Final Year Project in 2026</h3>
-          <p>A step-by-step guide to picking a project that impresses your guide, is implementable in one semester, and looks great on your resume.</p>
-          <div class="blog-meta">Coming soon</div>
+          <p>Step-by-step guide to picking a project that impresses your guide and looks great on your resume.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-img" style="background:#EEEDFE;">📄</div>
+      <a href="blog/how-to-write-srs-document.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#eff6ff;">📄</div>
         <div class="blog-card-body">
-          <span class="blog-tag">Documentation</span>
-          <h3>How to Write an SRS Document That Your Guide Will Approve</h3>
-          <p>The exact structure, sections, and level of detail that college guides expect in a Software Requirements Specification document.</p>
-          <div class="blog-meta">Coming soon</div>
+          <span class="blog-tag tag-guide">Documentation</span>
+          <h3>How to Write an SRS Document Your Guide Will Approve</h3>
+          <p>The exact structure, sections, and detail level that college guides and examiners expect.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-img" style="background:#FAEEDA;">🔬</div>
+      <a href="blog/how-to-write-ieee-research-paper.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#fdf4ff;">🔬</div>
         <div class="blog-card-body">
-          <span class="blog-tag">Research</span>
+          <span class="blog-tag tag-guide">Research</span>
           <h3>Writing Your First IEEE Research Paper — A Complete Guide</h3>
-          <p>Everything from choosing a topic and finding related work to structuring your paper and submitting to a conference or journal.</p>
-          <div class="blog-meta">Coming soon</div>
+          <p>From topic selection to formatting, submission, and getting published in a conference or journal.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-img" style="background:#FAECE7;">📑</div>
+      <a href="blog/final-year-project-report-format.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:#fff7ed;">📑</div>
         <div class="blog-card-body">
-          <span class="blog-tag">Project Report</span>
-          <h3>The Complete Final Year Project Report Format Guide</h3>
-          <p>Chapter-by-chapter breakdown of what to write, how many pages each section needs, and what examiners actually look for.</p>
-          <div class="blog-meta">Coming soon</div>
+          <span class="blog-tag tag-guide">Project Report</span>
+          <h3>Final Year Project Report Format — Complete Chapter Guide</h3>
+          <p>Chapter-by-chapter breakdown of what to write, page counts, and what examiners look for.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-img" style="background:#E8F4FD;">🤖</div>
+      <a href="blog/how-to-use-ai-tools-ethically.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:var(--blue-light);">🤖</div>
         <div class="blog-card-body">
-          <span class="blog-tag">AI Tools</span>
+          <span class="blog-tag tag-guide">AI Tools</span>
           <h3>How to Use AI Tools Ethically for Academic Work</h3>
-          <p>What is acceptable, what crosses the line, and how to use AI as a writing assistant without compromising your academic integrity.</p>
-          <div class="blog-meta">Coming soon</div>
+          <p>What's acceptable, what crosses the line, and how to protect your academic integrity.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
         </div>
-      </div>
+      </a>
 
-      <div class="blog-card">
-        <div class="blog-card-img" style="background:#E1F5EE;">💼</div>
+      <a href="blog/present-project-in-job-interview.html" class="blog-card">
+        <div class="blog-card-thumb" style="background:var(--gold-light);">💼</div>
         <div class="blog-card-body">
-          <span class="blog-tag">Career</span>
+          <span class="blog-tag tag-guide">Career</span>
           <h3>How to Present Your Final Year Project in a Job Interview</h3>
-          <p>What interviewers at TCS, Infosys, Google and startups actually want to know about your project — and how to answer their questions confidently.</p>
-          <div class="blog-meta">Coming soon</div>
+          <p>What interviewers at TCS, Infosys, Google and startups actually want to know about your project.</p>
+          <span class="blog-read">Read Guide &rarr;</span>
         </div>
-      </div>
+      </a>
 
-    </div>
-
-    <div class="info-box">
-      <p>Follow us on <a href="https://www.linkedin.com/company/adr-lab" target="_blank" rel="noreferrer">LinkedIn</a> and <a href="https://instagram.com/adrlab_official" target="_blank" rel="noreferrer">Instagram</a> to get notified when we publish new articles.</p>
     </div>
 
   </div>
-</div>
+</section>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/about.html">About ADR Lab</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/faq.html">FAQs</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms of Service</a>
-      <a href="/refund.html">Refund Policy</a>
-      <a href="https://scholar.adresearchlab.com">ADR Scholar</a>
-    </div>
-    <p class="footer-copy">&copy; 2025 ADR Lab. All rights reserved. Built for students, worldwide &#127757;</p>
+<section class="cta-section">
+  <h2>Have a Project in Mind?</h2>
+  <p>Submit your requirements and get a proposal in 24 hours.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="index.html#booking" class="btn btn-gold">Book a Project &rarr;</a>
+    <a href="https://wa.me/919430696596" class="btn btn-whatsapp">&#128172; WhatsApp Us</a>
   </div>
-</footer>
+</section>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 800, offset: 100, easing: "ease-in-out", once: true });</script>
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-brand">ADR <span>Lab</span></div>
+  <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+  <div class="footer-grid">
+    <div class="footer-col"><p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students worldwide since 2024.</p><p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:12px;">📞 +91 94306 96596</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><a href="project-ideas.html">Final Year Projects</a><a href="career-services.html">Career Services</a><a href="index.html#booking">Book a Project</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="about.html">About ADR Lab</a><a href="blog.html">Blog</a><a href="faq.html">FAQs</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><div class="footer-col-title">Legal</div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="refund.html">Refund Policy</a></div>
+  </div>
+  <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+</div></footer>
 </body>
 </html>

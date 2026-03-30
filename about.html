@@ -4,11 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About ADR Lab — Empowering Engineering Students Worldwide</title>
-  <meta name="description" content="ADR Lab builds AI-powered academic tools for engineering students worldwide. Learn about our mission, story, and the team behind ADR Scholar." />
-  
-    <link rel="stylesheet" href="shared.css" />
+  <meta name="description" content="ADR Lab provides final year project support, research guidance, and career services for engineering students worldwide. Learn about our story, mission and values." />
+  <link rel="canonical" href="https://adresearchlab.com/about.html" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .story-section { background:var(--white); padding:72px 24px 80px; }
+    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; max-width:960px; margin:0 auto; }
+    .story-text h2 { font-family:'DM Serif Display',serif; font-size:1.6rem; color:var(--navy); margin:0 0 18px; }
+    .story-text p { color:var(--gray-600); margin-bottom:16px; line-height:1.8; }
+    .story-visual { background:linear-gradient(145deg,var(--navy),var(--navy-mid)); border-radius:var(--radius-lg); padding:36px 32px; position:sticky; top:90px; }
+    .story-visual h3 { font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--gold); margin-bottom:22px; }
+    .tl-item { display:flex; gap:16px; padding-bottom:22px; }
+    .tl-item:last-child { padding-bottom:0; }
+    .tl-left { display:flex; flex-direction:column; align-items:center; }
+    .tl-dot { width:12px; height:12px; border-radius:50%; background:var(--gold); flex-shrink:0; margin-top:4px; }
+    .tl-line { width:2px; flex:1; background:rgba(201,168,76,0.2); margin-top:4px; }
+    .tl-item:last-child .tl-line { display:none; }
+    .tl-year { font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; margin-bottom:4px; }
+    .tl-desc { font-size:13px; color:rgba(255,255,255,0.6); line-height:1.6; }
+
+    .mission-section { background:var(--cream); padding:72px 24px; }
+    .mission-inner { max-width:800px; margin:0 auto; text-align:center; }
+    .mission-quote { background:linear-gradient(135deg,var(--navy),var(--navy-mid)); border-radius:var(--radius-lg); padding:48px 40px; margin:36px 0; position:relative; overflow:hidden; }
+    .mission-quote::before { content:'"'; font-family:'DM Serif Display',serif; font-size:180px; color:rgba(201,168,76,0.08); position:absolute; top:-20px; left:16px; line-height:1; pointer-events:none; }
+    .mission-quote blockquote { font-family:'DM Serif Display',serif; font-size:1.6rem; color:#fff; line-height:1.4; position:relative; margin:0; }
+    .mission-quote blockquote em { color:var(--gold); font-style:italic; }
+
+    .products-section { background:var(--white); padding:72px 24px; }
+    .products-inner { max-width:960px; margin:0 auto; }
+    .products-header { text-align:center; margin-bottom:48px; }
+    .products-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .product-card { background:var(--cream); border:1px solid var(--gray-200); border-radius:var(--radius-lg); padding:28px 24px; transition:var(--transition); }
+    .product-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); background:var(--white); border-color:transparent; }
+    .product-icon { font-size:32px; margin-bottom:14px; }
+    .product-name { font-family:'DM Serif Display',serif; font-size:1rem; color:var(--navy); margin-bottom:8px; }
+    .product-status { display:inline-block; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:3px 10px; border-radius:20px; margin-bottom:10px; }
+    .status-live { background:#d4edda; color:var(--green); }
+    .status-soon { background:var(--gold-light); color:#7a5c00; }
+    .status-dev { background:var(--blue-light); color:var(--blue); }
+    .product-card p { font-size:13px; color:var(--gray-600); line-height:1.6; margin:0; }
+
+    .values-section { background:var(--navy); padding:72px 24px; }
+    .values-inner { max-width:960px; margin:0 auto; }
+    .values-header { text-align:center; margin-bottom:48px; }
+    .values-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+    .value-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius-lg); padding:28px 24px; transition:var(--transition); }
+    .value-card:hover { background:rgba(255,255,255,0.08); }
+    .value-card-icon { font-size:28px; margin-bottom:14px; }
+    .value-card h3 { font-family:'DM Serif Display',serif; font-size:1.05rem; color:var(--gold); margin-bottom:10px; }
+    .value-card p { font-size:14px; color:rgba(255,255,255,0.6); line-height:1.7; margin:0; }
+
+    @media(max-width:900px){
+      .story-grid { grid-template-columns:1fr; gap:36px; }
+      .story-visual { position:static; }
+      .products-grid { grid-template-columns:1fr 1fr; }
+      .values-grid { grid-template-columns:1fr; }
+    }
+    @media(max-width:560px){
+      .products-grid { grid-template-columns:1fr; }
+      .mission-quote blockquote { font-size:1.3rem; }
+      .mission-quote { padding:36px 24px; }
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "logo": "https://adresearchlab.com/images/favicon.png",
+  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
+  "telephone": "+91-9430696596",
+  "email": "adrlab2026@gmail.com",
+  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
+  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
+}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "potentialAction": {"@type":"SearchAction","target":"https://adresearchlab.com/?s={search_term_string}","query-input":"required name=search_term_string"}
+}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "About", "item": "https://adresearchlab.com/about.html"}]}
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","name":"About ADR Lab","url":"https://adresearchlab.com/about.html","description":"ADR Lab was founded to help engineering students complete final year projects, research papers and career documentation — with expertise and integrity.","isPartOf":{"@type":"WebSite","name":"ADR Lab","url":"https://adresearchlab.com"}}
+  </script>
 </head>
 <body>
 
@@ -17,84 +112,119 @@
   <input type="checkbox" id="menu-toggle">
   <label for="menu-toggle" class="menu-icon">&#9776;</label>
   <nav class="nav-links">
-    <a href="/">Home</a>
-    <a href="/#services">Services</a>
-    <a href="/about.html">About</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/faq.html">FAQs</a>
-    <a href="/contact.html">Contact</a>
-    <a href="https://scholar.adresearchlab.com" class="btn-whatsapp">ADR Scholar &rarr;</a>
+    <a href="index.html">Home</a><a href="project-ideas.html">Projects</a><a href="career-services.html">Career</a>
+    <a href="about.html" class="active">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/919430696596" class="btn-wa">&#128172; WhatsApp</a>
   </nav>
 </header>
 
 <div class="page-hero">
   <div class="container">
+    <div class="badge">Est. 2024</div>
     <h1>About ADR Lab</h1>
-    <p>We build AI-powered academic tools that help engineering students worldwide finish their projects faster — without stress.</p>
+    <p>We help engineering students finish their final year projects and research papers — with expertise, integrity, and genuine care.</p>
   </div>
 </div>
 
-<div class="content">
-  <div class="container">
-
-    <h2>Our Story</h2>
-    <p>ADR Lab was founded with one clear observation — engineering students in India and around the world spend an enormous amount of time on documentation, research, and project paperwork, leaving very little time for actual learning and building.</p>
-    <p>Final year project submissions, research papers, SRS documents, and synopsis reports all demand hours of effort that most students are not trained to handle efficiently. We saw students struggling not because they lacked intelligence or ability, but because they lacked the right tools and guidance.</p>
-    <p>ADR Lab was built to fix this. We combine the power of modern AI with deep understanding of academic requirements to give every student a fair shot at submitting professional-quality work — regardless of their background or the quality of mentorship they have access to.</p>
-
-    <hr class="section-divider" />
-
-    <h2>Our Mission</h2>
-    <div class="info-box">
-      <p>"Finish Your Final Year Project Faster — Without Stress."</p>
+<section class="story-section">
+  <div class="story-grid">
+    <div class="story-text">
+      <h2>Our Story</h2>
+      <p>ADR Lab was founded with one clear observation — engineering students in India and around the world spend an enormous amount of time on documentation, research, and project paperwork, leaving very little time for actual learning and building.</p>
+      <p>Final year project submissions, research papers, SRS documents, and synopsis reports all demand hours of effort that most students are not trained to handle efficiently. We saw students struggling not because they lacked intelligence or ability, but because they lacked the right tools and guidance.</p>
+      <p>ADR Lab was built to fix this. We combine deep academic expertise with modern tools to give every student a fair shot at submitting professional-quality work — regardless of their background or the quality of mentorship they have access to.</p>
+      <p>From a single-service operation helping local students, we've grown into a multi-domain academic support platform serving students across India and worldwide — with 500+ projects delivered and a 4.9★ average rating.</p>
     </div>
-    <p>We believe every engineering student deserves access to high-quality academic tools. Our mission is to democratize academic success by making AI-powered project assistance accessible, affordable, and genuinely useful — for students from tier-1 colleges and tier-3 colleges alike, in India and across the world.</p>
-
-    <hr class="section-divider" />
-
-    <h2>What We Build</h2>
-    <p>ADR Lab is building a complete ecosystem of academic tools under one umbrella brand:</p>
-    <ul>
-      <li><strong>ADR Scholar</strong> — AI tools for BTech and MTech students. Project idea generator, SRS and synopsis templates, AI-written project reports, and a full research paper writing assistant supporting IEEE, Springer, and APA formats.</li>
-      <li><strong>ADR Check</strong> — Plagiarism detection and AI-content detection tool. A Turnitin alternative built specifically for the Indian and global academic market, at a fraction of the cost.</li>
-      <li><strong>ADR Campus</strong> — Institution-facing portal for colleges to manage student projects, guide assignments, and bulk plagiarism checking.</li>
-      <li><strong>ADR Ventures</strong> — R&amp;D collaboration tools for companies working with academic institutions.</li>
-      <li><strong>ADR Connect</strong> — Alumni network connecting graduates with current students for mentorship.</li>
-      <li><strong>ADR Bridge</strong> — Placement bridge connecting students with companies through verified project portfolios.</li>
-    </ul>
-
-    <hr class="section-divider" />
-
-    <h2>Our Values</h2>
-    <h3>Student First</h3>
-    <p>Every decision we make starts with one question — does this make a student's life easier? We do not build features to impress investors or competitors. We build features because students need them.</p>
-
-    <h3>Accessible Pricing</h3>
-    <p>We are deeply aware that most of our users are students with limited budgets. Our pricing is intentionally designed to be affordable — far below international competitors — while ensuring we remain sustainable as a business.</p>
-
-    <h3>Academic Integrity</h3>
-    <p>We build tools that help students work smarter, not tools that help them cheat. Our AI-generated content is always intended as a starting draft — we encourage every student to review, edit, and personalise what our tools produce before submission.</p>
-
-    <h3>Privacy by Design</h3>
-    <p>We collect only the data we absolutely need. We never sell student data. We never use student content to train AI models without explicit consent. Privacy is not an afterthought — it is built into every product we ship.</p>
-
-    <hr class="section-divider" />
-
-    <h2>Contact Us</h2>
-    <p>We would love to hear from you — whether you are a student, a college, or a company interested in partnering with us.</p>
-    <p>📧 <a href="/cdn-cgi/l/email-protection#3a525f5656557a5b5e485f495f5b485952565b5814595557"><span class="__cf_email__" data-cfemail="59313c35353619383d2b3c2a3c382b3a3135383b773a3634">[email&#160;protected]</span></a></p>
-    <p>🌐 <a href="https://adresearchlab.com">adresearchlab.com</a></p>
-    <p>💼 <a href="https://www.linkedin.com/company/adr-lab" target="_blank" rel="noreferrer">LinkedIn — ADR Lab</a></p>
-
+    <div class="story-visual">
+      <h3>Our Journey</h3>
+      <div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div><div class="tl-year">2024 — Founded</div><div class="tl-desc">ADR Lab launched with final year project support for engineering students in Jharkhand &amp; Bihar.</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div><div class="tl-year">Early 2025 — Expansion</div><div class="tl-desc">Added Research Paper Guidance and Career Services — resume, LinkedIn, and mock interview support.</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div><div class="tl-year">Mid 2025 — 200+ Projects</div><div class="tl-desc">Crossed 200 successful deliveries across AI/ML, Java, Blockchain and Cybersecurity domains.</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div><div class="tl-year">2026 — 500+ &amp; Growing</div><div class="tl-desc">Now serving students nationwide &amp; internationally with a 4.9★ rating and 137+ verified reviews.</div></div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<footer>
-  <div class="footer-links">
-    <a href="/privacy">Privacy Policy</a>
-    <a href="/terms">Terms of Service</a>
-    <a href="/refund">Refund Policy</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/blog">Blog</a>
-   
+<section class="mission-section">
+  <div class="mission-inner">
+    <span class="section-label">Our Purpose</span>
+    <h2 class="section-title">Our Mission</h2>
+    <p class="section-subtitle" style="margin:0 auto;">We believe every engineering student deserves access to high-quality academic support — regardless of which college they attend.</p>
+    <div class="mission-quote">
+      <blockquote>"Finish Your Final Year Project<br><em>Faster — Without Stress.</em>"</blockquote>
+    </div>
+    <p style="color:var(--gray-600);line-height:1.8;max-width:640px;margin:0 auto;">We democratize academic success by making project and research support accessible, affordable, and genuinely useful — for students from tier-1 and tier-3 colleges alike, in India and across the world.</p>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="products-inner">
+    <div class="products-header">
+      <span class="section-label">Ecosystem</span>
+      <h2 class="section-title">What We're Building</h2>
+      <p class="section-subtitle" style="margin:0 auto;">A complete academic support ecosystem under one umbrella.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card"><div class="product-icon">🎓</div><div class="product-name">ADR Lab (Core)</div><span class="product-status status-live">Live</span><p>Final year project development, research paper guidance, and career services for UG &amp; PG students worldwide.</p></div>
+      <div class="product-card"><div class="product-icon">🤖</div><div class="product-name">ADR Scholar</div><span class="product-status status-live">Live</span><p>AI-powered tools for project idea generation, dataset finder, ppt generation, SRS, synopsis, full project reports and IEEE/APA research papers.</p></div>
+      <div class="product-card"><div class="product-icon">🔍</div><div class="product-name">ADR Check</div><span class="product-status status-soon">Coming Soon</span><p>Plagiarism and AI-content detection tool — an affordable Turnitin alternative for the Indian academic market.</p></div>
+      <div class="product-card"><div class="product-icon">🏛️</div><div class="product-name">ADR Campus</div><span class="product-status status-dev">In Development</span><p>Institution portal for colleges to manage student projects, guide assignments, and bulk plagiarism checking.</p></div>
+      <div class="product-card"><div class="product-icon">🔬</div><div class="product-name">ADR Ventures</div><span class="product-status status-dev">In Development</span><p>R&amp;D collaboration tools connecting companies with academic institutions for joint research projects.</p></div>
+      <div class="product-card"><div class="product-icon">🌉</div><div class="product-name">ADR Bridge</div><span class="product-status status-dev">Planned</span><p>Placement bridge connecting students with companies through verified project portfolios and skill assessments.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="values-inner">
+    <div class="values-header">
+      <span class="section-label" style="color:var(--gold);">What Guides Us</span>
+      <h2 class="section-title" style="color:#fff;">Our Values</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.6);margin:0 auto;">Every decision we make is filtered through these four principles.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-card-icon">🎯</div><h3>Student First</h3><p>Every decision starts with one question — does this make a student's life easier? We build features because students need them, not to impress investors.</p></div>
+      <div class="value-card"><div class="value-card-icon">💰</div><h3>Accessible Pricing</h3><p>Most of our users are students with limited budgets. Our pricing is intentionally affordable — far below international competitors — while remaining sustainable.</p></div>
+      <div class="value-card"><div class="value-card-icon">📚</div><h3>Academic Integrity</h3><p>We help students work smarter, not cheat. All our support is a starting point that students review, edit, and personalise — making it genuinely their own work.</p></div>
+      <div class="value-card"><div class="value-card-icon">🔒</div><h3>Privacy by Design</h3><p>We collect only the minimum data needed. We never sell student data or use your content to train AI models. Privacy is built into everything we ship.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Work with ADR Lab?</h2>
+  <p>Submit your project requirements and get a tailored proposal within 24 hours.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="index.html#booking" class="btn btn-gold">Book a Project &rarr;</a>
+    <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);">Contact Us</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-brand">ADR <span>Lab</span></div>
+  <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+  <div class="footer-grid">
+    <div class="footer-col"><p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students worldwide since 2024.</p><p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:12px;">📞 +91 94306 96596</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><a href="project-ideas.html">Final Year Projects</a><a href="career-services.html">Career Services</a><a href="index.html#booking">Book a Project</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="about.html">About ADR Lab</a><a href="blog.html">Blog</a><a href="faq.html">FAQs</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><div class="footer-col-title">Legal</div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="refund.html">Refund Policy</a></div>
+  </div>
+  <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+</div></footer>
+</body>
+</html>
