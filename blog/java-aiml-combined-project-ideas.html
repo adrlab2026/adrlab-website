@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java + AI/ML Combined Project Ideas – ADR Lab</title>
+<meta name="description" content="15 hybrid Java + AI/ML final year project ideas combining Spring Boot backend with machine learning prediction modules. Curated by ADR Lab.">
+<link rel="canonical" href="https://adresearchlab.com/blog/java-aiml-combined-project-ideas.html">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../shared.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Java + AI/ML Combined Final Year Project Ideas","description":"15 hybrid Java + AI/ML project ideas for B.Tech and M.Tech students.","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"mainEntityOfPage":"https://adresearchlab.com/blog/java-aiml-combined-project-ideas.html"}</script>
+<style>
+  .blog-layout {
+    background: var(--white);
+    padding: 60px 24px 80px;
+  }
+  .blog-container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-200);
+    flex-wrap: wrap;
+  }
+  .meta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .meta-tag.gold { background: var(--gold-light); color: #7a5c00; }
+  .meta-info { font-size: 13px; color: var(--gray-400); }
+
+  /* Project Cards */
+  .project-list { display: flex; flex-direction: column; gap: 28px; }
+  .project-card {
+    background: var(--cream);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px 32px 24px;
+    transition: var(--transition);
+    position: relative;
+  }
+  .project-card:hover {
+    border-color: var(--blue);
+    box-shadow: var(--shadow-md);
+    background: var(--white);
+  }
+  .project-number {
+    position: absolute;
+    top: -14px;
+    left: 28px;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'DM Serif Display', serif;
+    font-size: 14px;
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+  .project-card h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin: 0 0 10px;
+  }
+  .project-card > p {
+    color: var(--gray-600);
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .tech-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+  }
+  .tech-java { background: #fff3e0; color: #b45309; }
+  .tech-ai { background: #f0fdf4; color: #166534; }
+  .tech-db { background: #eff6ff; color: #1d4ed8; }
+  .tech-web { background: #fdf4ff; color: #7e22ce; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--gray-600);
+  }
+  .feature-item::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Sidebar-style CTA strip */
+  .blog-cta-strip {
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .blog-cta-strip h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .blog-cta-strip p { font-size: 14px; color: rgba(255,255,255,0.6); margin: 0; flex-grow: 1; }
+  .blog-cta-strip .btns { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+
+  /* Back link */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 32px;
+    transition: var(--transition);
+  }
+  .back-link:hover { color: var(--navy); gap: 12px; }
+
+  @media (max-width: 640px) {
+    .project-card { padding: 28px 18px 20px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .blog-cta-strip { flex-direction: column; text-align: center; }
+    .blog-cta-strip .btns { justify-content: center; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ADR Lab",
+  "url": "https://adresearchlab.com",
+  "logo": "https://adresearchlab.com/images/favicon.png",
+  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
+  "telephone": "+91-9430696596",
+  "email": "adrlab2026@gmail.com",
+  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
+  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
+}
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adresearchlab.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Java+AI/ML Projects", "item": "https://adresearchlab.com/blog/java-aiml-combined-project-ideas.html"}]}
+  </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Java + AI/ML Combined Project Ideas — ADR Lab","description":"15 hybrid Java Spring Boot + Python AI/ML final year project ideas for engineering students.","url":"https://adresearchlab.com/blog/java-aiml-combined-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/java-aiml-combined-project-ideas.html"}
+  </script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">ADR <span>Lab</span></div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../project-ideas.html" class="active">Projects</a>
+    <a href="../career-services.html">Career</a>
+    <a href="../about.html">About</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../faq.html">FAQs</a>
+    <a href="../contact.html">Contact</a>
+    <a href="https://wa.me/919430696596" class="btn-wa">&#128172; WhatsApp</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="badge">Hybrid Projects</div>
+    <h1>Java + AI/ML Combined<br>Project Ideas</h1>
+    <p>15 industry-ready hybrid projects that integrate a robust Java Spring Boot backend with powerful AI/ML prediction modules — the perfect combination for full-stack academic submissions.</p>
+  </div>
+</div>
+
+<div class="blog-layout">
+  <div class="blog-container">
+
+    <a href="../project-ideas.html" class="back-link">&larr; Back to All Projects</a>
+
+    <div class="blog-meta">
+      <span class="meta-tag">🧩 Java + AI/ML</span>
+      <span class="meta-tag gold">15 Projects</span>
+      <span class="meta-info">B.Tech · M.Tech · MCA &nbsp;|&nbsp; Updated March 2026</span>
+    </div>
+
+    <div class="info-box">
+      <p>These projects combine a <strong>Java Spring Boot backend</strong> with a <strong>Python/Flask AI/ML microservice</strong> — communicating via REST API. This architecture is widely accepted by universities and industry alike.</p>
+    </div>
+
+    <div class="project-list">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-number">01</div>
+        <h2>AI-Powered Smart Healthcare Management System</h2>
+        <p>A hospital management platform where patients input symptoms, and an integrated ML model predicts potential diseases and recommends specialists — all managed via a Java backend.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Scikit-learn</span>
+          <span class="tech-badge tech-ai">Flask API</span>
+          <span class="tech-badge tech-db">MySQL</span>
+          <span class="tech-badge tech-web">React</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Patient registration &amp; records</div>
+          <div class="feature-item">Symptom-based disease prediction</div>
+          <div class="feature-item">Doctor assignment module</div>
+          <div class="feature-item">Appointment scheduling</div>
+          <div class="feature-item">Prescription &amp; billing system</div>
+          <div class="feature-item">Admin dashboard with analytics</div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-number">02</div>
+        <h2>Intelligent Resume Screening &amp; Job Matching Platform</h2>
+        <p>An HR tool built on Spring Boot where recruiters post jobs and an NLP model ranks applicant resumes by relevance, extracting skills and experience automatically.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">NLP / BERT</span>
+          <span class="tech-badge tech-ai">Python Flask</span>
+          <span class="tech-badge tech-db">PostgreSQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Resume upload &amp; parsing</div>
+          <div class="feature-item">NLP keyword extraction</div>
+          <div class="feature-item">JD-to-resume similarity scoring</div>
+          <div class="feature-item">Candidate ranking dashboard</div>
+          <div class="feature-item">Email shortlisting automation</div>
+          <div class="feature-item">Role-based access for HR &amp; admin</div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-number">03</div>
+        <h2>Fraud Detection System for Online Banking</h2>
+        <p>A banking simulation platform where transactions are processed via Spring Boot and analysed in real-time by a machine learning model that flags anomalies and suspicious patterns.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Random Forest</span>
+          <span class="tech-badge tech-ai">Flask REST</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Account &amp; transaction management</div>
+          <div class="feature-item">Real-time ML fraud scoring</div>
+          <div class="feature-item">Threshold-based alert system</div>
+          <div class="feature-item">Transaction freeze mechanism</div>
+          <div class="feature-item">Admin review &amp; override panel</div>
+          <div class="feature-item">Audit trail &amp; reporting</div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div class="project-number">04</div>
+        <h2>Smart E-Commerce Recommendation Engine</h2>
+        <p>An e-commerce platform built with Spring Boot that uses a collaborative filtering ML model to recommend products personalised to each user based on browsing and purchase history.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Collaborative Filtering</span>
+          <span class="tech-badge tech-db">MongoDB</span>
+          <span class="tech-badge tech-web">Angular</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Product catalogue &amp; cart</div>
+          <div class="feature-item">User behaviour tracking</div>
+          <div class="feature-item">ML-based personalised suggestions</div>
+          <div class="feature-item">Order &amp; payment simulation</div>
+          <div class="feature-item">Seller admin dashboard</div>
+          <div class="feature-item">Review &amp; rating system</div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div class="project-number">05</div>
+        <h2>AI-Driven Student Performance Prediction System</h2>
+        <p>An academic portal where faculty enter student grades and attendance, and a regression ML model predicts final performance and identifies at-risk students early.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Logistic Regression</span>
+          <span class="tech-badge tech-ai">Flask</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Student &amp; faculty portals</div>
+          <div class="feature-item">Grade &amp; attendance entry</div>
+          <div class="feature-item">Performance prediction model</div>
+          <div class="feature-item">At-risk student alerts</div>
+          <div class="feature-item">Progress trend visualisation</div>
+          <div class="feature-item">PDF report generation</div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <div class="project-number">06</div>
+        <h2>Real Estate Price Prediction Portal</h2>
+        <p>A property listing platform backed by Spring Boot where users get instant AI-based price estimates using location, size, and amenity data through an integrated regression model.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">XGBoost</span>
+          <span class="tech-badge tech-ai">Python Flask</span>
+          <span class="tech-badge tech-db">PostgreSQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Property listing &amp; search</div>
+          <div class="feature-item">Location-based filtering</div>
+          <div class="feature-item">ML price estimation widget</div>
+          <div class="feature-item">Agent &amp; buyer dashboards</div>
+          <div class="feature-item">Favourites &amp; enquiry system</div>
+          <div class="feature-item">Market trend analytics</div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card">
+        <div class="project-number">07</div>
+        <h2>Crop Disease Detection &amp; Smart Agriculture Portal</h2>
+        <p>A farmer portal where users upload crop leaf images and a CNN model detects diseases — the Java backend manages user data, history, and treatment recommendations.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">CNN / TensorFlow</span>
+          <span class="tech-badge tech-ai">Flask Image API</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Leaf image upload &amp; analysis</div>
+          <div class="feature-item">CNN-based disease classification</div>
+          <div class="feature-item">Treatment recommendation engine</div>
+          <div class="feature-item">Farmer &amp; agronomist portals</div>
+          <div class="feature-item">Weather API integration</div>
+          <div class="feature-item">Crop history tracking</div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-card">
+        <div class="project-number">08</div>
+        <h2>Sentiment-Driven Customer Feedback Analytics Platform</h2>
+        <p>A business tool where customers submit feedback through a Spring Boot portal, and an NLP sentiment model classifies responses to generate actionable insights for management.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">VADER / BERT Sentiment</span>
+          <span class="tech-badge tech-ai">Flask NLP API</span>
+          <span class="tech-badge tech-db">MongoDB</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Feedback submission portal</div>
+          <div class="feature-item">Positive / negative / neutral tagging</div>
+          <div class="feature-item">Sentiment trend dashboards</div>
+          <div class="feature-item">Department-level breakdown</div>
+          <div class="feature-item">Automated alert for negative spikes</div>
+          <div class="feature-item">Export to Excel / PDF</div>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project-card">
+        <div class="project-number">09</div>
+        <h2>AI-Based Traffic Violation Detection System</h2>
+        <p>A smart city module where camera feeds (or uploaded images) are processed by a YOLO object detection model via Flask, and violations are logged and managed in a Java-based portal.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">YOLOv8</span>
+          <span class="tech-badge tech-ai">OpenCV / Flask</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Image / video upload &amp; analysis</div>
+          <div class="feature-item">Helmet, signal &amp; lane detection</div>
+          <div class="feature-item">Violation logging system</div>
+          <div class="feature-item">Fine generation &amp; notifications</div>
+          <div class="feature-item">Admin review dashboard</div>
+          <div class="feature-item">Violation statistics reports</div>
+        </div>
+      </div>
+
+      <!-- Project 10 -->
+      <div class="project-card">
+        <div class="project-number">10</div>
+        <h2>Predictive Maintenance System for Industrial Equipment</h2>
+        <p>An IoT-simulated platform where sensor readings are fed into a Spring Boot backend and an anomaly detection model predicts equipment failures before they occur.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Isolation Forest</span>
+          <span class="tech-badge tech-ai">Flask ML API</span>
+          <span class="tech-badge tech-db">InfluxDB / MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Sensor data ingestion API</div>
+          <div class="feature-item">Real-time anomaly scoring</div>
+          <div class="feature-item">Failure probability alerts</div>
+          <div class="feature-item">Maintenance scheduling module</div>
+          <div class="feature-item">Equipment history &amp; logs</div>
+          <div class="feature-item">KPI dashboard with charts</div>
+        </div>
+      </div>
+
+      <!-- Project 11 -->
+      <div class="project-card">
+        <div class="project-number">11</div>
+        <h2>AI-Powered Mental Health Support Chatbot System</h2>
+        <p>A web platform where users chat with an NLP-based mental wellness chatbot, and the Java backend manages sessions, escalates critical cases, and logs interaction data securely.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">DialoGPT / Rule-based NLP</span>
+          <span class="tech-badge tech-ai">Flask Chatbot API</span>
+          <span class="tech-badge tech-db">PostgreSQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Secure user registration</div>
+          <div class="feature-item">Real-time chatbot conversation</div>
+          <div class="feature-item">Emotion &amp; sentiment detection</div>
+          <div class="feature-item">Critical flag escalation</div>
+          <div class="feature-item">Session history &amp; notes</div>
+          <div class="feature-item">Counsellor review panel</div>
+        </div>
+      </div>
+
+      <!-- Project 12 -->
+      <div class="project-card">
+        <div class="project-number">12</div>
+        <h2>Smart Inventory Forecasting &amp; Supply Chain System</h2>
+        <p>A retail inventory portal where stock movements are tracked via Spring Boot and a time-series model forecasts restocking needs to prevent stockouts and overstock.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">LSTM / ARIMA</span>
+          <span class="tech-badge tech-ai">Flask Forecast API</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Product &amp; warehouse management</div>
+          <div class="feature-item">Stock in / out tracking</div>
+          <div class="feature-item">AI demand forecasting</div>
+          <div class="feature-item">Low-stock alert engine</div>
+          <div class="feature-item">Supplier order automation</div>
+          <div class="feature-item">Inventory trend reports</div>
+        </div>
+      </div>
+
+      <!-- Project 13 -->
+      <div class="project-card">
+        <div class="project-number">13</div>
+        <h2>Loan Eligibility &amp; Credit Risk Prediction Portal</h2>
+        <p>A banking portal that accepts loan applications through a Spring Boot web interface and uses a classification model to predict loan approval probability based on applicant financials.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Decision Tree / SVM</span>
+          <span class="tech-badge tech-ai">Flask Risk API</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Loan application form</div>
+          <div class="feature-item">Document upload &amp; management</div>
+          <div class="feature-item">ML credit risk scoring</div>
+          <div class="feature-item">Approval / rejection workflow</div>
+          <div class="feature-item">Customer status tracking</div>
+          <div class="feature-item">Loan officer review portal</div>
+        </div>
+      </div>
+
+      <!-- Project 14 -->
+      <div class="project-card">
+        <div class="project-number">14</div>
+        <h2>Personalised Online Learning Platform with AI Tutor</h2>
+        <p>An e-learning system where the Java backend manages courses, students, and progress, while an NLP AI tutor answers student questions and adapts content difficulty based on performance.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Sentence Transformers</span>
+          <span class="tech-badge tech-ai">Flask Q&amp;A API</span>
+          <span class="tech-badge tech-db">MongoDB</span>
+          <span class="tech-badge tech-web">React</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Course &amp; module management</div>
+          <div class="feature-item">Video &amp; quiz delivery</div>
+          <div class="feature-item">AI question answering tutor</div>
+          <div class="feature-item">Adaptive difficulty engine</div>
+          <div class="feature-item">Progress &amp; completion tracking</div>
+          <div class="feature-item">Certificate generation</div>
+        </div>
+      </div>
+
+      <!-- Project 15 -->
+      <div class="project-card">
+        <div class="project-number">15</div>
+        <h2>Smart Energy Consumption Monitoring &amp; Prediction System</h2>
+        <p>A building energy management portal where consumption data is tracked via Spring Boot and an ML model predicts future usage, identifies wastage patterns, and suggests optimisations.</p>
+        <div class="tech-stack">
+          <span class="tech-badge tech-java">Spring Boot</span>
+          <span class="tech-badge tech-ai">Linear Regression / LSTM</span>
+          <span class="tech-badge tech-ai">Flask Prediction API</span>
+          <span class="tech-badge tech-db">MySQL</span>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item">Device &amp; zone registration</div>
+          <div class="feature-item">Real-time consumption monitoring</div>
+          <div class="feature-item">ML-based usage forecasting</div>
+          <div class="feature-item">Wastage &amp; anomaly detection</div>
+          <div class="feature-item">Cost estimation module</div>
+          <div class="feature-item">Optimisation recommendations</div>
+        </div>
+      </div>
+
+    </div><!-- end project-list -->
+
+    <div class="blog-cta-strip">
+      <div>
+        <h3>Want to Build One of These?</h3>
+        <p>ADR Lab provides complete development — Java backend, ML model, frontend, deployment, and documentation. Contact us for a free proposal.</p>
+      </div>
+      <div class="btns">
+        <a href="../index.html#booking" class="btn btn-gold">Book Now &rarr;</a>
+        <a href="https://wa.me/919430696596?text=Hi+I+want+a+Java+AI/ML+combined+project+from+ADR+Lab" class="btn btn-whatsapp">&#128172; WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="cta-section">
+  <h2>Ready to Start Your Hybrid Project?</h2>
+  <p>We handle the full stack — from model training to deployment.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="../index.html#booking" class="btn btn-gold">Submit Requirements &rarr;</a>
+    <a href="https://wa.me/919430696596" class="btn btn-whatsapp">&#128172; WhatsApp Us</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">ADR <span>Lab</span></div>
+    <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students with professional project and research support since 2024.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:12px;">📞 +91 94306 96596</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Project Ideas</div>
+        <a href="aiml-project-ideas.html">AI/ML Projects</a>
+        <a href="java-project-ideas.html">Java Projects</a>
+        <a href="blockchain-project-ideas.html">Blockchain Projects</a>
+        <a href="cyber-project-ideas.html">Cybersecurity Projects</a>
+        <a href="java-aiml-combined-project-ideas.html">Java + AI/ML</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <a href="../about.html">About ADR Lab</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../faq.html">FAQs</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Service</a>
+        <a href="../refund.html">Refund Policy</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
