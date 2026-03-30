@@ -1194,13 +1194,11 @@
 
     // Replace YOUR_WEB_APP_URL with your Google Apps Script Web App URL
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwQemsKhDygm6hwRBufd95K70YeuAmdg7iD-24sh2J0hsmX02-S8Vv2ii1N02V1vlfgxg/exec";
-    if (WEB_APP_URL !== "https://script.google.com/macros/s/AKfycbwQemsKhDygm6hwRBufd95K70YeuAmdg7iD-24sh2J0hsmX02-S8Vv2ii1N02V1vlfgxg/exec") {
       fetch(WEB_APP_URL, {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(formData)
       });
-    }
 
     document.getElementById('formBody').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
