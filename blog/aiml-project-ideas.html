@@ -1,68 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AI & ML Project Ideas – ADR Lab</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI & ML Final Year Project Ideas 2026 — ADR Lab</title>
+  <meta name="description" content="Explore 18 detailed AI and machine learning final year project ideas for B.Tech and M.Tech students — with modules, tech stack, datasets, and career relevance."/>
+  <link rel="canonical" href="https://adresearchlab.com/blog/aiml-project-ideas.html"/>
+  <meta property="og:title" content="AI & ML Final Year Project Ideas 2026 — ADR Lab"/>
+  <meta property="og:description" content="Explore 18 detailed AI and machine learning final year project ideas for B.Tech and M.Tech students — with modules, tech stack, datasets, and career relevance."/>
+  <meta property="og:url" content="https://adresearchlab.com/blog/aiml-project-ideas.html"/>
+  <meta property="og:type" content="article"/>
+  <link rel="icon" type="image/png" href="../images/favicon.png"/>
+  <link rel="stylesheet" href="blog.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com","logo":"https://adresearchlab.com/images/favicon.png","telephone":"+91-9430696596","email":"adrlab2026@gmail.com"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://adresearchlab.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://adresearchlab.com/blog.html"},{"@type":"ListItem","position":3,"name":"AI/ML Projects","item":"https://adresearchlab.com/blog/aiml-project-ideas.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI & ML Final Year Project Ideas 2026 — ADR Lab","description":"Explore 18 detailed AI and machine learning final year project ideas for B.Tech and M.Tech students — with modules, tech stack, datasets, and career relevance.","url":"https://adresearchlab.com/blog/aiml-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/aiml-project-ideas.html"}</script>
+  
+  <style>
+    /* ── Rich Project Card Layout ── */
+    .proj-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      margin-bottom: 32px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .proj-card:hover { box-shadow: var(--shadow-lg); border-color: transparent; }
+    .proj-card-header {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .proj-num {
+      background: var(--navy); color: var(--gold);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem; font-weight: 700;
+      min-width: 36px; height: 36px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .proj-title-wrap { flex: 1; }
+    .proj-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem; color: var(--navy); margin: 0 0 8px; line-height: 1.3;
+    }
+    .proj-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+    .badge-diff, .badge-domain {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+    }
+    .diff-easy { background: #d4edda; color: #155724; }
+    .diff-med { background: #fff3cd; color: #856404; }
+    .diff-hard { background: #f8d7da; color: #721c24; }
+    .dom-ai { background: #f0fdf4; color: #166534; }
+    .dom-java { background: #fff7ed; color: #9a3412; }
+    .dom-cyber { background: #fdf4ff; color: #7e22ce; }
+    .dom-bc { background: #eff6ff; color: #1e40af; }
+    .dom-web { background: var(--blue-light); color: var(--blue); }
 
-<!-- Premium Fonts -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    .proj-body { padding: 22px 28px; }
+    .proj-desc {
+      font-size: 15px; color: var(--gray-600); line-height: 1.8;
+      margin-bottom: 22px; border-left: 3px solid var(--gold);
+      padding-left: 14px;
+    }
 
-  gtag('config', 'G-F274FYF2KE');
-</script>
+    .proj-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 18px; margin-bottom: 18px;
+    }
+    .proj-section { background: var(--cream); border-radius: var(--radius); padding: 16px 18px; }
+    .proj-section-full { background: var(--cream); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 18px; }
+    .proj-section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .proj-section-title::before { content: attr(data-icon); }
+    .proj-list { list-style: none; padding: 0; margin: 0; }
+    .proj-list li {
+      font-size: 13px; color: var(--gray-600); padding: 4px 0;
+      display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+    }
+    .proj-list li::before { content: '▸'; color: var(--gold); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+    .tech-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tech-chip {
+      font-size: 11px; font-weight: 600; padding: 4px 10px;
+      border-radius: 6px; background: var(--navy); color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .career-bar {
+      background: linear-gradient(90deg, var(--blue-light), #fff);
+      border-radius: var(--radius); padding: 12px 16px;
+      font-size: 13px; color: var(--navy-mid); line-height: 1.6;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .career-bar::before { content: '💼'; font-size: 16px; flex-shrink: 0; }
 
+    .proj-card-footer {
+      padding: 14px 28px; background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .book-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--blue); color: #fff; font-size: 13px;
+      font-weight: 600; padding: 8px 18px; border-radius: 8px;
+      text-decoration: none; transition: var(--transition);
+    }
+    .book-link:hover { background: var(--navy-mid); color: #fff; transform: translateY(-1px); }
+    .dataset-tag {
+      font-size: 12px; color: var(--gray-600);
+      display: flex; align-items: center; gap: 6px;
+    }
 
-<!-- BlogPosting Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BlogPosting",
- "headline": "AI & ML Final Year Project Ideas",
- "description": "Premium AI and machine learning project ideas with abstracts, modules, system workflow and dataset support.",
- "author": {
-   "@type": "Organization",
-   "name": "ADR Lab",
-   "url": "https://adresearchlab.com"
- },
- "publisher": {
-   "@type": "Organization",
-   "name": "ADR Lab",
-   "logo": {
-       "@type": "ImageObject",
-       "url": "https://adresearchlab.com/images/logo.png"
-   }
- },
- "mainEntityOfPage": "https://adresearchlab.com/blog/aiml-project-ideas.html"
-}
-</script>
-<link rel="stylesheet" href="blog.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ADR Lab",
-  "url": "https://adresearchlab.com",
-  "logo": "https://adresearchlab.com/images/favicon.png",
-  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
-  "telephone": "+91-9430696596",
-  "email": "adrlab2026@gmail.com",
-  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
-  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
-}
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adresearchlab.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "AI/ML Projects", "item": "https://adresearchlab.com/blog/aiml-project-ideas.html"}]}
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI & ML Final Year Project Ideas — ADR Lab","description":"Explore 18 industry-ready AI and machine learning final year project ideas for B.Tech and M.Tech students.","url":"https://adresearchlab.com/blog/aiml-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/aiml-project-ideas.html"}
-  </script>
+    /* TOC */
+    .toc-box {
+      background: var(--cream); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg); padding: 22px 24px; margin-bottom: 32px;
+    }
+    .toc-box h3 {
+      font-family: 'DM Serif Display', serif; font-size: 1rem;
+      color: var(--navy); margin-bottom: 14px;
+    }
+    .toc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; list-style: none; padding: 0; margin: 0; }
+    .toc-list li { font-size: 13px; }
+    .toc-list a { color: var(--blue); text-decoration: none; display: flex; align-items: center; gap: 6px; padding: 3px 0; }
+    .toc-list a:hover { color: var(--navy); }
+
+    /* Page stats */
+    .page-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 14px; margin-bottom: 32px;
+    }
+    .stat-pill {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 14px 16px; text-align: center;
+    }
+    .stat-pill .sp-num { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--gold); }
+    .stat-pill .sp-lbl { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+
+    @media(max-width: 768px) {
+      .proj-grid { grid-template-columns: 1fr; }
+      .toc-list { grid-template-columns: 1fr; }
+      .page-stats { grid-template-columns: 1fr 1fr; }
+      .proj-card-header { flex-direction: column; gap: 10px; }
+      .proj-body { padding: 18px 16px; }
+      .proj-card-footer { flex-direction: column; align-items: flex-start; }
+    }
+    @media(max-width: 480px) {
+      .page-stats { grid-template-columns: 1fr 1fr; }
+      .proj-title { font-size: 1.05rem; }
+    }
+  </style>
 </head>
-
 <body>
 <header class="navbar">
   <div class="logo">ADR <span>Lab</span></div>
@@ -80,169 +175,604 @@
   </nav>
 </header>
 
-<!-- HEADER BANNER -->
 <section class="hero-banner">
-    <h1>AI & ML Final Year Project Ideas</h1>
-    <p>High-quality, modern and industry-focused project ideas for B.Tech, M.Tech & MCA students.</p>
+  <h1>AI & ML Final Year Project Ideas</h1>
+  <p>18 industry-ready projects with full details — modules, tech stack, datasets, and career relevance for B.Tech, M.Tech & MCA students.</p>
 </section>
 
 <div class="container">
 
-    <!-- PROJECTS LIST -->
+<div class="page-stats">
+  <div class="stat-pill"><div class="sp-num">18</div><div class="sp-lbl">Project Ideas</div></div>
+  <div class="stat-pill"><div class="sp-num">6+</div><div class="sp-lbl">Sub-Domains</div></div>
+  <div class="stat-pill"><div class="sp-num">⭐–⭐⭐⭐</div><div class="sp-lbl">All Difficulty Levels</div></div>
+  <div class="stat-pill"><div class="sp-num">24h</div><div class="sp-lbl">Proposal Turnaround</div></div>
+</div>
+<div class="toc-box">
+  <h3>📋 All Projects on This Page</h3>
+  <ul class="toc-list"><li><a href="#project-1">→ SmartSkin AI – Skin Disease Detection</a></li><li><a href="#project-2">→ NeuroTrack Vision – Stroke Risk</a></li><li><a href="#project-3">→ E-GuardAI – Fraud Detection</a></li><li><a href="#project-4">→ BrainTwinX – Brain Tumor Digital Twin</a></li><li><a href="#project-5">→ SignSpeak AI – Sign Language Converter</a></li><li><a href="#project-6">→ HealthMultiPredict – Multi-Disease Prediction</a></li><li><a href="#project-7">→ PersonaSense AI – Personality Prediction</a></li><li><a href="#project-8">→ GridGuard ML – Smart Grid Anomaly</a></li><li><a href="#project-9">→ FED-XAI Shield – Federated Cyber Defence</a></li><li><a href="#project-10">→ NeuroDetect – Alzheimer's Detection</a></li><li><a href="#project-11">→ CropShield – Crop Disease Detection</a></li><li><a href="#project-12">→ EmotiSense – Emotion Recognition</a></li><li><a href="#project-13">→ ResumeScreen AI – Resume Ranking</a></li><li><a href="#project-14">→ StockPulse LSTM – Stock Prediction</a></li><li><a href="#project-15">→ FakeShield – Fake News Detection</a></li><li><a href="#project-16">→ CampusBot – FAQ Chatbot</a></li><li><a href="#project-17">→ DrowsyGuard – Drowsiness Detection</a></li><li><a href="#project-18">→ AgroYield – Crop Yield Prediction</a></li></ul>
+</div>
 
-    <div class="project-card">
-        <h2 class="project-title">1. SmartSkin AI – Automated Dermatological Disease Detection</h2>
-        <p class="project-desc">Deep learning-based system for classifying conditions like acne, eczema, melanoma using skin lesion images.</p>
+  <div class="proj-card" id="project-1">
+    <div class="proj-card-header">
+      <div class="proj-num">01</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">SmartSkin AI – Dermatological Disease Detection</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">AI/ML</span>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">2. NeuroTrack Vision – Stroke Risk Recognition Using Mediapipe</h2>
-        <p class="project-desc">Uses face/pose landmarks to detect early stroke signs such as facial droop or abnormal movement.</p>
+    <div class="proj-body">
+      <p class="proj-desc">A deep learning system that classifies skin conditions including acne, eczema, psoriasis, and melanoma from patient-uploaded photographs. The model uses CNN architectures trained on labelled dermatology datasets, helping rural clinics and health apps provide preliminary screening without a specialist.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Image Upload & Preprocessing Module</li><li>CNN/ResNet Classification Engine</li><li>Disease Report Generation</li><li>Patient History Dashboard</li><li>Doctor Review Portal</li><li>Confidence Score Display</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">TensorFlow / Keras</span><span class="tech-chip">ResNet-50 / MobileNet</span><span class="tech-chip">Flask REST API</span><span class="tech-chip">React.js</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">OpenCV</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Ideal for roles in Healthcare AI, Computer Vision Engineering, and Medical Data Science. Strong fit for companies like Siemens Healthineers, Philips, and AI health startups.</div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">3. E-GuardAI – Hybrid Deep Learning Model for Fraud Detection</h2>
-        <p class="project-desc">Detects fraudulent transactions in real-time using combined ML + deep learning models.</p>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>ISIC Skin Lesion Dataset (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
     </div>
+  </div>
 
-    <div class="project-card">
-        <h2 class="project-title">4. BrainTwinX – Multimodal Digital Twin for Brain Tumor Therapy</h2>
-        <p class="project-desc">Simulation-driven model predicting tumor progression and assisting personalized treatment.</p>
+  <div class="proj-card" id="project-2">
+    <div class="proj-card-header">
+      <div class="proj-num">02</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">NeuroTrack Vision – Stroke Risk Detection</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-ai">Deep Learning</span>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">5. SignSpeak AI – Real-Time Sign-to-Speech Conversion System</h2>
-        <p class="project-desc">Computer vision + CNN/LSTM-based sign language translation to text and speech.</p>
+    <div class="proj-body">
+      <p class="proj-desc">Uses MediaPipe face and pose landmark tracking to detect early neurological warning signs of stroke — facial drooping, asymmetric eye movement, and abnormal posture — through real-time webcam analysis. Designed for assisted living environments and emergency screening.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>MediaPipe Landmark Extraction</li><li>Asymmetry Detection Algorithm</li><li>Real-time Risk Scoring Engine</li><li>Alert & Notification Module</li><li>Historical Trend Analysis</li><li>Patient Record Management</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">MediaPipe</span><span class="tech-chip">OpenCV</span><span class="tech-chip">TensorFlow</span><span class="tech-chip">Flask</span><span class="tech-chip">SQLite</span><span class="tech-chip">Matplotlib</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Positions you for Computer Vision, Medical AI, and Neurological Diagnostics roles. Highly valued in health-tech startups and telemedicine platforms.</div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">6. HealthMultiPredict – Multi-Disease Prediction Framework</h2>
-        <p class="project-desc">Unified ML platform predicting diabetes, liver disease, heart disease and more.</p>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom video dataset / CelebA for face landmarks</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
     </div>
+  </div>
 
-    <div class="project-card">
-        <h2 class="project-title">7. PersonaSense AI – Personality Prediction Using Social Media Data</h2>
-        <p class="project-desc">NLP-based personality type prediction using captions, posts and behavioral analytics.</p>
+  <div class="proj-card" id="project-3">
+    <div class="proj-card-header">
+      <div class="proj-num">03</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">E-GuardAI – Real-Time Fraud Detection</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">ML + Finance</span>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">8. GridGuard ML – Smart Grid Anomaly Detection</h2>
-        <p class="project-desc">ML model identifying abnormal electrical patterns, faults and energy theft.</p>
+    <div class="proj-body">
+      <p class="proj-desc">A hybrid fraud detection engine combining traditional ML classifiers with deep learning anomaly detection to flag suspicious financial transactions in real time. Processes transaction streams, computes risk scores, and automatically suspends flagged accounts pending review.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Transaction Ingestion & Feature Engineering</li><li>Random Forest + LSTM Hybrid Model</li><li>Real-Time Risk Scoring API</li><li>Alert Dashboard for Analysts</li><li>Account Freeze Mechanism</li><li>Audit Trail & Compliance Reports</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">XGBoost</span><span class="tech-chip">LSTM (Keras)</span><span class="tech-chip">Flask</span><span class="tech-chip">Redis</span><span class="tech-chip">MySQL</span><span class="tech-chip">Pandas</span><span class="tech-chip">Scikit-learn</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Top choice for FinTech, Banking AI, and Risk Analytics roles at companies like Razorpay, HDFC, Paytm, and global banks.</div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">9. FED-XAI Shield – Federated Explainable AI for Cyber Threat Detection</h2>
-        <p class="project-desc">Privacy-preserving federated learning system for multi-node cyberattack detection.</p>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>IEEE-CIS Fraud Detection (Kaggle) / PaySim</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
     </div>
+  </div>
 
-    <div class="project-card">
-        <h2 class="project-title">10. NeuroDetect ML – Early Alzheimer’s Detection</h2>
-        <p class="project-desc">ML-based Alzheimer prediction using medical data, cognitive scores or MRI features.</p>
+  <div class="proj-card" id="project-4">
+    <div class="proj-card-header">
+      <div class="proj-num">04</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">BrainTwinX – Brain Tumor Digital Twin</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-ai">Medical AI</span>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">11. AI-Powered Disease Prediction System</h2>
-        <p class="project-desc">Build a machine learning model to predict chronic diseases (diabetes, heart disease) 
-using patient health records and clinical features.</p>
+    <div class="proj-body">
+      <p class="proj-desc">Constructs a personalised digital simulation of a patient's brain tumor using MRI scan data, predicting tumor growth trajectories and simulating treatment responses. Combines segmentation models with physics-informed neural networks to assist oncologists in treatment planning.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>MRI Upload & DICOM Parsing</li><li>U-Net Tumor Segmentation</li><li>Growth Prediction Model</li><li>Treatment Response Simulation</li><li>Visualisation & Reporting Module</li><li>Clinician Dashboard</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">PyTorch</span><span class="tech-chip">U-Net</span><span class="tech-chip">nibabel</span><span class="tech-chip">SimpleITK</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">MongoDB</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Cutting-edge domain for Medical AI Research, Computational Oncology, and Clinical Decision Support roles. Excellent for research paper conversion.</div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">12. Real-Time Emotion Detection from Facial Expressions</h2>
-        <p class="project-desc">Use CNNs to identify human emotions in real-time via webcam feed — great for HCI and
-mental health applications.</p>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>BraTS 2020 MRI Dataset (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
     </div>
+  </div>
 
-    <div class="project-card">
-        <h2 class="project-title">13. NLP-Based Automated Resume Screening Tool</h2>
-        <p class="project-desc">Automate HR screening using NLP to match resumes with job descriptions and rank
-candidates by relevance.</p>
+  <div class="proj-card" id="project-5">
+    <div class="proj-card-header">
+      <div class="proj-num">05</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">SignSpeak AI – Sign Language to Speech Converter</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">Computer Vision</span>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">14. Stock Market Prediction using LSTM Networks</h2>
-        <p class="project-desc">Forecast stock prices using historical data with Long Short-Term Memory deep learning
-models and sentiment data.</p>
+    <div class="proj-body">
+      <p class="proj-desc">A real-time accessibility tool that captures hand gestures via webcam, recognises American/Indian Sign Language alphabets and words using a CNN/LSTM pipeline, and converts them to text and synthesised speech — enabling communication for the hearing/speech impaired.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Webcam Hand Gesture Capture</li><li>MediaPipe Hand Landmark Detection</li><li>CNN/LSTM Gesture Classification</li><li>Text Output & Speech Synthesis</li><li>Custom Sign Training Module</li><li>Mobile-Responsive Web Interface</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">MediaPipe</span><span class="tech-chip">TensorFlow / Keras</span><span class="tech-chip">OpenCV</span><span class="tech-chip">gTTS / pyttsx3</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Strong fit for Accessibility Tech, HCI Research, and AI Developer roles. Excellent social impact angle for interviews and research papers.</div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">15.  Fake News Detection using Machine Learning</h2>
-        <p class="project-desc">Classify news articles as real or fake using NLP pipeline, TF-IDF features, and ensemble
-classifiers.</p>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>ASL Dataset (Kaggle) / Custom recorded dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
     </div>
+  </div>
 
-    <div class="project-card">
-        <h2 class="project-title">16.   Intelligent Chatbot for College FAQ Automation</h2>
-        <p class="project-desc">Deploy an AI chatbot that answers student queries about admissions, exams, and
-campus life 24/7.</p>
+  <div class="proj-card" id="project-6">
+    <div class="proj-card-header">
+      <div class="proj-num">06</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">HealthMultiPredict – Multi-Disease Prediction Platform</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">Healthcare ML</span>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">17.   Driver Drowsiness Detection System</h2>
-        <p class="project-desc">Real-time eye-blink and yawn detection to alert drowsy drivers using computer vision —
-can save lives.</p>
+    <div class="proj-body">
+      <p class="proj-desc">A unified ML-based diagnostic platform that predicts multiple chronic conditions — diabetes, heart disease, liver disease, kidney disease — from patient health metrics entered through a web form. Each disease uses a separately trained and optimised model with explainability output.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Patient Data Entry Form</li><li>Disease-Specific Prediction Models</li><li>SHAP Explainability Module</li><li>Result Visualisation Dashboard</li><li>Report Download (PDF)</li><li>Admin Analytics Panel</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">XGBoost</span><span class="tech-chip">SHAP</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">SQLite</span><span class="tech-chip">ReportLab</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Highly relevant for Health Data Science, Clinical AI, and ML Engineering roles. The explainability component (SHAP) is a strong interview talking point.</div>
     </div>
-
-    <div class="project-card">
-        <h2 class="project-title">18.    Crop Yield Prediction for Smart Agriculture</h2>
-        <p class="project-desc">Predict crop yield based on soil composition, weather data, and satellite imagery using
-regression models.</p>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>PIMA Diabetes / Cleveland Heart / UCI Liver Dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
     </div>
+  </div>
 
-    
-<div class="cta-strip" style="margin:24px 0;">
+  <div class="proj-card" id="project-7">
+    <div class="proj-card-header">
+      <div class="proj-num">07</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">PersonaSense AI – Personality Prediction from Social Data</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">NLP / Psychology AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An NLP model that analyses text from social media posts, captions, and written responses to predict Big Five personality traits (OCEAN model). Applications include HR screening, personalised marketing, and mental wellness apps.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Text Input & Preprocessing</li><li>BERT/DistilBERT Feature Extraction</li><li>Multi-Label OCEAN Classifier</li><li>Personality Radar Chart Output</li><li>User History Dashboard</li><li>Batch CSV Processing Mode</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Transformers (HuggingFace)</span><span class="tech-chip">BERT / DistilBERT</span><span class="tech-chip">Flask</span><span class="tech-chip">Pandas</span><span class="tech-chip">Chart.js</span><span class="tech-chip">PostgreSQL</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Excellent for NLP Engineering, Behavioural AI, and HR-Tech roles. Strong research paper potential in the psychology + AI intersection.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>myPersonality Dataset / Essays Dataset (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-8">
+    <div class="proj-card-header">
+      <div class="proj-num">08</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">GridGuard ML – Smart Grid Anomaly Detection</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-ai">IoT / Energy AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">Monitors electrical grid sensor data streams in real time to detect faults, energy theft, and abnormal consumption patterns using time-series anomaly detection models. Designed for smart city and industrial energy management deployments.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Sensor Data Ingestion API</li><li>LSTM / Isolation Forest Anomaly Model</li><li>Real-time Alert Dashboard</li><li>Fault Classification Module</li><li>Energy Theft Detection</li><li>Historical Trend Reports</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">LSTM (Keras)</span><span class="tech-chip">Isolation Forest</span><span class="tech-chip">Apache Kafka (simulated)</span><span class="tech-chip">Flask</span><span class="tech-chip">InfluxDB</span><span class="tech-chip">Grafana</span><span class="tech-chip">React</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Strong profile for Smart Grid, Industrial IoT, and Energy Analytics roles at companies like Siemens, ABB, TATA Power, and smart city startups.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>UCI NILM / Smart Meters Dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-9">
+    <div class="proj-card-header">
+      <div class="proj-num">09</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">FED-XAI Shield – Federated Explainable AI Cyber Defence</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-ai">Federated Learning</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A privacy-preserving intrusion detection system where multiple network nodes each train a local ML model and share only model weights — not raw data — with a central aggregator. XAI (LIME/SHAP) explains which features triggered each alert.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Multi-Node Federated Training Simulation</li><li>FedAvg Aggregation Server</li><li>CICIDS2018 Feature Engineering</li><li>XAI Explanation Engine (SHAP/LIME)</li><li>Central Alert Dashboard</li><li>Node Performance Monitor</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">PySyft / Flower (federated)</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">SHAP / LIME</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">Redis</span><span class="tech-chip">MongoDB</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Top-tier for Cybersecurity AI, Privacy-Preserving ML, and Security Research roles. Ideal for IEEE/Springer research paper publication.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>CICIDS 2018 / KDD Cup 99 Dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-10">
+    <div class="proj-card-header">
+      <div class="proj-num">10</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">NeuroDetect ML – Early Alzheimer's Prediction</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">Medical AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An ML system that predicts early-stage Alzheimer's disease from MRI-derived features, cognitive test scores, and biomarker data. Combines traditional ML classifiers with deep learning image analysis to produce a risk score with confidence intervals.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>MRI Feature Extraction (VBM)</li><li>Cognitive Score Integration</li><li>Random Forest / CNN Classifier</li><li>Risk Score with Confidence Band</li><li>Patient Progression Tracking</li><li>Clinician Export Report</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">TensorFlow</span><span class="tech-chip">nibabel</span><span class="tech-chip">Flask</span><span class="tech-chip">SQLite</span><span class="tech-chip">Matplotlib</span><span class="tech-chip">ReportLab</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Relevant for Medical AI Research, Neuroscience Data Science, and Clinical AI roles. Strong potential for IEEE research paper.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>OASIS MRI Dataset / ADNI Dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-11">
+    <div class="proj-card-header">
+      <div class="proj-num">11</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">CropShield AI – Crop Disease Detection & Advisory</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-ai">Agriculture AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">Farmers upload photos of crop leaves, and a CNN model identifies diseases like blight, rust, and mildew with confidence scores. The system also provides treatment recommendations and tracks disease history per farm.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Leaf Image Upload</li><li>CNN Disease Classifier</li><li>Treatment Recommendation Engine</li><li>Farmer Dashboard</li><li>Weather API Integration</li><li>Disease History Log</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">TensorFlow / MobileNet</span><span class="tech-chip">OpenCV</span><span class="tech-chip">Flask</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">OpenWeatherMap API</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Great for AgriTech, Precision Farming, and Rural AI roles. High social impact — well-received in college evaluations and competitions.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>PlantVillage Dataset (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-12">
+    <div class="proj-card-header">
+      <div class="proj-num">12</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">EmotiSense – Real-Time Emotion Detection</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-ai">Computer Vision</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A webcam-based emotion recognition system that classifies seven human emotions (happy, sad, angry, surprised, fearful, disgusted, neutral) in real time using a CNN trained on facial expression datasets.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Face Detection (OpenCV/MediaPipe)</li><li>CNN Emotion Classifier</li><li>Real-time Overlay Display</li><li>Emotion History Logger</li><li>Session Analytics</li><li>API for Third-Party Integration</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">OpenCV</span><span class="tech-chip">TensorFlow / Keras</span><span class="tech-chip">MediaPipe</span><span class="tech-chip">Flask</span><span class="tech-chip">SQLite</span><span class="tech-chip">React</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Entry point for HCI Research, Affective Computing, and UX Analytics. Used in customer satisfaction tools, mental health apps, and EdTech platforms.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>FER-2013 / AffectNet Dataset (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-13">
+    <div class="proj-card-header">
+      <div class="proj-num">13</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">ResumeScreen AI – NLP-Based Resume Ranking</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">NLP / HR Tech</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An HR tool that accepts a job description and a batch of uploaded resumes, then uses NLP (TF-IDF + BERT similarity) to rank candidates by relevance, extract key skills, and generate a shortlist report — automating the first stage of recruitment.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>JD Input & Resume Batch Upload</li><li>PDF/DOCX Text Extraction</li><li>TF-IDF + BERT Similarity Scoring</li><li>Candidate Ranking Dashboard</li><li>Skills Gap Analysis</li><li>Shortlist Report Export (PDF)</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">spaCy</span><span class="tech-chip">HuggingFace Transformers</span><span class="tech-chip">PyMuPDF / pdfminer</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">PostgreSQL</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Direct relevance to HR-Tech, NLP Engineering, and Talent Analytics roles. Strong portfolio piece for companies like Naukri, LinkedIn, and enterprise HR platforms.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Kaggle Resume Dataset / Custom JDs</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-14">
+    <div class="proj-card-header">
+      <div class="proj-num">14</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">StockPulse LSTM – Stock Price Prediction Engine</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">Finance AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A time-series deep learning system that forecasts stock prices using LSTM networks trained on historical price data combined with sentiment scores extracted from financial news headlines via NLP.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Historical Data Ingestion (yfinance)</li><li>LSTM Price Forecasting Model</li><li>News Headline Sentiment Analyser</li><li>Combined Prediction Dashboard</li><li>Backtesting Module</li><li>Live Price Tracker</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">LSTM (Keras)</span><span class="tech-chip">NLTK / VADER</span><span class="tech-chip">yfinance API</span><span class="tech-chip">Flask</span><span class="tech-chip">Chart.js</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Pandas</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Strong fit for FinTech, Algorithmic Trading, and Quantitative Analysis roles. Good research paper potential with hybrid LSTM+sentiment architecture.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Yahoo Finance API / Kaggle Stock Datasets</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-15">
+    <div class="proj-card-header">
+      <div class="proj-num">15</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">FakeShield NLP – Fake News Detection System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-ai">NLP</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A web application where users paste or upload news articles, and an NLP pipeline (TF-IDF + ensemble classifier) predicts whether the content is real or fabricated — with a confidence score and explanation of key triggering terms.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Text Input & URL Scraper</li><li>Text Preprocessing Pipeline</li><li>TF-IDF + Logistic Regression / Random Forest</li><li>SHAP Feature Explanation</li><li>User Feedback Loop</li><li>Admin Accuracy Monitor</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">NLTK</span><span class="tech-chip">spaCy</span><span class="tech-chip">SHAP</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">SQLite</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Relevant for NLP Engineering, Content Moderation, and Misinformation Research roles. Growing demand in social media and news platform companies.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>LIAR Dataset / FakeNewsNet (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-16">
+    <div class="proj-card-header">
+      <div class="proj-num">16</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">CampusBot AI – College FAQ Automation Chatbot</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-ai">NLP / Chatbot</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An intelligent FAQ chatbot for college websites that answers student queries about admissions, exams, fees, and campus life using a retrieval-based NLP model. Escalates unresolved queries to a human admin.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>FAQ Knowledge Base Builder</li><li>Intent Classification (NLP)</li><li>Retrieval-Based Response Engine</li><li>Chat Interface (Web Widget)</li><li>Unresolved Query Escalation</li><li>Admin Knowledge Base Editor</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Rasa / DialoGPT</span><span class="tech-chip">spaCy</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">SQLite</span><span class="tech-chip">WebSockets</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Entry-level NLP and Conversational AI role. Highly practical for EdTech companies, college portals, and customer support automation.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom FAQ dataset (college-specific)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-17">
+    <div class="proj-card-header">
+      <div class="proj-num">17</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">DrowsyGuard – Driver Drowsiness Detection System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-ai">Computer Vision</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A real-time safety system that monitors a driver's eye blink rate and yawn frequency through a webcam feed, calculating an Eye Aspect Ratio (EAR) to detect drowsiness and trigger audio-visual alerts before an accident can occur.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Facial Landmark Detection</li><li>Eye Aspect Ratio (EAR) Calculator</li><li>Yawn Detection Module</li><li>Alert System (Audio + Screen)</li><li>Drowsiness Event Logger</li><li>Dashboard Statistics</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">OpenCV</span><span class="tech-chip">dlib / MediaPipe</span><span class="tech-chip">SciPy</span><span class="tech-chip">Flask</span><span class="tech-chip">SQLite</span><span class="tech-chip">Pygame (alerts)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Computer Vision and Automotive Safety roles. Direct relevance to ADAS (Advanced Driver Assistance Systems) development at companies like Bosch, Continental, and auto-tech startups.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom webcam recording / drowsy driver dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-18">
+    <div class="proj-card-header">
+      <div class="proj-num">18</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">AgroYield Predictor – Crop Yield Forecasting</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-ai">Agriculture AI</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">Predicts crop yield based on soil composition parameters, historical weather data, rainfall, temperature, and fertiliser usage using regression models. Provides district-level advisory recommendations to farmers and agricultural officers.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Soil & Weather Data Input Form</li><li>Feature Engineering Pipeline</li><li>Regression Model (Random Forest/XGBoost)</li><li>Yield Prediction Dashboard</li><li>Crop Advisory Generator</li><li>Historical Data Comparison</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">XGBoost</span><span class="tech-chip">Flask</span><span class="tech-chip">Pandas</span><span class="tech-chip">MySQL</span><span class="tech-chip">Chart.js</span><span class="tech-chip">React</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Relevant for AgriTech, Data Science, and Rural AI roles. Strong social impact narrative — well-received by examiners and evaluation committees.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>FAO / Kaggle Crop Yield Dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+<div class="cta-strip" style="margin:40px 0 20px;">
   <div>
-    <h3>Want to Build This Project?</h3>
-    <p>ADR Lab provides complete development support — from design to deployment.</p>
+    <h3>Want to Build One of These?</h3>
+    <p>ADR Lab provides complete development — code, documentation, deployment, and viva support.</p>
   </div>
   <div class="btns">
     <a href="../index.html#booking" class="btn-gold">Book Now &rarr;</a>
     <a href="https://wa.me/919430696596" class="btn-whatsapp">&#128172; WhatsApp</a>
   </div>
 </div>
-
 </div>
 
-
-<section class="cta-section">
-  <h2>Ready to Build Your Project?</h2>
-  <p>Submit your requirements and get a proposal within 24 hours.</p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-    <a href="../index.html#booking" class="btn btn-gold">Book a Project &rarr;</a>
-    <a href="https://wa.me/919430696596" class="btn btn-whatsapp">&#128172; WhatsApp Us</a>
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-brand">ADR <span>Lab</span></div>
+  <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+  <div class="footer-grid">
+    <div class="footer-col"><p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students since 2024.</p><p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px;">📞 +91 94306 96596</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p></div>
+    <div class="footer-col"><div class="footer-col-title">Project Ideas</div><a href="aiml-project-ideas.html">AI/ML Projects</a><a href="java-project-ideas.html">Java Projects</a><a href="blockchain-project-ideas.html">Blockchain</a><a href="cyber-project-ideas.html">Cybersecurity</a><a href="java-aiml-combined-project-ideas.html">Java+AI/ML</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="../about.html">About</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></div>
+    <div class="footer-col"><div class="footer-col-title">Legal</div><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../refund.html">Refund</a></div>
   </div>
-</section>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">ADR <span>Lab</span></div>
-    <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students with professional project and research support since 2024.</p>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Project Ideas</div>
-        <a href="aiml-project-ideas.html">AI/ML Projects</a>
-        <a href="java-project-ideas.html">Java Projects</a>
-        <a href="blockchain-project-ideas.html">Blockchain</a>
-        <a href="cyber-project-ideas.html">Cybersecurity</a>
-        <a href="java-aiml-combined-project-ideas.html">Java + AI/ML</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Company</div>
-        <a href="../about.html">About ADR Lab</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../faq.html">FAQs</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Legal</div>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
-        <a href="../refund.html">Refund Policy</a>
-      </div>
-    </div>
-    <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
-  </div>
-</footer>
+  <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+</div></footer>
 </body>
 </html>

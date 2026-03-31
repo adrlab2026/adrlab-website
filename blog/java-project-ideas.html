@@ -1,67 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Java Project Ideas – ADR Lab</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Final Year Project Ideas 2026 — Spring Boot, Hibernate, REST APIs</title>
+  <meta name="description" content="15 detailed Java final year project ideas with modules, tech stack, and career relevance — built on Spring Boot, Hibernate, and MySQL for B.Tech and M.Tech students."/>
+  <link rel="canonical" href="https://adresearchlab.com/blog/java-project-ideas.html"/>
+  <meta property="og:title" content="Java Final Year Project Ideas 2026 — Spring Boot, Hibernate, REST APIs"/>
+  <meta property="og:description" content="15 detailed Java final year project ideas with modules, tech stack, and career relevance — built on Spring Boot, Hibernate, and MySQL for B.Tech and M.Tech students."/>
+  <meta property="og:url" content="https://adresearchlab.com/blog/java-project-ideas.html"/>
+  <meta property="og:type" content="article"/>
+  <link rel="icon" type="image/png" href="../images/favicon.png"/>
+  <link rel="stylesheet" href="blog.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com","logo":"https://adresearchlab.com/images/favicon.png","telephone":"+91-9430696596","email":"adrlab2026@gmail.com"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://adresearchlab.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://adresearchlab.com/blog.html"},{"@type":"ListItem","position":3,"name":"Java Projects","item":"https://adresearchlab.com/blog/java-project-ideas.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Java Final Year Project Ideas 2026 — Spring Boot, Hibernate, REST APIs","description":"15 detailed Java final year project ideas with modules, tech stack, and career relevance — built on Spring Boot, Hibernate, and MySQL for B.Tech and M.Tech students.","url":"https://adresearchlab.com/blog/java-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/java-project-ideas.html"}</script>
+  
+  <style>
+    /* ── Rich Project Card Layout ── */
+    .proj-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      margin-bottom: 32px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .proj-card:hover { box-shadow: var(--shadow-lg); border-color: transparent; }
+    .proj-card-header {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .proj-num {
+      background: var(--navy); color: var(--gold);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem; font-weight: 700;
+      min-width: 36px; height: 36px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .proj-title-wrap { flex: 1; }
+    .proj-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem; color: var(--navy); margin: 0 0 8px; line-height: 1.3;
+    }
+    .proj-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+    .badge-diff, .badge-domain {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+    }
+    .diff-easy { background: #d4edda; color: #155724; }
+    .diff-med { background: #fff3cd; color: #856404; }
+    .diff-hard { background: #f8d7da; color: #721c24; }
+    .dom-ai { background: #f0fdf4; color: #166534; }
+    .dom-java { background: #fff7ed; color: #9a3412; }
+    .dom-cyber { background: #fdf4ff; color: #7e22ce; }
+    .dom-bc { background: #eff6ff; color: #1e40af; }
+    .dom-web { background: var(--blue-light); color: var(--blue); }
 
-<!-- Premium Fonts -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    .proj-body { padding: 22px 28px; }
+    .proj-desc {
+      font-size: 15px; color: var(--gray-600); line-height: 1.8;
+      margin-bottom: 22px; border-left: 3px solid var(--gold);
+      padding-left: 14px;
+    }
 
-  gtag('config', 'G-F274FYF2KE');
-</script>
+    .proj-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 18px; margin-bottom: 18px;
+    }
+    .proj-section { background: var(--cream); border-radius: var(--radius); padding: 16px 18px; }
+    .proj-section-full { background: var(--cream); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 18px; }
+    .proj-section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .proj-section-title::before { content: attr(data-icon); }
+    .proj-list { list-style: none; padding: 0; margin: 0; }
+    .proj-list li {
+      font-size: 13px; color: var(--gray-600); padding: 4px 0;
+      display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+    }
+    .proj-list li::before { content: '▸'; color: var(--gold); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+    .tech-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tech-chip {
+      font-size: 11px; font-weight: 600; padding: 4px 10px;
+      border-radius: 6px; background: var(--navy); color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .career-bar {
+      background: linear-gradient(90deg, var(--blue-light), #fff);
+      border-radius: var(--radius); padding: 12px 16px;
+      font-size: 13px; color: var(--navy-mid); line-height: 1.6;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .career-bar::before { content: '💼'; font-size: 16px; flex-shrink: 0; }
 
-<!-- Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BlogPosting",
- "headline": "Java Final Year Project Ideas",
- "description": "Premium Java project ideas with features, modules, workflows, and real-world application details.",
- "author": {
-   "@type": "Organization",
-   "name": "ADR Lab",
-   "url": "https://adresearchlab.com"
- },
- "publisher": {
-   "@type": "Organization",
-   "name": "ADR Lab",
-   "logo": {
-       "@type": "ImageObject",
-       "url": "https://adresearchlab.com/images/logo.png"
-   }
- },
- "mainEntityOfPage": "https://adresearchlab.com/blog/java-project-ideas.html"
-}
-</script>
-<link rel="stylesheet" href="java-project-ideas.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ADR Lab",
-  "url": "https://adresearchlab.com",
-  "logo": "https://adresearchlab.com/images/favicon.png",
-  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
-  "telephone": "+91-9430696596",
-  "email": "adrlab2026@gmail.com",
-  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
-  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
-}
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adresearchlab.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Java Projects", "item": "https://adresearchlab.com/blog/java-project-ideas.html"}]}
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":"Java Final Year Project Ideas — ADR Lab","description":"15 industry-ready Java Spring Boot final year project ideas for engineering students.","url":"https://adresearchlab.com/blog/java-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/java-project-ideas.html"}
-  </script>
+    .proj-card-footer {
+      padding: 14px 28px; background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .book-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--blue); color: #fff; font-size: 13px;
+      font-weight: 600; padding: 8px 18px; border-radius: 8px;
+      text-decoration: none; transition: var(--transition);
+    }
+    .book-link:hover { background: var(--navy-mid); color: #fff; transform: translateY(-1px); }
+    .dataset-tag {
+      font-size: 12px; color: var(--gray-600);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* TOC */
+    .toc-box {
+      background: var(--cream); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg); padding: 22px 24px; margin-bottom: 32px;
+    }
+    .toc-box h3 {
+      font-family: 'DM Serif Display', serif; font-size: 1rem;
+      color: var(--navy); margin-bottom: 14px;
+    }
+    .toc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; list-style: none; padding: 0; margin: 0; }
+    .toc-list li { font-size: 13px; }
+    .toc-list a { color: var(--blue); text-decoration: none; display: flex; align-items: center; gap: 6px; padding: 3px 0; }
+    .toc-list a:hover { color: var(--navy); }
+
+    /* Page stats */
+    .page-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 14px; margin-bottom: 32px;
+    }
+    .stat-pill {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 14px 16px; text-align: center;
+    }
+    .stat-pill .sp-num { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--gold); }
+    .stat-pill .sp-lbl { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+
+    @media(max-width: 768px) {
+      .proj-grid { grid-template-columns: 1fr; }
+      .toc-list { grid-template-columns: 1fr; }
+      .page-stats { grid-template-columns: 1fr 1fr; }
+      .proj-card-header { flex-direction: column; gap: 10px; }
+      .proj-body { padding: 18px 16px; }
+      .proj-card-footer { flex-direction: column; align-items: flex-start; }
+    }
+    @media(max-width: 480px) {
+      .page-stats { grid-template-columns: 1fr 1fr; }
+      .proj-title { font-size: 1.05rem; }
+    }
+  </style>
 </head>
-
 <body>
 <header class="navbar">
   <div class="logo">ADR <span>Lab</span></div>
@@ -79,278 +175,511 @@
   </nav>
 </header>
 
-<!-- HEADER -->
 <section class="hero-banner">
-    <h1>Java Final Year Project Ideas</h1>
-    <p>15 industry-ready Java projects using Spring Boot, Hibernate, MySQL & REST APIs.</p>
+  <h1>Java Final Year Project Ideas</h1>
+  <p>15 industry-ready Spring Boot projects with full details — modules, tech stack, and career relevance for B.Tech, M.Tech & MCA students.</p>
 </section>
 
-<!-- CONTENT -->
 <div class="container">
 
-    <!-- 1 -->
-    <div class="project-card">
-        <h2 class="project-title">1. Smart Attendance Management System</h2>
-        <p class="project-desc">A digital attendance automation system for colleges and institutions.</p>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Admin, Faculty & Student Login</li>
-            <li>QR Code / OTP Based Attendance</li>
-            <li>Reports & Analytics</li>
-            <li>Email Notifications</li>
-            <li>Export Excel/PDF</li>
-            <li>JWT Authentication</li>
-        </ul>
-    </div>
-
-    <!-- 2 -->
-    <div class="project-card">
-        <h2 class="project-title">2. Online Banking System</h2>
-        <p class="project-desc">A secure core banking simulation platform.</p>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>KYC Management</li>
-            <li>Fund Transfer (IMPS/NEFT Simulation)</li>
-            <li>Transaction History</li>
-            <li>Admin Dashboard</li>
-            <li>Encryption & Authentication</li>
-            <li>REST API</li>
-        </ul>
-    </div>
-
-    <!-- 3 -->
-    <div class="project-card">
-        <h2 class="project-title">3. E-Commerce Platform</h2>
-        <p class="project-desc">Complete shopping system built using Spring Boot.</p>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Product Catalog</li>
-            <li>Cart & Wishlist</li>
-            <li>Order Management</li>
-            <li>Payment Gateway Simulation</li>
-            <li>Inventory Management</li>
-            <li>Microservices Architecture</li>
-        </ul>
-    </div>
-
-    <!-- 4 -->
-    <div class="project-card">
-        <h2 class="project-title">4. Hospital Management System</h2>
-        <p class="project-desc">A web-based software for managing hospital workflow.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Patient Registration</li>
-            <li>Doctor Appointment Booking</li>
-            <li>Billing System</li>
-            <li>Medical Records</li>
-            <li>Dashboards for Admin/Doctors</li>
-            <li>RBAC Authorization</li>
-        </ul>
-    </div>
-
-    <!-- 5 -->
-    <div class="project-card">
-        <h2 class="project-title">5. Job Portal System</h2>
-        <p class="project-desc">Full recruitment solution for employers and job seekers.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Employer & Candidate Login</li>
-            <li>Resume Upload</li>
-            <li>Job Posting & Tracking</li>
-            <li>Admin Approval</li>
-            <li>Email Notifications</li>
-        </ul>
-    </div>
-
-    <!-- 6 -->
-    <div class="project-card">
-        <h2 class="project-title">6. Inventory Management System</h2>
-        <p class="project-desc">Warehouse stock tracking using barcode and reports.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Stock Management</li>
-            <li>Barcode Integration</li>
-            <li>Supplier Management</li>
-            <li>Low Stock Alerts</li>
-            <li>Sales/Purchase Reports</li>
-            <li>Analytics Dashboard</li>
-        </ul>
-    </div>
-
-    <!-- 7 -->
-    <div class="project-card">
-        <h2 class="project-title">7. Online Examination System</h2>
-        <p class="project-desc">Secure exam system with evaluation automation.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Question Bank</li>
-            <li>Timer-based Exams</li>
-            <li>Auto Evaluation</li>
-            <li>Results Generation</li>
-            <li>Anti-cheating System</li>
-            <li>Student Analytics</li>
-        </ul>
-    </div>
-
-    <!-- 8 -->
-    <div class="project-card">
-        <h2 class="project-title">8. Real Estate Management System</h2>
-        <p class="project-desc">Property listing and marketplace solution.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Property Listings</li>
-            <li>Buyer/Seller Registration</li>
-            <li>Search & Filters</li>
-            <li>Appointment Scheduling</li>
-            <li>Approval Workflow</li>
-        </ul>
-    </div>
-
-    <!-- 9 -->
-    <div class="project-card">
-        <h2 class="project-title">9. Learning Management System (LMS)</h2>
-	<p class="project-desc">Online course management system.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Course Creation</li>
-            <li>Video Upload</li>
-            <li>Quiz/Assignment</li>
-            <li>Progress Tracking</li>
-            <li>Certificate Generation</li>
-            <li>Payment Integration</li>
-        </ul>
-    </div>
-
-    <!-- 10 -->
-    <div class="project-card">
-        <h2 class="project-title">10. Blockchain-Based Voting System</h2>
-	<p class="project-desc">Secure voting application using blockchain principles.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Voter Registration</li>
-            <li>Secure Vote Casting</li>
-            <li>Tamper-Proof Ledger</li>
-            <li>Result Transparency</li>
-            <li>Monitoring Dashboard</li>
-        </ul>
-    </div>
-
-    <!-- 11 -->
-    <div class="project-card">
-        <h2 class="project-title">11. Ride Sharing Application Backend</h2>
-	<p class="project-desc">Backend service for cab booking platform. </p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>User/Driver Registration</li>
-            <li>Ride Booking</li>
-            <li>Fare Calculation</li>
-            <li>Location Tracking</li>
-            <li>Rating System</li>
-            <li>RESTful APIs</li>
-        </ul>
-    </div>
-
-    <!-- 12 -->
-    <div class="project-card">
-        <h2 class="project-title">12. CRM System</h2>
-	<p class="project-desc">Customer relationship management software.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Lead Management</li>
-            <li>Sales Pipeline</li>
-            <li>Task & Reminders</li>
-            <li>Customer Logs</li>
-            <li>Reports Dashboard</li>
-            <li>Email Integration</li>
-        </ul>
-    </div>
-
-    <!-- 13 -->
-    <div class="project-card">
-        <h2 class="project-title">13. AI Resume Screening System</h2>
-	<p class="project-desc">Resume filtering system using rule-based and ML integration.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Resume Parsing</li>
-            <li>Keyword Matching</li>
-            <li>Candidate Scoring</li>
-            <li>Admin Dashboard</li>
-            <li>Interview Scheduling</li>
-        </ul>
-    </div>
-
-    <!-- 14 -->
-    <div class="project-card">
-        <h2 class="project-title">14. Expense Tracker Application</h2>
-	<p class="project-desc">Personal finance management system.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Income/Expense Management</li>
-            <li>Category Analysis</li>
-            <li>Monthly Reports</li>
-            <li>Budget Alerts</li>
-            <li>Charts & Visualization</li>
-        </ul>
-    </div>
-
-    <!-- 15 -->
-    <div class="project-card">
-        <h2 class="project-title">15. Microservices-Based Order Management System</h2>
-	<p class="project-desc">Enterprise-grade distributed system for order processing.</p>
-	<p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Order Service</li>
-            <li>Payment Service</li>
-            <li>Inventory Service</li>
-            <li>API Gateway</li>
-            <li>Service Discovery</li>
-            <li>Docker Deployment</li>
-        </ul>
-    </div>
-
+<div class="page-stats">
+  <div class="stat-pill"><div class="sp-num">15</div><div class="sp-lbl">Project Ideas</div></div>
+  <div class="stat-pill"><div class="sp-num">Spring Boot</div><div class="sp-lbl">Core Framework</div></div>
+  <div class="stat-pill"><div class="sp-num">⭐–⭐⭐⭐</div><div class="sp-lbl">All Levels</div></div>
+  <div class="stat-pill"><div class="sp-num">24h</div><div class="sp-lbl">Proposal Turnaround</div></div>
+</div>
+<div class="toc-box">
+  <h3>📋 All Projects on This Page</h3>
+  <ul class="toc-list"><li><a href="#project-1">→ Smart Attendance Management</a></li><li><a href="#project-2">→ Online Banking System</a></li><li><a href="#project-3">→ E-Commerce + Recommendation</a></li><li><a href="#project-4">→ Hospital Management System</a></li><li><a href="#project-5">→ Job Portal System</a></li><li><a href="#project-6">→ Inventory Management System</a></li><li><a href="#project-7">→ Smart LMS / E-Learning</a></li><li><a href="#project-8">→ Real Estate Portal</a></li><li><a href="#project-9">→ Train Ticket Booking</a></li><li><a href="#project-10">→ Library Management System</a></li><li><a href="#project-11">→ Blood Bank Management</a></li><li><a href="#project-12">→ Employee Payroll System</a></li><li><a href="#project-13">→ Social Media Platform</a></li><li><a href="#project-14">→ Online Exam Platform</a></li><li><a href="#project-15">→ Microservices Order System</a></li></ul>
 </div>
 
-
-<section class="cta-section">
-  <h2>Ready to Build Your Project?</h2>
-  <p>Submit your requirements and get a proposal within 24 hours.</p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-    <a href="../index.html#booking" class="btn btn-gold">Book a Project &rarr;</a>
-    <a href="https://wa.me/919430696596" class="btn btn-whatsapp">&#128172; WhatsApp Us</a>
-  </div>
-</section>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">ADR <span>Lab</span></div>
-    <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students with professional project and research support since 2024.</p>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Project Ideas</div>
-        <a href="aiml-project-ideas.html">AI/ML Projects</a>
-        <a href="java-project-ideas.html">Java Projects</a>
-        <a href="blockchain-project-ideas.html">Blockchain</a>
-        <a href="cyber-project-ideas.html">Cybersecurity</a>
-        <a href="java-aiml-combined-project-ideas.html">Java + AI/ML</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Company</div>
-        <a href="../about.html">About ADR Lab</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../faq.html">FAQs</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Legal</div>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
-        <a href="../refund.html">Refund Policy</a>
+  <div class="proj-card" id="project-1">
+    <div class="proj-card-header">
+      <div class="proj-num">01</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Smart Attendance Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / Spring Boot</span>
+        </div>
       </div>
     </div>
-    <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+    <div class="proj-body">
+      <p class="proj-desc">A digital attendance automation platform for colleges and institutions that replaces manual registers with QR code and OTP-based attendance marking. Admins, faculty, and students each have role-specific dashboards with analytics and automated email/SMS alerts for absenteeism.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Admin / Faculty / Student Login Portals</li><li>QR Code & OTP Attendance Marking</li><li>Leave Application & Approval Workflow</li><li>Attendance Analytics & Reports</li><li>Automated Email/SMS Alerts</li><li>Export to Excel / PDF</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java 17</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Spring Security (JWT)</span><span class="tech-chip">Hibernate / JPA</span><span class="tech-chip">MySQL</span><span class="tech-chip">Thymeleaf / React</span><span class="tech-chip">Twilio API (SMS)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Strong fit for enterprise software, EdTech, and HR automation roles. Demonstrates Spring Boot mastery, JWT security, and RESTful API design — highly valued at TCS, Infosys, and product companies.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom college attendance data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
   </div>
-</footer>
+
+  <div class="proj-card" id="project-2">
+    <div class="proj-card-header">
+      <div class="proj-num">02</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Online Banking System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-java">Java / Finance</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A secure core banking simulation platform with multi-account management, fund transfers (IMPS/NEFT simulation), fixed deposit management, and a full admin dashboard. Implements industry-standard security including JWT auth, BCrypt password hashing, and transaction audit logs.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Customer Registration & KYC Module</li><li>Multi-Account Management</li><li>Fund Transfer Engine (NEFT/IMPS Sim)</li><li>Fixed Deposit & Loan Simulation</li><li>Transaction History & Statements</li><li>Admin Dashboard & Fraud Flags</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java 17</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Spring Security</span><span class="tech-chip">JWT</span><span class="tech-chip">BCrypt</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">iText (PDF statements)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Directly relevant for FinTech, Banking Software, and Core Java developer roles. Demonstrates security implementation, financial transaction logic, and audit trail design — impressive in BFSI sector interviews.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom simulated transaction data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-3">
+    <div class="proj-card-header">
+      <div class="proj-num">03</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">E-Commerce Platform with Recommendation Engine</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-java">Java / Full Stack</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A complete online shopping platform built on Spring Boot with a product catalogue, cart, order management, and payment gateway simulation. A Python-based collaborative filtering recommendation engine runs as a microservice and personalises product suggestions per user.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Product Catalogue & Category Management</li><li>Cart, Wishlist & Checkout</li><li>Order Tracking & Delivery Status</li><li>Payment Gateway (Razorpay Simulation)</li><li>Collaborative Filtering Recommendation API</li><li>Seller Admin Dashboard</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">Python (Flask ML service)</span><span class="tech-chip">Redis (session)</span><span class="tech-chip">Stripe / Razorpay SDK</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Excellent for full-stack Java developer and product engineering roles. The microservice + ML recommendation component makes it stand out in interviews at e-commerce companies.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Amazon product dataset (Kaggle) for recommendations</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-4">
+    <div class="proj-card-header">
+      <div class="proj-num">04</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Hospital Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / Healthcare</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A comprehensive hospital workflow management system covering patient registration, doctor scheduling, billing, and medical record keeping. Includes role-based access for doctors, nurses, billing staff, and admins with HIPAA-compliant data handling patterns.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Patient Registration & OPD Management</li><li>Doctor Appointment Scheduling</li><li>Prescription & Medical Records</li><li>Billing & Invoice Generation</li><li>Lab Test Management</li><li>Admin Analytics Dashboard</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate / JPA</span><span class="tech-chip">MySQL</span><span class="tech-chip">Thymeleaf</span><span class="tech-chip">Spring Security</span><span class="tech-chip">iText (billing PDF)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Relevant for healthcare IT, enterprise Java, and hospital software companies like HCL, Wipro, and health-tech startups. Straightforward scope — reliable choice for first-time final year project students.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom mock hospital data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-5">
+    <div class="proj-card-header">
+      <div class="proj-num">05</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Job Portal System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-java">Java / HR Tech</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A full-featured job marketplace where employers post vacancies, candidates upload resumes and apply, and admins moderate all listings. Includes keyword-based job search, application tracking system (ATS), and automated email notifications for shortlisting.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Employer & Candidate Portals</li><li>Resume Upload & Parsing</li><li>Job Posting & Application Tracking</li><li>Keyword Search & Filter Engine</li><li>Shortlisting & Interview Scheduling</li><li>Email Notification System</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">Apache Solr / Elasticsearch (search)</span><span class="tech-chip">Spring Mail</span><span class="tech-chip">AWS S3 (resume storage)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Directly relevant for HR-Tech companies like Naukri, LinkedIn, and Indeed clones. Demonstrates search engine integration, file storage, and workflow automation skills.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom job listings / Indeed public dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-6">
+    <div class="proj-card-header">
+      <div class="proj-num">06</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Inventory Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / ERP</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A warehouse and stock management system with barcode-based product tracking, supplier management, automated reorder alerts, and comprehensive stock movement reports. Designed for SME retail and warehouse operations.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Product & Category Management</li><li>Barcode / QR Code Integration</li><li>Stock In / Out Tracking</li><li>Supplier & Purchase Order Module</li><li>Low-Stock Alert Engine</li><li>Sales Report & Analytics</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">ZXing (barcode)</span><span class="tech-chip">Thymeleaf / React</span><span class="tech-chip">JasperReports</span><span class="tech-chip">Spring Mail</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Valuable for ERP, Supply Chain, and retail software roles. ERP modules are standard in large-scale enterprise software — this project demonstrates business domain understanding.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom inventory / retail dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-7">
+    <div class="proj-card-header">
+      <div class="proj-num">07</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Smart Learning Management System (LMS)</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-java">Java / EdTech</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An e-learning platform where instructors create courses with video lectures, quizzes, and assignments. Students enrol, track progress, and receive completion certificates. Includes a discussion forum and an admin portal for content moderation.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Course & Module Builder</li><li>Video Upload & Streaming Integration</li><li>Quizzes & Auto-Grading Engine</li><li>Student Progress Tracker</li><li>Discussion Forum</li><li>Certificate Generation (PDF)</li><li>Payment Integration</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">AWS S3 (videos)</span><span class="tech-chip">iText (certificates)</span><span class="tech-chip">Razorpay</span><span class="tech-chip">WebSockets (forum)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Excellent for EdTech companies like BYJU's, Unacademy, Coursera vendors, and corporate training platforms. Covers full product engineering complexity.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom course content</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-8">
+    <div class="proj-card-header">
+      <div class="proj-num">08</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Real Estate Property Listing Portal</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / Web</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A property listing and search platform where sellers list properties with photos and details, buyers browse and filter by location/price/type, and agents manage enquiries. Includes an integrated appointment scheduler and map view.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Property Listing with Image Upload</li><li>Advanced Search & Filter Engine</li><li>Buyer Enquiry & Contact System</li><li>Agent Dashboard</li><li>Appointment Scheduler</li><li>Google Maps Integration</li><li>Admin Moderation Panel</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">Google Maps API</span><span class="tech-chip">AWS S3 (images)</span><span class="tech-chip">Spring Mail</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Relevant for PropTech and real estate portal companies. Demonstrates full-stack Java with map integration and file management — clean scope for college projects.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>MagicBricks / 99acres public listings</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-9">
+    <div class="proj-card-header">
+      <div class="proj-num">09</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Train Ticket Booking System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / Transport</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An Indian Railways-inspired ticket reservation system with train search, seat availability checking, PNR management, ticket booking/cancellation, and an admin panel for train schedule management. Implements concurrency control for simultaneous bookings.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Train Search & Route Query</li><li>Seat Availability & Reservation Engine</li><li>PNR Management & Status</li><li>Ticket Booking & Cancellation</li><li>Waitlist & Auto-Upgrade Logic</li><li>Admin Train Schedule Manager</li><li>PDF Ticket Generation</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">iText (PDF tickets)</span><span class="tech-chip">Spring Security</span><span class="tech-chip">Redis (concurrency)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Classic Java full-stack project — well understood by examiners. The concurrency control and transaction management aspects demonstrate strong Spring Boot knowledge for placement interviews.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Indian Railways public dataset / IRCTC mock data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-10">
+    <div class="proj-card-header">
+      <div class="proj-num">10</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Library Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / Web</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A comprehensive digital library management system covering book cataloguing, member registration, book issue/return tracking, fine calculation, and an OPAC (Online Public Access Catalogue) for students to search available books.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Book Catalogue & ISBN Management</li><li>Member Registration & Library Cards</li><li>Book Issue / Return Tracking</li><li>Fine Calculation Engine</li><li>OPAC Search Interface</li><li>Overdue Email Reminders</li><li>Admin Analytics</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">Thymeleaf</span><span class="tech-chip">Spring Security</span><span class="tech-chip">Spring Mail</span><span class="tech-chip">JasperReports</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Solid foundational Java project that demonstrates CRUD mastery, business logic, and reporting. Recommended as a reliable first-year choice for students new to Spring Boot.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Open Library dataset / custom catalogue</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-11">
+    <div class="proj-card-header">
+      <div class="proj-num">11</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Blood Bank Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / Healthcare</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A digital blood bank system that manages donor registration, blood inventory by type and expiry, hospital donation requests, cross-matching, and emergency alerts. Includes a donor search map and WhatsApp notification for urgent requests.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Donor Registration & Blood Type Records</li><li>Blood Inventory Management</li><li>Hospital Request & Allocation</li><li>Cross-Match & Compatibility Check</li><li>Emergency Donor Alert (WhatsApp API)</li><li>Expiry Tracking & Alerts</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">MySQL</span><span class="tech-chip">Hibernate</span><span class="tech-chip">React</span><span class="tech-chip">Twilio WhatsApp API</span><span class="tech-chip">Google Maps API</span><span class="tech-chip">Spring Mail</span></div>
+        </div>
+      </div>
+      <div class="career-bar">High social impact project with good examiner reception. Demonstrates event-driven notifications and healthcare domain knowledge. Good fit for health-tech and NGO software companies.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom blood bank mock data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-12">
+    <div class="proj-card-header">
+      <div class="proj-num">12</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Employee Payroll Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-java">Java / HRM</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A complete HR payroll system that manages employee records, attendance integration, salary computation (CTC breakdown, TDS, PF, ESI), payslip generation, and annual tax documents. Designed for SME HR departments.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Employee Registration & Department Management</li><li>Attendance Integration Module</li><li>Salary Structure & CTC Calculator</li><li>TDS / PF / ESI Computation</li><li>Monthly Payslip Generation (PDF)</li><li>Annual Tax Statement (Form 16)</li><li>Admin Dashboard</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">iText (PDF payslip)</span><span class="tech-chip">React</span><span class="tech-chip">Spring Security</span><span class="tech-chip">Spring Mail</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Directly relevant for HRM software, payroll platforms, and enterprise ERP companies like SAP, Oracle HCM, and Zoho Payroll. Strong business logic component.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom payroll mock dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-13">
+    <div class="proj-card-header">
+      <div class="proj-num">13</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Social Media Platform (Mini Twitter/Instagram)</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-java">Java / Full Stack</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A social networking platform with user profiles, post creation (text/images), follow/follower system, real-time feed, likes, comments, and a notification engine. Implements hashtag search and a basic content moderation admin panel.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>User Auth & Profile Management</li><li>Post Creation & Media Upload</li><li>Follow / Follower Graph</li><li>Real-Time Feed Algorithm</li><li>Likes, Comments & Shares</li><li>Hashtag Search & Trending</li><li>Notification Engine (WebSockets)</li><li>Admin Moderation</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">WebSockets (STOMP)</span><span class="tech-chip">AWS S3</span><span class="tech-chip">Redis (feed cache)</span><span class="tech-chip">Spring Security</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Impressive full-stack project for product engineering, social media platform, and startup roles. Demonstrates real-time systems, caching, and social graph design.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom user-generated content</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-14">
+    <div class="proj-card-header">
+      <div class="proj-num">14</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Online Exam & Quiz Platform</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-java">Java / EdTech</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A full-featured online examination system with question bank management, time-limited quizzes, auto-grading, anti-cheating measures (tab-switch detection), detailed result analytics, and a certificate generator for passing students.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Question Bank & Category Management</li><li>Exam Configuration & Scheduling</li><li>Time-Limited Exam Interface</li><li>Anti-Cheating Detection (tab-switch)</li><li>Auto-Grading & Instant Results</li><li>Performance Analytics Dashboard</li><li>Certificate Generation</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Hibernate</span><span class="tech-chip">MySQL</span><span class="tech-chip">React</span><span class="tech-chip">WebSockets (timer sync)</span><span class="tech-chip">iText (certificates)</span><span class="tech-chip">Spring Security</span><span class="tech-chip">Redis (exam state)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Highly relevant for EdTech, competitive exam platforms (BYJU's, Testbook, Unacademy), and corporate training assessment tools.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom question bank / UPSC/SSC public question sets</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-15">
+    <div class="proj-card-header">
+      <div class="proj-num">15</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Microservices-Based Order Management System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-java">Java / Microservices</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An enterprise-grade distributed order processing system decomposed into independent microservices: Order Service, Payment Service, Inventory Service, and Notification Service — communicating via REST APIs with an API Gateway and service discovery.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Order Service (CRUD & workflow)</li><li>Payment Service (Razorpay integration)</li><li>Inventory Service (stock deduction)</li><li>Notification Service (email/SMS)</li><li>API Gateway (Spring Cloud Gateway)</li><li>Service Discovery (Eureka)</li><li>Centralised Logging (ELK Stack)</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Java</span><span class="tech-chip">Spring Boot</span><span class="tech-chip">Spring Cloud</span><span class="tech-chip">Eureka</span><span class="tech-chip">API Gateway</span><span class="tech-chip">Docker</span><span class="tech-chip">MySQL (per service)</span><span class="tech-chip">Kafka (events)</span><span class="tech-chip">React</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Advanced architecture project — highly valued for senior developer and solution architect interviews. Directly demonstrates microservices design patterns expected at top IT companies and product firms.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom order data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+<div class="cta-strip" style="margin:40px 0 20px;">
+  <div>
+    <h3>Want to Build One of These?</h3>
+    <p>ADR Lab provides complete development — code, documentation, deployment, and viva support.</p>
+  </div>
+  <div class="btns">
+    <a href="../index.html#booking" class="btn-gold">Book Now &rarr;</a>
+    <a href="https://wa.me/919430696596" class="btn-whatsapp">&#128172; WhatsApp</a>
+  </div>
+</div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-brand">ADR <span>Lab</span></div>
+  <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+  <div class="footer-grid">
+    <div class="footer-col"><p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students since 2024.</p><p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px;">📞 +91 94306 96596</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p></div>
+    <div class="footer-col"><div class="footer-col-title">Project Ideas</div><a href="aiml-project-ideas.html">AI/ML Projects</a><a href="java-project-ideas.html">Java Projects</a><a href="blockchain-project-ideas.html">Blockchain</a><a href="cyber-project-ideas.html">Cybersecurity</a><a href="java-aiml-combined-project-ideas.html">Java+AI/ML</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="../about.html">About</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></div>
+    <div class="footer-col"><div class="footer-col-title">Legal</div><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../refund.html">Refund</a></div>
+  </div>
+  <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+</div></footer>
 </body>
 </html>

@@ -1,67 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cybersecurity Project Ideas – ADR Lab</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Final Year Project Ideas 2026 — Ethical Hacking & IDS</title>
+  <meta name="description" content="15 detailed Cybersecurity final year project ideas with modules, tech stack, and career relevance — covering IDS, encryption, forensics, and ethical hacking for B.Tech and M.Tech students."/>
+  <link rel="canonical" href="https://adresearchlab.com/blog/cyber-project-ideas.html"/>
+  <meta property="og:title" content="Cybersecurity Final Year Project Ideas 2026 — Ethical Hacking & IDS"/>
+  <meta property="og:description" content="15 detailed Cybersecurity final year project ideas with modules, tech stack, and career relevance — covering IDS, encryption, forensics, and ethical hacking for B.Tech and M.Tech students."/>
+  <meta property="og:url" content="https://adresearchlab.com/blog/cyber-project-ideas.html"/>
+  <meta property="og:type" content="article"/>
+  <link rel="icon" type="image/png" href="../images/favicon.png"/>
+  <link rel="stylesheet" href="blog.css"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F274FYF2KE');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com","logo":"https://adresearchlab.com/images/favicon.png","telephone":"+91-9430696596","email":"adrlab2026@gmail.com"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://adresearchlab.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://adresearchlab.com/blog.html"},{"@type":"ListItem","position":3,"name":"Cybersecurity Projects","item":"https://adresearchlab.com/blog/cyber-project-ideas.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cybersecurity Final Year Project Ideas 2026 — Ethical Hacking & IDS","description":"15 detailed Cybersecurity final year project ideas with modules, tech stack, and career relevance — covering IDS, encryption, forensics, and ethical hacking for B.Tech and M.Tech students.","url":"https://adresearchlab.com/blog/cyber-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/cyber-project-ideas.html"}</script>
+  
+  <style>
+    /* ── Rich Project Card Layout ── */
+    .proj-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      margin-bottom: 32px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .proj-card:hover { box-shadow: var(--shadow-lg); border-color: transparent; }
+    .proj-card-header {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .proj-num {
+      background: var(--navy); color: var(--gold);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem; font-weight: 700;
+      min-width: 36px; height: 36px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .proj-title-wrap { flex: 1; }
+    .proj-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem; color: var(--navy); margin: 0 0 8px; line-height: 1.3;
+    }
+    .proj-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+    .badge-diff, .badge-domain {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+    }
+    .diff-easy { background: #d4edda; color: #155724; }
+    .diff-med { background: #fff3cd; color: #856404; }
+    .diff-hard { background: #f8d7da; color: #721c24; }
+    .dom-ai { background: #f0fdf4; color: #166534; }
+    .dom-java { background: #fff7ed; color: #9a3412; }
+    .dom-cyber { background: #fdf4ff; color: #7e22ce; }
+    .dom-bc { background: #eff6ff; color: #1e40af; }
+    .dom-web { background: var(--blue-light); color: var(--blue); }
 
-<!-- Premium Fonts -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F274FYF2KE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    .proj-body { padding: 22px 28px; }
+    .proj-desc {
+      font-size: 15px; color: var(--gray-600); line-height: 1.8;
+      margin-bottom: 22px; border-left: 3px solid var(--gold);
+      padding-left: 14px;
+    }
 
-  gtag('config', 'G-F274FYF2KE');
-</script>
+    .proj-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 18px; margin-bottom: 18px;
+    }
+    .proj-section { background: var(--cream); border-radius: var(--radius); padding: 16px 18px; }
+    .proj-section-full { background: var(--cream); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 18px; }
+    .proj-section-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .proj-section-title::before { content: attr(data-icon); }
+    .proj-list { list-style: none; padding: 0; margin: 0; }
+    .proj-list li {
+      font-size: 13px; color: var(--gray-600); padding: 4px 0;
+      display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+    }
+    .proj-list li::before { content: '▸'; color: var(--gold); font-size: 11px; flex-shrink: 0; margin-top: 2px; }
+    .tech-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tech-chip {
+      font-size: 11px; font-weight: 600; padding: 4px 10px;
+      border-radius: 6px; background: var(--navy); color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+    }
+    .career-bar {
+      background: linear-gradient(90deg, var(--blue-light), #fff);
+      border-radius: var(--radius); padding: 12px 16px;
+      font-size: 13px; color: var(--navy-mid); line-height: 1.6;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .career-bar::before { content: '💼'; font-size: 16px; flex-shrink: 0; }
 
-<!-- Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BlogPosting",
- "headline": "Cybersecurity Final Year Project Ideas",
- "description": "Premium Cybersecurity project ideas with features, modules, workflows, and real-world application details.",
- "author": {
-   "@type": "Organization",
-   "name": "ADR Lab",
-   "url": "https://adresearchlab.com"
- },
- "publisher": {
-   "@type": "Organization",
-   "name": "ADR Lab",
-   "logo": {
-       "@type": "ImageObject",
-       "url": "https://adresearchlab.com/images/logo.png"
-   }
- },
- "mainEntityOfPage": "https://adresearchlab.com/blog/cybersecurity-project-ideas.html"
-}
-</script>
-<link rel="stylesheet" href="java-project-ideas.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ADR Lab",
-  "url": "https://adresearchlab.com",
-  "logo": "https://adresearchlab.com/images/favicon.png",
-  "description": "ADR Lab provides Final Year Project development, Research Paper Guidance, Resume Services, LinkedIn Optimization, and Mock Interview coaching for engineering students worldwide.",
-  "telephone": "+91-9430696596",
-  "email": "adrlab2026@gmail.com",
-  "sameAs": ["https://www.linkedin.com/company/adr-lab", "https://instagram.com/adrlab_official"],
-  "contactPoint": {"@type":"ContactPoint","telephone":"+91-9430696596","contactType":"customer support","email":"adrlab2026@gmail.com","areaServed":"Worldwide","availableLanguage":"en"}
-}
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adresearchlab.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adresearchlab.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Cybersecurity Projects", "item": "https://adresearchlab.com/blog/cyber-project-ideas.html"}]}
-  </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cybersecurity Final Year Project Ideas — ADR Lab","description":"Ethical hacking, IDS, and network security final year project ideas for engineering students.","url":"https://adresearchlab.com/blog/cyber-project-ideas.html","datePublished":"2026-03-01","dateModified":"2026-03-30","author":{"@type":"Organization","name":"ADR Lab","url":"https://adresearchlab.com"},"publisher":{"@type":"Organization","name":"ADR Lab","logo":{"@type":"ImageObject","url":"https://adresearchlab.com/images/favicon.png"}},"mainEntityOfPage":"https://adresearchlab.com/blog/cyber-project-ideas.html"}
-  </script>
+    .proj-card-footer {
+      padding: 14px 28px; background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .book-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--blue); color: #fff; font-size: 13px;
+      font-weight: 600; padding: 8px 18px; border-radius: 8px;
+      text-decoration: none; transition: var(--transition);
+    }
+    .book-link:hover { background: var(--navy-mid); color: #fff; transform: translateY(-1px); }
+    .dataset-tag {
+      font-size: 12px; color: var(--gray-600);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* TOC */
+    .toc-box {
+      background: var(--cream); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg); padding: 22px 24px; margin-bottom: 32px;
+    }
+    .toc-box h3 {
+      font-family: 'DM Serif Display', serif; font-size: 1rem;
+      color: var(--navy); margin-bottom: 14px;
+    }
+    .toc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; list-style: none; padding: 0; margin: 0; }
+    .toc-list li { font-size: 13px; }
+    .toc-list a { color: var(--blue); text-decoration: none; display: flex; align-items: center; gap: 6px; padding: 3px 0; }
+    .toc-list a:hover { color: var(--navy); }
+
+    /* Page stats */
+    .page-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 14px; margin-bottom: 32px;
+    }
+    .stat-pill {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 14px 16px; text-align: center;
+    }
+    .stat-pill .sp-num { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--gold); }
+    .stat-pill .sp-lbl { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+
+    @media(max-width: 768px) {
+      .proj-grid { grid-template-columns: 1fr; }
+      .toc-list { grid-template-columns: 1fr; }
+      .page-stats { grid-template-columns: 1fr 1fr; }
+      .proj-card-header { flex-direction: column; gap: 10px; }
+      .proj-body { padding: 18px 16px; }
+      .proj-card-footer { flex-direction: column; align-items: flex-start; }
+    }
+    @media(max-width: 480px) {
+      .page-stats { grid-template-columns: 1fr 1fr; }
+      .proj-title { font-size: 1.05rem; }
+    }
+  </style>
 </head>
-
 <body>
 <header class="navbar">
   <div class="logo">ADR <span>Lab</span></div>
@@ -79,300 +175,511 @@
   </nav>
 </header>
 
-<!-- HEADER -->
 <section class="hero-banner">
-    <h1>Cybersecurity Final Year Project Ideas</h1>
+  <h1>Cybersecurity Final Year Project Ideas</h1>
+  <p>15 in-depth projects covering ethical hacking, IDS, cryptography, and digital forensics — with full modules, tech stack, and career relevance.</p>
 </section>
 
-<!-- CONTENT -->
 <div class="container">
 
-    <!-- 1 -->
-    <div class="project-card">
-        <h2 class="project-title">1. AI-Powered Phishing Email Detection System </h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Classifies emails as phishing/legitimate</li>
-            <li>Analyzes email text, sender address, URLs</li>
-            <li>Detects suspicious patterns using ML</li>
-            <li>Dashboard with detection statistics</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, Scikit-Learn/TensorFlow, NLP (spaCy), Flask, HTML/CSS</li>
-        </ul>
-    </div>
-
-    <!-- 2 -->
-    <div class="project-card">
-        <h2 class="project-title">2. Intrusion Detection System (IDS) using Machine Learning</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Monitors network logs</li>
-            <li>Detects anomalies like DoS, brute force, port scan</li>
-            <li>Real-time alert generation</li>
-            <li>Visualization dashboards</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, Pandas, Scikit-Learn, CIC-IDS/KDD99 dataset, Matplotlib</li>
-        </ul>
-    </div>
-
-    <!-- 3 -->
-    <div class="project-card">
-        <h2 class="project-title">3. Web Application Vulnerability Scanner</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Crawl webpages</li>
-            <li>Detect SQL Injection, XSS, CSRF, broken auth</li>
-            <li>Find insecure headers & server misconfigurations</li>
-            <li>Generates security report</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, BeautifulSoup, Requests, OWASP Top-10 rules</li>
-        </ul>
-    </div>
-
-    <!-- 4 -->
-    <div class="project-card">
-        <h2 class="project-title">4. Malicious URL Detection Using Machine Learning</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Analyze URL Structure and domain features</li>
-            <li>Classifies URL as safe or malicious</li>
-            <li>Detects phishing pages</li>
-            <li>Simple UI to input URLs</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, Scikit-Learn, URL datasets, Flask/Streamlit</li>
-        </ul>
-    </div>
-
-    <!-- 5 -->
-    <div class="project-card">
-        <h2 class="project-title">5. Secure File Storage System with Encryption</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Encrypt files using AES-256</li>
-            <li>User authentication & role-based access</li>
-            <li>Secure download/upload</li>
-            <li>Logs all user activities</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python/Node.js, AES library (PyCryptodome), MySQL/MongoDB</li>
-        </ul>
-    </div>
-
-    <!-- 6 -->
-    <div class="project-card">
-        <h2 class="project-title">6. Honeypot & Attack Analysis Dashboard</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Deploy SSH/HTTP honeypot</li>
-            <li>Logs attacker IPs & commands</li>
-            <li>Generates attack frequency charts</li>
-            <li>Geolocation of attacks</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Cowrie Honeypot, Python, ELK Stack (Elasticsearch-Logstash-Kibana)</li>
-        </ul>
-    </div>
-
-    <!-- 7 -->
-    <div class="project-card">
-        <h2 class="project-title">7. Browser Extension for Detecting Unsafe Websites</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Warns users about phishing/malicious sites</li>
-            <li>Checks SSL certificate & URL reputation</li>
-            <li>Blocks insecure forms</li>
-            <li>Popup alerts</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>JavaScript, Chrome Extension API, HTML/CSS</li>
-        </ul>
-    </div>
-
-    <!-- 8 -->
-    <div class="project-card">
-        <h2 class="project-title">8. Network Packet Sniffer & Analyzer</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Captures packets in real-time</li>
-            <li>Displays TCP/UDP/HTTPS/DNS data</li>
-            <li>Detect ARP spoofing, MITM attempts</li>
-            <li>Charts for traffic analysis</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, Scapy, Wireshark dataset, Flask</li>
-        </ul>
-    </div>
-
-    <!-- 9 -->
-    <div class="project-card">
-        <h2 class="project-title">9. Ransomware Behaviour Simulator (Safe)</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Encrypts test files only to simulate attack</li>
-            <li>Shows ransomware-like warning screen</li>
-            <li>Decrypts with key</li>
-            <li>Logs file access & encryption patterns</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, AES Encryption, Tkinter GUI</li>
-        </ul>
-    </div>
-
-    <!-- 10 -->
-    <div class="project-card">
-        <h2 class="project-title">10. Biometric Authentication System</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Login using face/voice/fingerprint</li>
-            <li>Liveness detection</li>
-            <li>Multi-factor authentication</li>
-            <li>Secure storage of biometric data</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, OpenCV, TensorFlow/Keras, SQLite/MySQL</li>
-        </ul>
-    </div>
-
-    <!-- 11 -->
-    <div class="project-card">
-        <h2 class="project-title">11. Secure Chat App with End-to-End Encryption</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Encrypted messaging using AES/RSA</li>
-            <li>Secure key exchange</li>
-            <li>No message stored in server</li>
-            <li>Optional group chats</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python/Node.js, Socket.IO, RSA/AES cryptography</li>
-        </ul>
-    </div>
-
-    <!-- 12 -->
-    <div class="project-card">
-        <h2 class="project-title">12. Blockchain-Based Voting System</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Immutable transaction log</li>
-            <li>Secure voter registration</li>
-            <li>Double-voting prevention</li>
-            <li>Transparent result verification</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Solidity (Ethereum), Web3.js, Ganache, React/Node.js</li>
-        </ul>
-    </div>
-
-    <!-- 13 -->
-    <div class="project-card">
-        <h2 class="project-title">13. Password Manager with Encrypted Vault</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Stores passwords in encrypted vault</li>
-            <li>Master password-based access</li>
-            <li>Auto password generator</li>
-            <li>Clipboard auto-clear</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python/Java, AES-256, SQLite/MySQL, Tkinter/JavaFx</li>
-        </ul>
-    </div>
-
-    <!-- 14 -->
-    <div class="project-card">
-        <h2 class="project-title">14. Log Monitoring & Alerting System (Mini SIEM)</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <li>Collects system logs (windows/Linux)</li>
-            <li>Correlation rules to detect attacks</li>
-            <li>Live alerts (email/SMS)</li>
-            <li>Dashboard analysis</li>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, Syslog, Elasticsearch/kibana, Bash for log collection</li>
-        </ul>
-    </div>
-
-    <!-- 15 -->
-    <div class="project-card">
-        <h2 class="project-title">15. IoT Security Scanner</h2>
-        <p class="features-title">Features:</p>
-        <ul class="features-list">
-            <p>1. Scans IoT devices for: </p>
-            <li>Weak/default passwords</li>
-            <li>open ports</li>
-            <li>Unencrypted traffic</li>
-	    <li>Firmware vulnerabilities</li>
-	    <li>Docker Deployment</li>
-	    <p>2. Generates device security score </p>
-        </ul>
-	<p class="features-title">Tech Stack:</p>
-	<ul class="features-list">
-            <li>Python, Nmap API, MQTT/HTTP sniffing tools, Flask</li>
-        </ul>
-    </div>
-
+<div class="page-stats">
+  <div class="stat-pill"><div class="sp-num">15</div><div class="sp-lbl">Project Ideas</div></div>
+  <div class="stat-pill"><div class="sp-num">OWASP</div><div class="sp-lbl">Aligned</div></div>
+  <div class="stat-pill"><div class="sp-num">⭐–⭐⭐⭐</div><div class="sp-lbl">All Levels</div></div>
+  <div class="stat-pill"><div class="sp-num">24h</div><div class="sp-lbl">Proposal Turnaround</div></div>
+</div>
+<div class="toc-box">
+  <h3>📋 All Projects on This Page</h3>
+  <ul class="toc-list"><li><a href="#project-1">→ Phishing Email Detection</a></li><li><a href="#project-2">→ Intrusion Detection (IDS)</a></li><li><a href="#project-3">→ Web Vulnerability Scanner</a></li><li><a href="#project-4">→ Malicious URL Detection</a></li><li><a href="#project-5">→ Secure File Storage (Encryption)</a></li><li><a href="#project-6">→ Honeypot & Attack Dashboard</a></li><li><a href="#project-7">→ Browser Safety Extension</a></li><li><a href="#project-8">→ Packet Sniffer & Analyser</a></li><li><a href="#project-9">→ Ransomware Behaviour Simulator</a></li><li><a href="#project-10">→ Biometric Authentication</a></li><li><a href="#project-11">→ Secure Chat (E2E Encryption)</a></li><li><a href="#project-12">→ Password Manager with Vault</a></li><li><a href="#project-13">→ Log Monitoring (Mini SIEM)</a></li><li><a href="#project-14">→ IoT Security Scanner</a></li><li><a href="#project-15">→ Digital Forensics Tool</a></li></ul>
 </div>
 
-
-<section class="cta-section">
-  <h2>Ready to Build Your Project?</h2>
-  <p>Submit your requirements and get a proposal within 24 hours.</p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-    <a href="../index.html#booking" class="btn btn-gold">Book a Project &rarr;</a>
-    <a href="https://wa.me/919430696596" class="btn btn-whatsapp">&#128172; WhatsApp Us</a>
-  </div>
-</section>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">ADR <span>Lab</span></div>
-    <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students with professional project and research support since 2024.</p>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Project Ideas</div>
-        <a href="aiml-project-ideas.html">AI/ML Projects</a>
-        <a href="java-project-ideas.html">Java Projects</a>
-        <a href="blockchain-project-ideas.html">Blockchain</a>
-        <a href="cyber-project-ideas.html">Cybersecurity</a>
-        <a href="java-aiml-combined-project-ideas.html">Java + AI/ML</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Company</div>
-        <a href="../about.html">About ADR Lab</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../faq.html">FAQs</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Legal</div>
-        <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
-        <a href="../refund.html">Refund Policy</a>
+  <div class="proj-card" id="project-1">
+    <div class="proj-card-header">
+      <div class="proj-num">01</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">AI-Powered Phishing Email Detection System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / NLP</span>
+        </div>
       </div>
     </div>
-    <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+    <div class="proj-body">
+      <p class="proj-desc">An NLP-based email classifier that scans incoming emails for phishing indicators — suspicious URLs, spoofed sender addresses, urgency-based language patterns, and malicious attachment types. Achieves high precision to minimise false positives for legitimate email.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Email Header & Body Parser</li><li>URL Extraction & Reputation Check</li><li>NLP Feature Engineering (TF-IDF/BERT)</li><li>Random Forest / LSTM Classifier</li><li>Confidence Score Dashboard</li><li>Whitelist & Feedback Loop</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn</span><span class="tech-chip">HuggingFace Transformers</span><span class="tech-chip">NLTK</span><span class="tech-chip">Flask</span><span class="tech-chip">VirusTotal API</span><span class="tech-chip">React</span><span class="tech-chip">MySQL</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Directly relevant for SOC Analyst, Email Security, and Threat Intelligence roles at companies like Symantec, Palo Alto Networks, and enterprise IT security teams.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>CEAS / TREC Spam Dataset (Kaggle) / PhishTank URLs</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
   </div>
-</footer>
+
+  <div class="proj-card" id="project-2">
+    <div class="proj-card-header">
+      <div class="proj-num">02</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Intrusion Detection System (IDS) using ML</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Network</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A network traffic analyser that classifies packets as normal or attack traffic (DoS, DDoS, port scan, brute force) using a machine learning classifier trained on the CICIDS2018 dataset. Includes real-time alert generation and a SIEM-style dashboard.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Packet Capture / PCAP Parsing</li><li>Feature Engineering (flow statistics)</li><li>Multi-Class Attack Classifier</li><li>Real-Time Alert Generation</li><li>Attack Type Dashboard</li><li>Threat Report Export</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn / XGBoost</span><span class="tech-chip">Scapy / Pyshark</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">MySQL</span><span class="tech-chip">Pandas</span><span class="tech-chip">Matplotlib</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Core cybersecurity role — IDS/IPS knowledge is expected at all SOC Analyst, Network Security Engineer, and Threat Detection roles. Strong research paper potential.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>CICIDS 2017/2018 Dataset (Kaggle)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-3">
+    <div class="proj-card-header">
+      <div class="proj-num">03</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Web Application Vulnerability Scanner</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / AppSec</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">An automated web security scanner that probes target URLs for OWASP Top 10 vulnerabilities including SQL injection, XSS, CSRF, insecure headers, and open redirects. Generates a professional pentest-style vulnerability report with severity ratings and remediation guidance.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>URL Input & Crawler Module</li><li>SQL Injection Probe Engine</li><li>XSS (Reflected & Stored) Detector</li><li>CSRF Token Checker</li><li>Security Header Analyser</li><li>PDF Vulnerability Report Generator</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Requests / Selenium</span><span class="tech-chip">BeautifulSoup</span><span class="tech-chip">SQLMap (integration)</span><span class="tech-chip">Flask</span><span class="tech-chip">ReportLab (PDF)</span><span class="tech-chip">React</span><span class="tech-chip">SQLite</span></div>
+        </div>
+      </div>
+      <div class="career-bar">AppSec Engineer, Penetration Tester, and Bug Bounty Hunter roles. OWASP vulnerability knowledge is mandatory for all application security positions. Note: only test on systems you own or have permission to test.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>DVWA / WebGoat (intentionally vulnerable apps for testing)</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-4">
+    <div class="proj-card-header">
+      <div class="proj-num">04</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Malicious URL Detection using ML</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / ML</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A real-time URL reputation checker that extracts lexical, host-based, and content-based features from URLs and classifies them as benign, phishing, malware, or defacement using an ensemble ML model. Includes a browser extension prototype.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>URL Feature Extraction (lexical + WHOIS)</li><li>Multi-Class URL Classifier</li><li>Real-Time API Endpoint</li><li>Browser Extension Prototype (Chrome)</li><li>Threat Category Dashboard</li><li>Feedback & Retraining Loop</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scikit-learn / XGBoost</span><span class="tech-chip">Requests</span><span class="tech-chip">python-whois</span><span class="tech-chip">Flask</span><span class="tech-chip">Chrome Extension (JS)</span><span class="tech-chip">SQLite</span><span class="tech-chip">React</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Threat Intelligence, URL Filtering, and Browser Security roles. Lightweight ML application that demonstrates both security domain knowledge and practical API development.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>ISCX-URL 2016 / Kaggle Malicious URLs Dataset</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-5">
+    <div class="proj-card-header">
+      <div class="proj-num">05</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Secure File Storage System with Encryption</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Cryptography</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A personal cloud storage platform implementing AES-256 encryption for all uploaded files, with SHA-256 integrity verification, role-based access control, and a full audit trail. Files are encrypted client-side before upload — ensuring zero-knowledge storage.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>User Auth & Key Derivation (PBKDF2)</li><li>AES-256 Client-Side Encryption</li><li>Encrypted File Upload & Storage</li><li>Integrity Verification (SHA-256)</li><li>Secure File Sharing (time-limited links)</li><li>Access Log & Audit Trail</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python / Java</span><span class="tech-chip">AES-256</span><span class="tech-chip">PBKDF2 Key Derivation</span><span class="tech-chip">Flask / Spring Boot</span><span class="tech-chip">React</span><span class="tech-chip">AWS S3 (encrypted)</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">JWT</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Cryptography, Cloud Security, and Data Privacy roles. Demonstrates practical implementation of encryption standards — highly valued at security-focused companies and cloud service providers.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom file upload data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-6">
+    <div class="proj-card-header">
+      <div class="proj-num">06</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Honeypot & Attack Analysis Dashboard</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Threat Intel</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">Deploys a simulated vulnerable server (honeypot) that logs and analyses attacker behaviour — recording connection attempts, login brute-force patterns, exploit payloads, and geographic origin. A SIEM-style dashboard visualises attack patterns and generates threat intelligence reports.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Low-Interaction Honeypot Service</li><li>Attack Log Collection & Parser</li><li>IP Geolocation & Reputation Lookup</li><li>Attack Pattern Visualisation</li><li>Threat Intelligence Report Generator</li><li>Alert & Email Notification System</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Flask (honeypot server)</span><span class="tech-chip">MaxMind GeoIP2</span><span class="tech-chip">ElasticSearch / SQLite</span><span class="tech-chip">React</span><span class="tech-chip">Chart.js</span><span class="tech-chip">Shodan API</span><span class="tech-chip">Pandas</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Threat Intelligence Analyst, SOC Engineer, and Red Team roles. Operating and analysing a honeypot demonstrates advanced understanding of attacker TTPs (Tactics, Techniques, Procedures).</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom honeypot-captured logs</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-7">
+    <div class="proj-card-header">
+      <div class="proj-num">07</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Browser Extension for Detecting Unsafe Websites</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-easy">⭐ Easy</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Browser Security</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A Chrome/Firefox browser extension that rates website safety in real time — checking SSL certificate validity, domain age, Google Safe Browsing status, and known phishing indicators. Displays a safety badge and blocks navigation to high-risk sites.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>SSL Certificate Validation</li><li>Domain Age & WHOIS Check</li><li>Google Safe Browsing API Integration</li><li>Phishing Indicator Heuristics</li><li>Safety Badge Overlay</li><li>Blocklist & Whitelist Management</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">JavaScript (Chrome Extension)</span><span class="tech-chip">Google Safe Browsing API</span><span class="tech-chip">VirusTotal API</span><span class="tech-chip">Python (backend scoring)</span><span class="tech-chip">Flask</span><span class="tech-chip">SQLite</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Browser Security, Client-Side Security, and Security Product Development roles. Chrome extensions demonstrate JavaScript + security API integration — practical and portfolio-friendly.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>PhishTank / OpenPhish feed</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-8">
+    <div class="proj-card-header">
+      <div class="proj-num">08</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Network Packet Sniffer & Protocol Analyser</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Network Forensics</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A network forensics tool that captures live packets on a selected interface, dissects protocol layers (Ethernet, IP, TCP/UDP, HTTP/DNS), reconstructs sessions, and flags suspicious patterns like port scans, ARP spoofing, and cleartext password transmission.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Live Packet Capture Interface</li><li>Protocol Dissector (Ethernet/IP/TCP/DNS)</li><li>Session Reconstruction Module</li><li>Port Scan & ARP Spoof Detector</li><li>Cleartext Credential Detector</li><li>PCAP Export & Replay</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scapy</span><span class="tech-chip">Pyshark</span><span class="tech-chip">Socket Programming</span><span class="tech-chip">Tkinter / React (GUI)</span><span class="tech-chip">SQLite</span><span class="tech-chip">Wireshark (PCAP format)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Network Forensics, SOC Analyst, and Network Engineer roles. Deep understanding of TCP/IP stack is fundamental for all security certifications (CEH, OSCP). Best project for students targeting network security careers.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Wireshark sample PCAP files / custom lab capture</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-9">
+    <div class="proj-card-header">
+      <div class="proj-num">09</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Ransomware Behaviour Simulator (Safe/Educational)</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Malware Analysis</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A sandboxed, safe educational simulator that demonstrates ransomware behaviour patterns — file system scanning, extension filtering, symmetric encryption, ransom note generation, and C2 communication simulation — on designated test files only, with full rollback. No malicious payload.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Safe File Encryption Simulation (test files only)</li><li>Extension Targeting Logic</li><li>Ransom Note Generator</li><li>Simulated C2 Communication (localhost)</li><li>Complete Decryption & Rollback</li><li>Behaviour Analysis Dashboard</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">AES Encryption</span><span class="tech-chip">Watchdog (file monitoring)</span><span class="tech-chip">Flask (C2 simulation)</span><span class="tech-chip">PyQt5 (GUI)</span><span class="tech-chip">SQLite</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Malware Analysis, Incident Response, and Security Research roles. Educational ransomware simulation demonstrates advanced threat understanding — impressive for cybersecurity specialist interviews. Must clearly document safe scope in documentation.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom designated test files only</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-10">
+    <div class="proj-card-header">
+      <div class="proj-num">10</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Biometric Authentication System</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Identity</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A multi-factor authentication system combining facial recognition and fingerprint verification. The system registers users biometrically, then validates identity at login using a CNN-based face matcher and fingerprint feature comparison — eliminating password-based vulnerabilities.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Facial Registration & Feature Extraction</li><li>CNN-Based Face Recognition</li><li>Fingerprint Feature Extraction</li><li>Multi-Factor Auth Engine</li><li>Liveness Detection (anti-spoofing)</li><li>Auth Attempt Audit Log</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">face_recognition / DeepFace</span><span class="tech-chip">OpenCV</span><span class="tech-chip">FingerprintPy / PyFingerprint</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">JWT</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Identity & Access Management (IAM), Biometric Security, and Authentication Platform roles. Biometric authentication is replacing passwords across enterprise and consumer security — strong future relevance.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>LFW Face Dataset / Custom fingerprint mock data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-11">
+    <div class="proj-card-header">
+      <div class="proj-num">11</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Secure Chat Application with E2E Encryption</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Cryptography</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A real-time messaging application where all messages are encrypted end-to-end using the Signal Protocol (X3DH key exchange + Double Ratchet algorithm). The server never stores plaintext — even a compromised server cannot read messages. Includes forward secrecy.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>User Registration & Key Exchange (X3DH)</li><li>Double Ratchet Message Encryption</li><li>Real-Time Messaging (WebSockets)</li><li>Group Chat with Key Distribution</li><li>Message Deletion & Disappearing Messages</li><li>Key Verification (Safety Numbers)</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python / Java</span><span class="tech-chip">Signal Protocol</span><span class="tech-chip">X3DH + Double Ratchet</span><span class="tech-chip">WebSockets</span><span class="tech-chip">Flask / Spring Boot</span><span class="tech-chip">React</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Libsodium / Bouncy Castle</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Cryptography Engineer, Secure Communications, and Privacy-Tech roles. Implementing Signal Protocol is a technically impressive feat — strong differentiator in security interviews.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom chat data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-12">
+    <div class="proj-card-header">
+      <div class="proj-num">12</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Password Manager with Encrypted Vault</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Cryptography</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A personal password manager where all credentials are stored in an AES-256-GCM encrypted vault, protected by a master password using PBKDF2/Argon2 key derivation. Includes a password strength analyser, breach checker (HaveIBeenPwned API), and secure password generator.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Master Password & Key Derivation (Argon2)</li><li>AES-256-GCM Vault Encryption</li><li>Password Entry CRUD</li><li>Breach Check (HaveIBeenPwned API)</li><li>Password Strength Meter</li><li>Secure Password Generator</li><li>Browser Extension (optional)</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python / Java</span><span class="tech-chip">AES-256-GCM</span><span class="tech-chip">Argon2 / PBKDF2</span><span class="tech-chip">HaveIBeenPwned API</span><span class="tech-chip">Flask / Spring Boot</span><span class="tech-chip">React</span><span class="tech-chip">SQLite (encrypted)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Security Software Development, Privacy Tools, and Cryptography roles. Password managers are a classic cryptographic application — demonstrates key derivation, symmetric encryption, and secure storage patterns.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom vault data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-13">
+    <div class="proj-card-header">
+      <div class="proj-num">13</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Log Monitoring & Alerting System (Mini SIEM)</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / SIEM</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A lightweight Security Information and Event Management (SIEM) system that ingests logs from multiple sources (web server, firewall, SSH), parses and normalises them, applies correlation rules to detect attacks (brute force, privilege escalation, data exfiltration), and sends real-time alerts.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Multi-Source Log Ingestion (syslog/JSON)</li><li>Log Parsing & Normalisation Engine</li><li>Correlation Rule Engine</li><li>Real-Time Alert Generation</li><li>Threat Dashboard (Grafana-like)</li><li>Incident Ticket Creation</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">ELK Stack (Elasticsearch/Logstash/Kibana)</span><span class="tech-chip">Pandas</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">Redis</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Twilio (SMS alerts)</span></div>
+        </div>
+      </div>
+      <div class="career-bar">SOC Analyst, SIEM Engineer, and Security Operations roles. SIEM knowledge is mandatory for all enterprise security positions — building one from scratch demonstrates exceptional depth.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom server log data / HDFS logs</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-14">
+    <div class="proj-card-header">
+      <div class="proj-num">14</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">IoT Device Security Scanner</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-med">⭐⭐ Medium</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / IoT</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A network scanner that discovers IoT devices on a subnet, fingerprints device type and firmware version, checks for default credentials, open ports, and known CVEs (Common Vulnerabilities and Exposures), and generates a risk assessment report.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>IoT Device Discovery (Nmap integration)</li><li>Device Fingerprinting & OS Detection</li><li>Default Credential Testing</li><li>Open Port & Service Enumeration</li><li>CVE Lookup (NVD API)</li><li>Risk Assessment PDF Report</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Nmap / python-nmap</span><span class="tech-chip">Shodan API</span><span class="tech-chip">NVD CVE API</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">SQLite</span><span class="tech-chip">ReportLab</span></div>
+        </div>
+      </div>
+      <div class="career-bar">IoT Security, Penetration Testing, and Embedded Security roles. IoT security is one of the fastest-growing cybersecurity domains — scanners like this are used by security consultants and enterprise IT teams.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Custom lab IoT devices / Shodan data</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+  <div class="proj-card" id="project-15">
+    <div class="proj-card-header">
+      <div class="proj-num">15</div>
+      <div class="proj-title-wrap">
+        <h2 class="proj-title">Digital Forensics Evidence Analysis Tool</h2>
+        <div class="proj-badges">
+          <span class="badge-diff diff-hard">⭐⭐⭐ Advanced</span>
+          <span class="badge-domain dom-cyber">Cybersecurity / Digital Forensics</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-desc">A digital forensics workbench that analyses disk images, memory dumps, and file artefacts — extracting metadata, recovering deleted files, identifying steganographic content, generating MD5/SHA256 file hashes, and producing a chain-of-custody evidence report.</p>
+      <div class="proj-grid">
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="🧩">Modules</div>
+          <ul class="proj-list"><li>Disk Image Mounting & File Extraction</li><li>Deleted File Recovery Module</li><li>Metadata Extraction (EXIF, timestamps)</li><li>Steganography Detection (LSB analysis)</li><li>Hash Generation & Integrity Verification</li><li>Chain-of-Custody Evidence Report (PDF)</li></ul>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-title" data-icon="⚙️">Tech Stack</div>
+          <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">pytsk3 (disk forensics)</span><span class="tech-chip">Volatility3 (memory analysis)</span><span class="tech-chip">Pillow / SteganoScan</span><span class="tech-chip">Hashlib</span><span class="tech-chip">Flask</span><span class="tech-chip">React</span><span class="tech-chip">ReportLab</span></div>
+        </div>
+      </div>
+      <div class="career-bar">Digital Forensics Investigator, Incident Responder, and Law Enforcement Tech roles. Forensics tools are used in cybercrime investigation — a niche, high-value specialisation with government and enterprise demand.</div>
+    </div>
+    <div class="proj-card-footer">
+      <span class="dataset-tag">📊 Dataset: <strong>Digital Corpora disk images / CTF challenge files</strong></span>
+      <a href="../index.html#booking" class="book-link">Build This Project &rarr;</a>
+    </div>
+  </div>
+
+<div class="cta-strip" style="margin:40px 0 20px;">
+  <div>
+    <h3>Want to Build One of These?</h3>
+    <p>ADR Lab provides complete development — code, documentation, deployment, and viva support.</p>
+  </div>
+  <div class="btns">
+    <a href="../index.html#booking" class="btn-gold">Book Now &rarr;</a>
+    <a href="https://wa.me/919430696596" class="btn-whatsapp">&#128172; WhatsApp</a>
+  </div>
+</div>
+</div>
+
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-brand">ADR <span>Lab</span></div>
+  <div class="footer-tagline">Academic Projects &amp; Research Support — Worldwide</div>
+  <div class="footer-grid">
+    <div class="footer-col"><p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;">Empowering engineering students since 2024.</p><p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px;">📞 +91 94306 96596</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📧 adrlab2026@gmail.com</p></div>
+    <div class="footer-col"><div class="footer-col-title">Project Ideas</div><a href="aiml-project-ideas.html">AI/ML Projects</a><a href="java-project-ideas.html">Java Projects</a><a href="blockchain-project-ideas.html">Blockchain</a><a href="cyber-project-ideas.html">Cybersecurity</a><a href="java-aiml-combined-project-ideas.html">Java+AI/ML</a></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><a href="../about.html">About</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></div>
+    <div class="footer-col"><div class="footer-col-title">Legal</div><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../refund.html">Refund</a></div>
+  </div>
+  <div class="footer-copy">© 2026 ADR Lab. All rights reserved.</div>
+</div></footer>
 </body>
 </html>
