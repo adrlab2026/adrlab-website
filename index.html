@@ -16,7 +16,7 @@
   <!-- Social Cards -->
   <meta property="og:title" content="ADR Lab – Final Year Projects & Research Support" />
   <meta property="og:description" content="Expert guidance for academic projects, AI/ML projects, research papers, and resume/LinkedIn optimization." />
-  <meta property="og:url" content="https://adresearchlab.com" />
+  <meta property="og:url" content="https://adresearchlab.com/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://adresearchlab.com/images/hero.jpg" />
@@ -54,19 +54,38 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ADR Lab | Final Year Projects, AI/ML Projects, Research Paper Support",
+      "url": "https://adresearchlab.com/",
+      "description": "ADR Lab offers Final Year Projects, AI/ML Projects, Java Projects, Research Paper Guidance, Resume Services, LinkedIn Optimization worldwide.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "ADR Lab",
+        "url": "https://adresearchlab.com"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ADR Lab",
+            "item": "https://adresearchlab.com/"
+          }
+        ]
+      }
+    }
+    </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "ADR Lab",
           "item": "https://adresearchlab.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://adresearchlab.com/#services"
         }
       ]
     }
@@ -1498,4 +1517,18 @@
 
     // Replace YOUR_WEB_APP_URL with your Google Apps Script Web App URL
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwQemsKhDygm6hwRBufd95K70YeuAmdg7iD-24sh2J0hsmX02-S8Vv2ii1N02V1vlfgxg/exec";
-      fetch(WE
+      fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(formData)
+      });
+
+
+document.getElementById('formBody').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
